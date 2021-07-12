@@ -10,25 +10,24 @@
     </head>
     <body>
         <header id = "title">
-            <h1>팀플RPG의 모든것1</h1>
+            <h1>팀플RPG의 모든것</h1>
+            <h2>팀플RPG 정보공유 사이트</h2>
         </header>
         <hr>
-        <div>
-            <div id="classView" class="classView">
-                <script>
-                    var request = new XMLHttpRequest();
-                    request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
-                    request.send(null)
-                    var my_JSON_object = JSON.parse(request.responseText);
+        <div id="classView" class="classView">
+            <script>
+                var request = new XMLHttpRequest();
+                request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
+                request.send(null)
+                var my_JSON_object = JSON.parse(request.responseText);
 
-                    for(var i =0; i < my_JSON_object.classes.length; ++i){
-                        document.writeln("<div class='classProfile'><img class='classProfileImage' src=data/"+my_JSON_object.classes[i].image+">");
-                        document.writeln(my_JSON_object.classes[i].name+"</div>");
-                    }
-                </script>
-            </div>
-            <button>클래스 보기</button>
+                for(var i =0; i < my_JSON_object.classes.length; ++i){
+                    document.writeln("<div class='classProfile'><img class='classProfileImage' src=data/"+my_JSON_object.classes[i].image+">");
+                    document.writeln(my_JSON_object.classes[i].name+"</div>");
+                }
+            </script>
         </div>
-        팀플RPG 정보공유 사이트
+        <hr>
+        <button>직업 보기</button>
     </body>
 </html>
