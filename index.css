@@ -1,7 +1,7 @@
 .classView
 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
@@ -9,4 +9,9 @@
 {
     margin: 20px;
     display:inline;
+}
+.classProfileImage
+{
+    width: 128px;
+    height: 128px;
 }

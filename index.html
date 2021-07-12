@@ -21,13 +21,11 @@
                     request.send(null)
                     var my_JSON_object = JSON.parse(request.responseText);
 
-                    for(var i =0; i < my_JSON_object.classes.length; ++i)
-                        document.writeln("<div class='classProfile'><img src="+my_JSON_object.classes[i].image+">"+ my_JSON_object.classes[i].name+"</div>");
+                    for(var i =0; i < my_JSON_object.classes.length; ++i){
+                        document.writeln("<div class='classProfile'><img class='classProfileImage' src=data/"+my_JSON_object.classes[i].image+">");
+                        document.writeln(my_JSON_object.classes[i].name+"</div>");
+                    }
                 </script>
-                
-                <div class="classProfile"><img src="data/dummy.png"></div>
-                <div class="classProfile"><img src="data/dummy.png"></div>
-                <div class="classProfile"><img src="data/dummy.png"></div>
             </div>
             <button>클래스 보기</button>
         </div>
