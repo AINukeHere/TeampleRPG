@@ -22,10 +22,46 @@
                 var my_JSON_object = JSON.parse(request.responseText);
 
                 for(var i =0; i < my_JSON_object.classes.length; ++i){
-                    document.writeln("<div class='classProfile'><img class='classProfileImage' src=./data/"+my_JSON_object.classes[i].image+">");
+                    document.writeln("<div class='classProfile' onmousemove='showClassInfo(this)' onmouseout='hideClassInfo(this)'>\
+                        <img class='classProfileImage' src=./data/"+my_JSON_object.classes[i].image+">");
                     document.writeln(my_JSON_object.classes[i].name+"</div>");
                 }
+                console.log(my_JSON_object.classes[i].explanation);
+                function showClassInfo(obj)
+                {
+                    var posx = 0;
+                    var posy = 0;
+                    if (!e)
+                        var e = window.event;
+                    if (e.pageX || e.pageY) {
+                        posx = e.pageX;
+                        posy = e.pageY;
+                    } else if (e.clientX || e.clientY) {
+                        posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                        posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+                    }
+
+                    var classInfo = document.getElementById("classInfo");
+                    classInfo.style.opacity=1;
+                    classInfo.style.left=(posx+5).toString()+"px";
+                    classInfo.style.top=(posy+5).toString()+"px";
+                    classInfo.children[0].textContent = "test";
+                }
+                function hideClassInfo(obj)
+                {
+                    var classInfo = document.getElementById("classInfo");
+                    classInfo.style.opacity=0;
+                    classInfo.style.left="0px";
+                    classInfo.style.top="0px";
+                    console.log(obj)
+                }
             </script>
+            <div id="classInfo" class='classInfo' style="opacity: 0;">
+                <div name="classExplanation">
+                    캐릭터를 설명하는 중...
+                </div>
+                <img src='data/dummy.png'>
+            </div>
         </div>
         <hr>
         <button>직업 보기</button>
