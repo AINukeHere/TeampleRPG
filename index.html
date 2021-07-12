@@ -18,6 +18,8 @@
             <script>
                 var request = new XMLHttpRequest();
                 request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
+                //request.overrideMimeType("application/json");
+                //request.open("GET", "data/class_info.json", true);
                 request.send(null)
                 var my_JSON_object = JSON.parse(request.responseText);
 
@@ -57,9 +59,9 @@
                 }
             </script>
             <div id="classInfo" class='classInfo' style="opacity: 0;">
-                <div name="classExplanation">
+                <p name="classExplanation">
                     캐릭터를 설명하는 중...
-                </div>
+                </p>
                 <img src='data/dummy.png'>
             </div>
         </div>
