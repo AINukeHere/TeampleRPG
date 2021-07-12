@@ -34,9 +34,8 @@
                     var classInfo = document.getElementById("classInfo");
                     classInfo.style.left=(event.clientX+5).toString()+"px";
                     classInfo.style.top=(event.clientY+5).toString()+"px";
-                    console.log(event.clientX, event.clientY);
+                    //console.log(event.clientX, event.clientY);
                 }
-                console.log(my_JSON_object.classes[0].explanation);
                 function showClassInfo(classIdx)
                 {
                     var posx = 0;
@@ -50,7 +49,6 @@
                         posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
                         posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
                     }
-                    console.log(classIdx);
                     var classInfo = document.getElementById("classInfo");
                     classInfo.style.opacity=1;
                     classInfo.children[0].innerHTML = my_JSON_object.classes[classIdx].explanation;
