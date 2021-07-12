@@ -1,0 +1,11 @@
+.classView
+{
+    border: 10px;
+    position: absolute;
+    color: blue;
+}
+.classProfile
+{
+    margin: 20px;
+    display:inline;
+}

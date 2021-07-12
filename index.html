@@ -10,10 +10,29 @@
     </head>
     <body>
         <header id = "title">
-            <h1>팀플RPG의 모든것</h1>
+            <h1>팀플RPG의 모든것1</h1>
         </header>
         <hr>
         <div>
+            <div id="classView" class="classView">
+                <script>
+                    // $.getJSON("data/class_info.json", function(json) {
+                    //     console.log(json); // this will show the info it in firebug console
+                    // });
+                    var request = new XMLHttpRequest();
+                    request.open("GET", "data/class_info.json", false);
+                    request.send(null)
+                    var my_JSON_object = JSON.parse(request.responseText);
+                    alert (my_JSON_object.result[0]);
+
+                    // for(var i =0; i < 10; ++i)
+                    //     document.writeln("<div class='classProfile'><img src='dummy.png'></div>");
+                </script>
+                
+                <div class="classProfile"><img src="data/dummy.png"></div>
+                <div class="classProfile"><img src="data/dummy.png"></div>
+                <div class="classProfile"><img src="data/dummy.png"></div>
+            </div>
             <button>클래스 보기</button>
         </div>
         팀플RPG 정보공유 사이트
