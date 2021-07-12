@@ -16,17 +16,13 @@
         <div>
             <div id="classView" class="classView">
                 <script>
-                    // $.getJSON("data/class_info.json", function(json) {
-                    //     console.log(json); // this will show the info it in firebug console
-                    // });
                     var request = new XMLHttpRequest();
-                    request.open("GET", "data/class_info.json", false);
+                    request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
                     request.send(null)
                     var my_JSON_object = JSON.parse(request.responseText);
-                    alert (my_JSON_object.result[0]);
 
-                    // for(var i =0; i < 10; ++i)
-                    //     document.writeln("<div class='classProfile'><img src='dummy.png'></div>");
+                    for(var i =0; i < my_JSON_object.classes.length; ++i)
+                        document.writeln("<div class='classProfile'><img src="+my_JSON_object.classes[i].image+">"+ my_JSON_object.classes[i].name+"</div>");
                 </script>
                 
                 <div class="classProfile"><img src="data/dummy.png"></div>
