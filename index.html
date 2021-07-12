@@ -26,7 +26,7 @@
                         <img class='classProfileImage' src=./data/"+my_JSON_object.classes[i].image+">");
                     document.writeln(my_JSON_object.classes[i].name+"</div>");
                 }
-                console.log(my_JSON_object.classes[i].explanation);
+                console.log(my_JSON_object.classes[0].explanation);
                 function showClassInfo(obj)
                 {
                     var posx = 0;
@@ -45,7 +45,7 @@
                     classInfo.style.opacity=1;
                     classInfo.style.left=(posx+5).toString()+"px";
                     classInfo.style.top=(posy+5).toString()+"px";
-                    classInfo.children[0].textContent = "test";
+                    classInfo.children[0].textContent = my_JSON_object.classes[0].explanation;
                 }
                 function hideClassInfo(obj)
                 {
