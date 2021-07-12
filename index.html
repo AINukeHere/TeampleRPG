@@ -24,12 +24,20 @@
                 var my_JSON_object = JSON.parse(request.responseText);
 
                 for(var i =0; i < my_JSON_object.classes.length; ++i){
-                    document.writeln("<div class='classProfile' onmousemove='showClassInfo(this)' onmouseout='hideClassInfo(this)'>\
+                    document.writeln("<a class='classProfile' href='#' onmousemove='showClassInfo("+i+")' onmouseout='hideClassInfo(this)'>\
                         <img class='classProfileImage' src=./data/"+my_JSON_object.classes[i].image+">");
-                    document.writeln(my_JSON_object.classes[i].name+"</div>");
+                    document.writeln(my_JSON_object.classes[i].name+"</a>");
+                }
+                document.addEventListener('mousemove', setInfoPosition);
+                function setInfoPosition(event)
+                {
+                    var classInfo = document.getElementById("classInfo");
+                    classInfo.style.left=(event.clientX+5).toString()+"px";
+                    classInfo.style.top=(event.clientY+5).toString()+"px";
+                    console.log(event.clientX, event.clientY);
                 }
                 console.log(my_JSON_object.classes[0].explanation);
-                function showClassInfo(obj)
+                function showClassInfo(classIdx)
                 {
                     var posx = 0;
                     var posy = 0;
@@ -42,12 +50,10 @@
                         posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
                         posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
                     }
-
+                    console.log(classIdx);
                     var classInfo = document.getElementById("classInfo");
                     classInfo.style.opacity=1;
-                    classInfo.style.left=(posx+5).toString()+"px";
-                    classInfo.style.top=(posy+5).toString()+"px";
-                    classInfo.children[0].textContent = my_JSON_object.classes[0].explanation;
+                    classInfo.children[0].innerHTML = my_JSON_object.classes[classIdx].explanation;
                 }
                 function hideClassInfo(obj)
                 {
@@ -55,7 +61,6 @@
                     classInfo.style.opacity=0;
                     classInfo.style.left="0px";
                     classInfo.style.top="0px";
-                    console.log(obj)
                 }
             </script>
             <div id="classInfo" class='classInfo' style="opacity: 0;">
