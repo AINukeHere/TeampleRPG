@@ -11,30 +11,27 @@
     <body>
         <header id = "title">
             <h1>팀플RPG의 모든것</h1>
-            <h2>팀플RPG 정보공유 사이트 test</h2>
+            <h2>팀플RPG 정보공유 사이트 test2</h2>
         </header>
         <hr>
+        <button onclick="toggleClassView();">클래스 보기/숨기기</button>
         <div id="classView" class="classView">
             <script>
                 var request = new XMLHttpRequest();
                 request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
-                //request.overrideMimeType("application/json");
-                // request.onreadystatechange = function(){
-                //     console.log(request.response);
-                // }
-                // request.open("GET", "data/class_info.json", true);
                 request.send(null)
-                var my_JSON_object = JSON.parse(request.responseText);
-
-                for(var i =0; i < my_JSON_object.classes.length; ++i){
-                    document.writeln("<a class='classProfile' href='#' onmousemove='showClassInfo("+i+")' onmouseout='hideClassInfo(this)'>\
-                        <img class='classProfileImage' src=./data/"+my_JSON_object.classes[i].image+"><br>");
-                    document.writeln("<span>"+my_JSON_object.classes[i].name+"</span><br>");
-                    if(my_JSON_object.classes[i].nickname)
+                var jsonObject = JSON.parse(request.responseText);
+            </script>
+            <script>
+                for(var i =0; i < jsonObject.classes.length; ++i){
+                    document.writeln("<div class='classProfile' onclick='toggleClassView("+i+")' onmousemove='showClassInfo("+i+")' onmouseout='hideClassInfo(this)'>\
+                        <img class='classProfileImage' src=./data/"+jsonObject.classes[i].image+"><br>");
+                    document.writeln("<span>"+jsonObject.classes[i].name+"</span><br>");
+                    if(jsonObject.classes[i].nickname)
                     {
-                        document.writeln("<span>"+my_JSON_object.classes[i].nickname+"</span><br>");
+                        document.writeln("<span>"+jsonObject.classes[i].nickname+"</span><br>");
                     }
-                    document.writeln("</a>");
+                    document.writeln("</div>");
                 }
                 document.addEventListener('mousemove', setInfoPosition);
                 function setInfoPosition(event)
@@ -59,8 +56,17 @@
                     }
                     var classInfo = document.getElementById("classInfo");
                     classInfo.style.opacity=1;
-                    classInfo.children[0].innerHTML = my_JSON_object.classes[classIdx].explanation;
-                    classInfo.children[1].src = 'data/'+my_JSON_object.classes[classIdx].image;
+                    classInfo.children[0].innerHTML = jsonObject.classes[classIdx].explanation;
+                    classInfo.children[1].src = 'data/'+jsonObject.classes[classIdx].image;
+                }
+                function toggleClassView(classIdx)
+                {
+                    var classView = document.getElementById("classView");
+                    if (classView.style.display == "none")
+                        classView.style.display = "grid";
+                    else
+                        classView.style.display = "none";
+                    
                 }
                 function hideClassInfo(obj)
                 {
@@ -78,6 +84,5 @@
             </div>
         </div>
         <hr>
-        <button>직업 보기</button>
     </body>
 </html>
