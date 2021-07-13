@@ -9,6 +9,16 @@
 {
     margin: 20px;
     display:inline;
+    text-align: center;
+}
+.classProfile:link
+{
+    text-decoration: none;
+}
+.classProfile:visited
+{
+    text-decoration: none;
+    color:blue;
 }
 .classProfileImage
 {

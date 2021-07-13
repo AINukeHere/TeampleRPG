@@ -28,8 +28,13 @@
 
                 for(var i =0; i < my_JSON_object.classes.length; ++i){
                     document.writeln("<a class='classProfile' href='#' onmousemove='showClassInfo("+i+")' onmouseout='hideClassInfo(this)'>\
-                        <img class='classProfileImage' src=./data/"+my_JSON_object.classes[i].image+">");
-                    document.writeln(my_JSON_object.classes[i].name+"</a>");
+                        <img class='classProfileImage' src=./data/"+my_JSON_object.classes[i].image+"><br>");
+                    document.writeln("<span>"+my_JSON_object.classes[i].name+"</span><br>");
+                    if(my_JSON_object.classes[i].nickname)
+                    {
+                        document.writeln("<span>"+my_JSON_object.classes[i].nickname+"</span><br>");
+                    }
+                    document.writeln("</a>");
                 }
                 document.addEventListener('mousemove', setInfoPosition);
                 function setInfoPosition(event)
