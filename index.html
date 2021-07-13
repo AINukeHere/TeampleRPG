@@ -17,9 +17,9 @@
         <div id="classView" class="classView">
             <script>
                 var request = new XMLHttpRequest();
-                // request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
+                request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
                 //request.overrideMimeType("application/json");
-                request.open("GET", "./data/class_info.json", true);
+                // request.open("GET", "./data/class_info.json", true);
                 request.send(null)
                 var my_JSON_object = JSON.parse(request.responseText);
 
