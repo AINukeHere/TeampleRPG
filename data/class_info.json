@@ -78,11 +78,13 @@
         },
         {
             "name":"광기의 살육자",
-            "image":"warrior.png"
+            "image":"warrior.png",
+            "explanation":"파괴력측정불가.<br>내구력측정불가.<br>기동성측정불가.<br>무감각(Passive) - 쉴드 지속적으로 회복.<br>순수한 광기(Passive) - 아군 사망시 체력 마나 회복"
         },
         {
             "name":"마제",
-            "image":"dmsenswk.png"
+            "image":"dmsenswk.png",
+            "explanation":"파괴력측정불가.<br>내구력측정불가.<br>기동성측정불가.<br>상처(Passive)  -  사망할시 적을 지옥의 동반자로 삼습니다. <br>증오의 씨앗(Passive)  -  일정시간마다 체력을 회복합니다.<br>마제의 눈(Passive)  -  마제의 눈은 그 아무도 속일 수가 없습니다.(컴셋무한)"
         }
     ]
 }
