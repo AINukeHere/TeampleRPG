@@ -14,17 +14,13 @@
             <h2>팀플RPG 정보공유 사이트 test2</h2>
         </header>
         <hr>
-        <button onclick="toggleClassView();">클래스 보기/숨기기</button>
-        <div id="classView" class="classView">
-            <script>
-                var request = new XMLHttpRequest();
-                request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
-                request.send(null)
-                var jsonObject = JSON.parse(request.responseText);
+        <button onclick="toggleclassTable();">클래스 보기/숨기기</button>
+        <div id="classTable" class="classTable">
+            <script src="teamplerpg_data.js">
             </script>
             <script>
                 for(var i =0; i < jsonObject.classes.length; ++i){
-                    document.writeln("<div class='classProfile' onclick='toggleClassView("+i+")' onmousemove='showClassInfo("+i+")' onmouseout='hideClassInfo(this)'>\
+                    document.writeln("<div class='classProfile' onclick='onClickClass("+i+")' onmousemove='showClassInfo("+i+")' onmouseout='hideClassInfo(this)'>\
                         <img class='classProfileImage' src=./data/"+jsonObject.classes[i].image+"><br>");
                     document.writeln("<span>"+jsonObject.classes[i].name+"</span><br>");
                     if(jsonObject.classes[i].nickname)
@@ -34,54 +30,37 @@
                     document.writeln("</div>");
                 }
                 document.addEventListener('mousemove', setInfoPosition);
-                function setInfoPosition(event)
-                {
-                    var classInfo = document.getElementById("classInfo");
-                    classInfo.style.left=(event.clientX+5).toString()+"px";
-                    classInfo.style.top=(event.clientY+5).toString()+"px";
-                    //console.log(event.clientX, event.clientY);
-                }
-                function showClassInfo(classIdx)
-                {
-                    var posx = 0;
-                    var posy = 0;
-                    if (!e)
-                        var e = window.event;
-                    if (e.pageX || e.pageY) {
-                        posx = e.pageX;
-                        posy = e.pageY;
-                    } else if (e.clientX || e.clientY) {
-                        posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-                        posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-                    }
-                    var classInfo = document.getElementById("classInfo");
-                    classInfo.style.opacity=1;
-                    classInfo.children[0].innerHTML = jsonObject.classes[classIdx].explanation;
-                    classInfo.children[1].src = 'data/'+jsonObject.classes[classIdx].image;
-                }
-                function toggleClassView(classIdx)
-                {
-                    var classView = document.getElementById("classView");
-                    if (classView.style.display == "none")
-                        classView.style.display = "grid";
-                    else
-                        classView.style.display = "none";
-                    
-                }
-                function hideClassInfo(obj)
-                {
-                    var classInfo = document.getElementById("classInfo");
-                    classInfo.style.opacity=0;
-                    classInfo.style.left="0px";
-                    classInfo.style.top="0px";
-                }
+                
             </script>
-            <div id="classInfo" class='classInfo' style="opacity: 0;">
+            <div id="classInfo" class='classInfo'>
                 <p name="classExplanation">
                     캐릭터를 설명하는 중...
                 </p>
                 <img src='data/dummy.png'>
             </div>
+        </div>
+        <hr>
+        <div id="classView">
+            <img src="data/dummy.png">
+            <span>캐릭터 설명</span>
+            <br>
+            <table border="1" style="border:2px double red">
+                <tr>
+                    <td id="Skill1_image" align='center'>
+                        <img src="data/1Skill.png">
+                    </td>
+                    <td rowspan="2">
+                        <span id="Skill1_explanation">1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="Skill1_name">1스킬 이름</span>
+                    </td>
+                </tr>
+            </table><br><br><br><br><br><br><br><br>
+            
+            <br>
         </div>
         <hr>
     </body>
