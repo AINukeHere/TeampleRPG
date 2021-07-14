@@ -20,12 +20,49 @@ function onClickClass(classIdx)
 {
     toggleclassTable();
     var classView = document.getElementById("classView");
-    //classView.innerHTML="";
-    console.log(classView);
-    var Skill1_explanation = document.getElementById("Skill1_explanation");
-    Skill1_explanation.innerHTML=jsonObject.classes[classIdx].Skill1_explanation;
-    var Skill1_name = document.getElementById("Skill1_name");
-    Skill1_name.innerHTML=jsonObject.classes[classIdx].Skill1_name;
+    var innerHTML_str = "\
+    <img class='classProfileImage' src=data/"+jsonObject.classes[classIdx].image+"'>\
+    <span>"+jsonObject.classes[classIdx].explanation+"</span>\
+    <br>\
+    <table border='1' style='border:2px double red'>\
+    ";
+    var classInfo = jsonObject.classes[classIdx];
+    for(var i = 0; i < classInfo.skills.length; ++i)
+    {
+        var skillInfo = classInfo.skills[i];
+        innerHTML_str += "\
+        <tr>\
+            <td align='center' colspan='2'>";
+            for(var cmdIdx = 0; skillInfo.command.length; ++cmdIdx)
+            {
+                innerHTML_str += "\
+                <img src='data/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
+                console.log(jsonObject.classes[classIdx].skills[i].command[cmdIdx]);
+            }
+            innerHTML_str += "\
+            </td>\
+        </tr>\
+        <tr>\
+            <td>\
+                <span>"+skillInfo.name+"</span>\
+            </td>\
+            <td>\
+                <span>"+skillInfo.explanation+"</span>\
+            </td>\
+        </tr>\
+        ";
+    }
+    innerHTML_str+="\
+    </table>\
+    ";
+    classView.innerHTML= innerHTML_str;
+
+    // var classProfileImage = classView.getElementsByClassName("classProfileImage");
+    // classProfileImage[0].src = 'data/' + jsonObject.classes[classIdx].image;
+    // var Skill1_explanation = document.getElementById("Skill1_explanation");
+    // Skill1_explanation.innerHTML=jsonObject.classes[classIdx].Skill1_explanation;
+    // var Skill1_name = document.getElementById("Skill1_name");
+    // Skill1_name.innerHTML=jsonObject.classes[classIdx].Skill1_name;
 }
 function toggleclassTable()
 {
@@ -39,6 +76,4 @@ function hideClassInfo(obj)
 {
     var classInfo = document.getElementById("classInfo");
     classInfo.style.display="none";
-    classInfo.style.left="0px";
-    classInfo.style.top="0px";
 }

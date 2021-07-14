@@ -15,15 +15,13 @@
 {
     cursor: pointer;
 }
-/* .classProfile:link
-{
-    text-decoration: none;
+#classView{
+    background-color: #374b76;
 }
-.classProfile:visited
-{
-    text-decoration: none;
-    color:blue;
-} */
+#Skill1_name{
+    font-size: 13px;
+    font-weight: bold;
+}
 .classProfileImage
 {
     width: 128px;
