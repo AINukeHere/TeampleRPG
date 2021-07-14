@@ -15,19 +15,12 @@
 {
     cursor: pointer;
 }
-#classView{
-    background-color: #374b76;
-}
-#Skill1_name{
-    font-size: 13px;
-    font-weight: bold;
-}
 .classProfileImage
 {
     width: 128px;
     height: 128px;
 }
-.classInfo
+.classPopupInfo
 {
     background-color: white;
     padding: 4px;
@@ -36,4 +29,54 @@
     float: left; 
     overflow: hidden; 
     z-index: 999;
+}
+#classView{
+    margin: 10px;
+    padding: 10px;
+    background-color:black;
+}
+.specName
+{
+    font-weight: bold;
+    color:rgb(17,255,26);
+}
+.specStars
+{
+    font-weight: bold;
+    color:rgb(255,5,5);
+}
+.explanation
+{
+    font-weight: bold;
+    color: white;
+}
+.skillPopupInfo
+{
+    background-color: black;
+    padding: 4px;
+    position: absolute; 
+    display: none; 
+    float: left; 
+    overflow: hidden; 
+    z-index: 999;
+}
+.skillViewer{
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid white;
+}
+.skillContent{
+    padding-bottom: 20px;
+}
+.skillIcon{
+    width:52px;
+    height:54px;
+}
+.skillCommand{
+    color:rgb(17, 255, 26);
+    font-weight: bold;
+}
+.skillName{
+    color:rgb(44, 180, 148);
+    font-weight: bold;
 }

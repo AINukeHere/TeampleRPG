@@ -3,7 +3,10 @@
         {
             "name":"워리어",
             "image":"warrior.png",
-            "explanation":"파괴력★★☆☆☆<br>내구력★★★☆☆<br>기동성★☆☆☆☆<br>근접형전투로 보조마법을 받으면서 선두에서 싸우는 클래스입니다<br>강한 체력과 적당한 공격력을 가지고있어서 여유롭게 사냥할 수 있습니다",
+            "spec1":2,
+            "spec2":3,
+            "spec3":1,
+            "explanation":"근접형전투로 보조마법을 받으면서 선두에서 싸우는 클래스입니다<br>강한 체력과 적당한 공격력을 가지고있어서 여유롭게 사냥할 수 있습니다",
             "skills":[
                 {
                     "command":"S",
@@ -104,7 +107,47 @@
             "name":"알려진 바 없음",
             "nickname":"광기의 살육자",
             "image":"warrior.png",
-            "explanation":"파괴력측정불가.<br>내구력측정불가.<br>기동성측정불가.<br>무감각(Passive) - 쉴드 지속적으로 회복.<br>순수한 광기(Passive) - 아군 사망시 체력 마나 회복"
+            "spec1":5,
+            "spec2":5,
+            "spec3":5,
+            "explanation":"파괴력측정불가.<br>내구력측정불가.<br>기동성측정불가.<br>무감각(Passive) - 쉴드 지속적으로 회복.<br>순수한 광기(Passive) - 아군 사망시 체력 마나 회복",
+            "skills":[
+                {
+                    "command":"S",
+                    "name":"사혈참",
+                    "explanation":"적을 혹독하게 찢어 죽입니다."
+                },
+                {
+                    "command":"C",
+                    "name":"광살각",
+                    "explanation":"빛의속도로 적의 신체를 분해해버립니다."
+                },
+                {
+                    "command":"CC",
+                    "name":"흡혈참",
+                    "explanation":"적의 피를 순간 흡혈해버립니다.(자신체력80%, 적체력 25%<보스불가>)"
+                },
+                {
+                    "command":"A",
+                    "name":"무한(無限)광격",
+                    "explanation":"적을 수많은 검으로 강타하는데 그 숫자는 셀 수 없을 정도라고 한다."
+                },
+                {
+                    "command":"O",
+                    "name":"블러드 오브 엠페러",
+                    "explanation":"이 기술은 어떤 기술인지 알 수 없다. 다만 피로 덮인 후에 적은 처참하게 토막 나 죽어있다."
+                },
+                {
+                    "command":"P",
+                    "name":"무감각",
+                    "explanation":"쉴드 40 유지"
+                },
+                {
+                    "command":"P",
+                    "name":"순수한 광기",
+                    "explanation":"아군사망시 회복"
+                }
+            ]
         },
         {
             "name":"마제",

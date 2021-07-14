@@ -9,6 +9,8 @@
         </style>
     </head>
     <body>
+        <script ttype="text/javascript" src="data/d_class_info.js"></script>
+        <script src="teamplerpg_data.js"></script>
         <header id = "title">
             <h1>팀플RPG의 모든것</h1>
             <h2>팀플RPG 정보공유 사이트 test2</h2>
@@ -16,11 +18,9 @@
         <hr>
         <button onclick="toggleclassTable();">클래스 보기/숨기기</button>
         <div id="classTable" class="classTable">
-            <script src="teamplerpg_data.js">
-            </script>
             <script>
                 for(var i =0; i < jsonObject.classes.length; ++i){
-                    document.writeln("<div class='classProfile' onclick='onClickClass("+i+")' onmousemove='showClassInfo("+i+")' onmouseout='hideClassInfo(this)'>\
+                    document.writeln("<div class='classProfile' onclick='onClickClass("+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
                         <img class='classProfileImage' src=./data/"+jsonObject.classes[i].image+"><br>");
                     document.writeln("<span>"+jsonObject.classes[i].name+"</span><br>");
                     if(jsonObject.classes[i].nickname)
@@ -29,32 +29,21 @@
                     }
                     document.writeln("</div>");
                 }
-                document.addEventListener('mousemove', setInfoPosition);
+                document.addEventListener('mousemove', setPopupInfoPosition);
                 
             </script>
-            <div id="classInfo" class='classInfo'>
+            <div id="classPopupInfo" class='classPopupInfo'>
                 <p name="classExplanation">
                     캐릭터를 설명하는 중...
                 </p>
                 <img src='data/dummy.png'>
             </div>
         </div>
-        <hr>
+        <button onclick="toggleclassTable();">클래스 보기/숨기기</button>
         <div id="classView">
-            <img class='classProfileImage' src="data/dummy.png">
-            <span>캐릭터 설명</span>
-            <br>
-            <table border="1" style="border:2px double red">
-                <tr>
-                    <td align='center'>
-                        <img id="Skill1_image" src="data/S_Skill.png">
-                    </td>
-                    <td rowspan="2">
-                        <span id="Skill1_explanation">1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명1스킬 설명</span>
-                    </td>
-                </tr>
-            </table>
         </div>
-        <hr>
+        <div id="skillPopupInfo" class="skillPopupInfo">
+            <img src="data/S_Skill_Cost.png">
+        </div>
     </body>
 </html>
