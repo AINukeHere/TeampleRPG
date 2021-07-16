@@ -53,7 +53,7 @@ function hideSkillPopupInfo()
 
 function onClickClass(classIdx)
 {
-    toggleclassTable();
+    //toggleclassTable();
     var classInfo = jsonObject.classes[classIdx];
     var classView = document.getElementById("classView");
     
@@ -118,12 +118,12 @@ function onClickClass(classIdx)
         <div class='jobSelect'>\
         <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
         <div class='jobExplanation'>\
-        <div class='job1View'><span>" + classInfo.jobs1.name+ "</span><br>\
+        <div class='job1View'><span>" + classInfo.jobs1.name+ "("+classInfo.jobs1.nickname+")</span><br>\
         <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
         <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
         <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
         " + classInfo.jobs1.explanation + "</div>\
-        <div class='job2View'><span>" + classInfo.jobs2.name+ "</span><br>\
+        <div class='job2View'><span>" + classInfo.jobs2.name+ "("+classInfo.jobs1.nickname+")</span><br>\
         <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
         <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
         <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
