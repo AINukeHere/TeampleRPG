@@ -43,8 +43,6 @@ function showSkillPopupInfo(skillCommand)
 {
     var skillPopupInfo = document.getElementById("skillPopupInfo");
     skillPopupInfo.style.display="inline";
-    if(skillCommand == "P")
-        skillPopupInfo.getElementsByTagName("img")[0].s
     skillPopupInfo.getElementsByTagName("img")[0].src = "data/"+skillCommand+"_Skill_Cost.png";
 }
 function hideSkillPopupInfo()
@@ -59,14 +57,10 @@ function onClickClass(classIdx)
     var classInfo = jsonObject.classes[classIdx];
     var classView = document.getElementById("classView");
     
-    var spec_str1="";
-    var spec_str2="";
-    var spec_str3="";
-    for(var i = 5, spec1 = classInfo.spec1,spec2 = classInfo.spec2, spec3 = classInfo.spec3; i > 0; --i,--spec1, --spec2, --spec3){
-        spec_str1 += (spec1 > 0) ? "★" : "☆";
-        spec_str2 += (spec2 > 0) ? "★" : "☆";
-        spec_str3 += (spec3 > 0) ? "★" : "☆";
-    }
+    var spec_str1=getSpecString(classInfo.spec1);
+    var spec_str2=getSpecString(classInfo.spec2);
+    var spec_str3=getSpecString(classInfo.spec3);
+    
 
     var innerHTML_str = "\
     <img class='classProfileImage' src=data/"+jsonObject.classes[classIdx].image+"><br>\
@@ -91,9 +85,9 @@ function onClickClass(classIdx)
                 onmousemove='showSkillPopupInfo(\""+skillInfo.command[cmdIdx]+"\")' \
                 onmouseout='hideSkillPopupInfo()' \
                 src='data/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
-                console.log(jsonObject.classes[classIdx].skills[i].command[cmdIdx]);
             }
             innerHTML_str += "\
+            <span style='color:white'>" +skillInfo.type+"</span>\
             </td>\
         </tr>\
         <tr>\
@@ -113,5 +107,55 @@ function onClickClass(classIdx)
     innerHTML_str+="\
     </div>\
     ";
+    if(classInfo.jobs1 != null){
+        var job1_spec1_str = getSpecString(classInfo.jobs1.spec1);
+        var job1_spec2_str = getSpecString(classInfo.jobs1.spec2);
+        var job1_spec3_str = getSpecString(classInfo.jobs1.spec3);
+        var job2_spec1_str = getSpecString(classInfo.jobs2.spec1);
+        var job2_spec2_str = getSpecString(classInfo.jobs2.spec2);
+        var job2_spec3_str = getSpecString(classInfo.jobs2.spec3);
+        innerHTML_str += "\
+        <div class='jobSelect'>\
+        <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
+        <div class='jobExplanation'>\
+        <div class='job1View'><span>" + classInfo.jobs1.name+ "</span><br>\
+        <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
+        <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
+        <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
+        " + classInfo.jobs1.explanation + "</div>\
+        <div class='job2View'><span>" + classInfo.jobs2.name+ "</span><br>\
+        <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
+        <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
+        <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
+        " + classInfo.jobs2.explanation + "</div>\
+        </div>";
+        // <tr><td>" + classInfo.jobs1.name + "</td><td>" + classInfo.jobs2.name + "</td></tr>\
+        // <tr><td class='job1Explanation'>" + classInfo.jobs1.explanation + "</td><td class='job2Explanation'>" + classInfo.jobs2.explanation + "</td></tr>";
+        // var explanationLines = classInfo.jobs1.explanation.length > classInfo.jobs2.explanation.length ? classInfo.jobs1.explanation.length : classInfo.jobs2.explanation.length;
+        // for(var i =0; i< explanationLines; ++i)
+        // {
+        //     if (i < classInfo.jobs1.explanation.length){
+        //         innerHTML_str += "\
+        //         <tr><td>" + classInfo.jobs1.explanation[i] + "</td>";
+        //     }
+        //     if (i < classInfo.jobs1.explanation.length){
+        //         innerHTML_str += "\
+        //         <td>" + classInfo.jobs2.explanation[i] + "</td></tr>";
+        //     }
+        // }
+        innerHTML_str += "\
+        </div>\
+        ";
+    }
+
+    //html DOM 수정
     classView.innerHTML= innerHTML_str;
+}
+function getSpecString(starNum)
+{
+    var spec_str = "";
+    for(var i = 5, spec = starNum; i > 0; --i,--spec){
+        spec_str += (spec > 0) ? "★" : "☆";
+    }
+    return spec_str;
 }

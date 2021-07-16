@@ -31,6 +31,7 @@
     z-index: 999;
 }
 #classView{
+    max-width: 950px;
     margin: 10px;
     padding: 10px;
     background-color:black;
@@ -60,7 +61,7 @@
     overflow: hidden; 
     z-index: 999;
 }
-.skillViewer{
+.skillViewer, .jobSelect{
     margin: 5px;
     padding: 10px;
     border: 2px solid white;
@@ -79,4 +80,23 @@
 .skillName{
     color:rgb(44, 180, 148);
     font-weight: bold;
+}
+.jobExplanation
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.jobSelectMessage{
+    color: white;
+    text-align: center;
+}
+.job1View{
+    color: white;
+    text-align: left;
+    position: relative;
+}
+.job2View{
+    color: white;
+    text-align: right;
+    position: relative;
 }

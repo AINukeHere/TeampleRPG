@@ -12,12 +12,76 @@ jsonObject=[
                     {
                         "command":"S",
                         "name":"배쉬",
-                        "explanation":"적을 스턴하며 강하게 벤다"
+                        "explanation":"적을 스턴하며 강하게 벤다",
+                        "type":"공격형"
                     },
                     {
                         "command":"SS",
                         "name":"리프어택",
-                        "explanation":"목표물 위로 뛰어올라 착지와 함께 공격한다."
+                        "explanation":"목표물 위로 뛰어올라 착지와 함께 공격한다.",
+                        "type":"공격형"
+                    }
+                ],
+                "jobs1":{
+                    "name":"기사단장",
+                    "spec1":4,
+                    "spec2":4,
+                    "spec3":3,
+                    "explanation":"병사를 소환하여 싸우는 소환형 근접 클래스입니다<br>일반적인 전사클래스이며, 업그레이드를 잘한다면<br>탱커와 딜러 두가지역할을 모두 맡을수 있습니다.<br>※ 4라운드 이후 돈을 더 받을수 있습니다!",
+                    "skills":[
+                        {
+                            "command":"S",
+                            "name":"배쉬",
+                            "explanation":"적을 스턴하며 강하게 벤다",
+                            "type":"공격형"
+                        },
+                        {
+                            "command":"SS",
+                            "name":"리프어택",
+                            "explanation":"목표물 위로 뛰어올라 착지와 함께 공격한다.",
+                            "type":"공격형"
+                        }
+                    ]
+                },
+                "jobs2":{
+                    "name":"버서커",
+                    "spec1":5,
+                    "spec2":2,
+                    "spec3":2,
+                    "explanation":"싸움에 미친 전사 . 때로는 아군까지 공격하기도 합니다.<br>하지만 파괴력은 모든 클래스 중 우위를 다툽니다",
+                    "skills":[
+                        {
+                            "command":"S",
+                            "name":"배쉬",
+                            "explanation":"적을 스턴하며 강하게 벤다",
+                            "type":"공격형"
+                        },
+                        {
+                            "command":"SS",
+                            "name":"리프어택",
+                            "explanation":"목표물 위로 뛰어올라 착지와 함께 공격한다.",
+                            "type":"공격형"
+                        }
+                    ]
+                }
+            },
+            {
+                "name":"위자드",
+                "image":"wizard.png",
+                "spec1":2,
+                "spec2":1,
+                "spec3":2,
+                "explanation":"중거리에서 마법을 사용하며 근접클래스를 지원하는 클래스입니다<br>하지만 체력이 부실하며 , 이동속도도 느리므로 체력관리가 필요합니다",
+                "skills":[
+                    {
+                        "command":"S",
+                        "name":"파이어볼",
+                        "explanation":"적에게 볼로된 구를 날립니다."
+                    },
+                    {
+                        "command":"SS",
+                        "name":"버닝스톤",
+                        "explanation":"불타는 돌을 만들어 적에게 쏟아 붓습니다."
                     }
                 ],
                 "jobs1":{
@@ -25,24 +89,19 @@ jsonObject=[
                     "skills":[
                         {
                             "command":"S",
-                            "name":"배쉬",
-                            "explanation":"적을 스턴하며 강하게 벤다"
+                            "name":"파이어볼",
+                            "explanation":"적에게 볼로된 구를 날립니다."
                         },
                         {
                             "command":"SS",
-                            "name":"리프어택",
-                            "explanation":"목표물 위로 뛰어올라 착지와 함께 공격한다."
+                            "name":"버닝스톤",
+                            "explanation":"불타는 돌을 만들어 적에게 쏟아 붓습니다."
                         }
                     ]
                 },
                 "jobs2":{
                     "name":"버서커"
                 }
-            },
-            {
-                "name":"위자드",
-                "image":"wizard.png",
-                "explanation":"파괴력★★☆☆☆<br>내구력★☆☆☆☆<br>기동성★★☆☆☆<br>중거리에서 마법을 사용하며 근접클래스를 지원하는 클래스입니다<br>하지만 체력이 부실하며 , 이동속도도 느리므로 체력관리가 필요합니다"
             },
             {
                 "name":"헌터",
@@ -116,37 +175,44 @@ jsonObject=[
                     {
                         "command":"S",
                         "name":"사혈참",
-                        "explanation":"적을 혹독하게 찢어 죽입니다."
+                        "explanation":"적을 혹독하게 찢어 죽입니다.",
+                        "type":"공격형"
                     },
                     {
                         "command":"C",
                         "name":"광살각",
-                        "explanation":"빛의속도로 적의 신체를 분해해버립니다."
+                        "explanation":"빛의속도로 적의 신체를 분해해버립니다.",
+                        "type":"공격형"
                     },
                     {
                         "command":"CC",
                         "name":"흡혈참",
-                        "explanation":"적의 피를 순간 흡혈해버립니다.(자신체력80%, 적체력 25%<보스불가>)"
+                        "explanation":"적의 피를 순간 흡혈해버립니다.(자신체력80%, 적체력 25%<보스불가>)",
+                        "type":"유틸기"
                     },
                     {
                         "command":"A",
                         "name":"무한(無限)광격",
-                        "explanation":"적을 수많은 검으로 강타하는데 그 숫자는 셀 수 없을 정도라고 한다."
+                        "explanation":"적을 수많은 검으로 강타하는데 그 숫자는 셀 수 없을 정도라고 한다.",
+                        "type":"공격형"
                     },
                     {
                         "command":"O",
                         "name":"블러드 오브 엠페러",
-                        "explanation":"이 기술은 어떤 기술인지 알 수 없다. 다만 피로 덮인 후에 적은 처참하게 토막 나 죽어있다."
+                        "explanation":"이 기술은 어떤 기술인지 알 수 없다. 다만 피로 덮인 후에 적은 처참하게 토막 나 죽어있다.",
+                        "type":"공격형"
                     },
                     {
                         "command":"P",
                         "name":"무감각",
-                        "explanation":"쉴드 40 유지"
+                        "explanation":"쉴드 40 유지",
+                        "type":"회복형"
                     },
                     {
                         "command":"P",
                         "name":"순수한 광기",
-                        "explanation":"아군사망시 회복"
+                        "explanation":"아군사망시 회복",
+                        "type":"회복형"
                     }
                 ]
             },
@@ -154,7 +220,60 @@ jsonObject=[
                 "name":"마제",
                 "nickname":"의문의 사나이",
                 "image":"dmsenswk.png",
-                "explanation":"파괴력측정불가.<br>내구력측정불가.<br>기동성측정불가.<br>상처(Passive)  -  사망할시 적을 지옥의 동반자로 삼습니다. <br>증오의 씨앗(Passive)  -  일정시간마다 체력을 회복합니다.<br>마제의 눈(Passive)  -  마제의 눈은 그 아무도 속일 수가 없습니다.(컴셋무한)"
+                "spec1":5,
+                "spec2":5,
+                "spec3":5,
+                "explanation":"파괴력측정불가.<br>내구력측정불가.<br>기동성측정불가.<br>상처(Passive)  -  사망할시 적을 지옥의 동반자로 삼습니다. <br>증오의 씨앗(Passive)  -  일정시간마다 체력을 회복합니다.<br>마제의 눈(Passive)  -  마제의 눈은 그 아무도 속일 수가 없습니다.(컴셋무한)",
+                "skills":[
+                    {
+                        "command":"S",
+                        "name":"어둠_[眞]",
+                        "explanation":"적을 끌어옴과 동시에 검으로 적을 가릅니다.",
+                        "type":"공격형"
+                    },
+                    {
+                        "command":"C",
+                        "name":"진환참",
+                        "explanation":"모든 적의 공격을 무력화 시킵니다.(8초 지속)",
+                        "type":"유틸기"
+                    },
+                    {
+                        "command":"CC",
+                        "name":"혈사원참",
+                        "explanation":"마제가 벤다면 그에 뒤따라 그림자도 8번을 같이 벤다는 기술이다.",
+                        "type":"공격형"
+                    },
+                    {
+                        "command":"A",
+                        "name":"쐐기_진극참",
+                        "explanation":"수천개의 칼날들이 날아와 공격 한다. 이공격을 맞는 순간 적은 흔적도 없이 사라진다.",
+                        "type":"공격형"
+                    },
+                    {
+                        "command":"O",
+                        "name":"사살백두(射殺百頭)",
+                        "explanation":"\"쏘아 죽이는 100개의 머리\"라는 뜻으로 100번을 순식간으로 적을 베어버린다.",
+                        "type":"공격형"
+                    },
+                    {
+                        "command":"P",
+                        "name":"상처",
+                        "explanation":"사망시 Fire 생성",
+                        "type":"유틸기"
+                    },
+                    {
+                        "command":"P",
+                        "name":"증오의 씨앗",
+                        "explanation":"주기적으로 체력 회복",
+                        "type":"회복형"
+                    },
+                    {
+                        "command":"P",
+                        "name":"마제의 눈",
+                        "explanation":"스캔 무한",
+                        "type":"유틸기"
+                    }
+                ]
             }
         ]
     }

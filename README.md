@@ -1,3 +1,3 @@
 # TeampleRPG
 
-this site is published at http://teamplerpg.tk/
+this site is published at https://teamplerpg.tk/
