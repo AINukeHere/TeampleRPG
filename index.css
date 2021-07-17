@@ -1,15 +1,33 @@
+section{
+    margin-left: 200px;
+}
+.sectionTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
 .classTable
 {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    max-width: 1280px;
 }
 .classProfile
 {
     margin: 20px;
     display:inline;
     text-align: center;
+}
+a.classProfile{
+    text-decoration: none;
+}
+a.classProfile:visited{
+    color:black;
+}
+a.classProfile:hover{
+    text-decoration: underline;
+    color:blue;
 }
 .classProfile:hover
 {
@@ -110,7 +128,15 @@ span{
 .jobSelection{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
 }
-.jobSelectButton{
+.job1SelectButton{
     font-size: 20px;
+    height: 50px;
+    margin-right: 10px;
+}
+.job2SelectButton{
+    font-size: 20px;
+    height: 50px;
+    margin-left: 10px;
 }

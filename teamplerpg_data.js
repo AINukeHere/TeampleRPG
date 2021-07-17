@@ -11,13 +11,13 @@ function setPopupInfoPosition(event)
 {
     var classPopupInfo = document.getElementById("classPopupInfo");
     var skillPopupInfo = document.getElementById("skillPopupInfo");
+    skillPopupInfo.style.left=(event.pageX+5).toString()+"px";
     if(event.pageX < 960){
         classPopupInfo.style.left=(event.pageX+5).toString()+"px";
-        skillPopupInfo.style.left=(event.pageX+5).toString()+"px";
     }
     else{
+        classPopupInfo.style.left=(event.pageX-5 - 450).toString()+"px";
         classPopupInfo.style.right=(event.pageX-5).toString()+"px";
-        skillPopupInfo.style.right=(event.pageX-5).toString()+"px";
     }
     skillPopupInfo.style.top=(event.pageY+5).toString()+"px";
     classPopupInfo.style.top=(event.pageY+5).toString()+"px";
@@ -149,8 +149,10 @@ function onClickClass(classIdx)
                 </div>\
             </div>\
             <div class ='jobSelection'>\
-            <button class='jobSelectButton'>선택1</button>\
-            <button class='jobSelectButton'>선택2</button>\
+            <img style='align-self:center;justify-self: center;' src='data/jobSelect1.png'>\
+            <img style='align-self:center;justify-self: center;' src='data/jobSelect2.png'>\
+            <button class='job1SelectButton' onclick='onSelectJob("+classIdx+", 0)'>선택1</button>\
+            <button class='job2SelectButton' onclick='onSelectJob("+classIdx+", 1)'>선택2</button>\
             </div>\
         </div>\
         ";
@@ -158,6 +160,10 @@ function onClickClass(classIdx)
 
     //html DOM 수정
     classView.innerHTML= innerHTML_str;
+}
+function onSelectJob(classIdx, jobIdx)
+{
+    console.log("onSelectJob("+classIdx + ", " + jobIdx + ")");
 }
 function getSpecString(starNum)
 {

@@ -6,6 +6,7 @@
         </title>
         <style type="text/css">
             @import url("index.css");
+            @import url("category.css");
         </style>
     </head>
     <body>
@@ -13,37 +14,72 @@
         <script src="teamplerpg_data.js"></script>
         <header id = "title">
             <h1>팀플RPG의 모든것</h1>
-            <h2>팀플RPG 정보공유 사이트 test2</h2>
+            <h2>팀플RPG 정보공유 사이트 (공사중임)</h2>
         </header>
-        <hr>
-        <button onclick="toggleclassTable();">클래스 보기/숨기기</button>
-        <div id="classTable" class="classTable">
-            <script>
-                for(var i =0; i < jsonObject.classes.length; ++i){
-                    document.writeln("<a href='#classView' class='classProfile' onclick='onClickClass("+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
-                        <img class='classProfileImage' src=./data/"+jsonObject.classes[i].image+"><br>");
-                    document.writeln("<span>"+jsonObject.classes[i].name+"</span><br>");
-                    if(jsonObject.classes[i].nickname)
-                    {
-                        document.writeln("<span>"+jsonObject.classes[i].nickname+"</span><br>");
-                    }
-                    document.writeln("</a>");
-                }
-                document.addEventListener('mousemove', setPopupInfoPosition);
-                
-            </script>
-            <div id="classPopupInfo" class='classPopupInfo'>
-                <div>
-                    캐릭터를 설명하는 중...
-                </div>
-                <img src='data/dummy.png'>
+        <nav>
+            <div id="index">
+                <h3>바로가기</h3>
+                <a href="#title">맨 위로</a>
+                <a href="#ClassAndJobs">클래스 및 직업</a>
+                <a href="#ItemInfomation">아이템 정보</a>
+                <a href="#StageReword">스테이지 정보</a>
+                <a href="#UpgradeCostCalculator">업그레이드 계산기</a>
+                <a href="#NuclearCalculator">핵 데미지 계산기</a>
             </div>
-        </div>
-        <button onclick="toggleclassTable();">클래스 보기/숨기기</button>
-        <div id="classView">
-        </div>
-        <div id="skillPopupInfo" class="skillPopupInfo">
-            <img src="data/S_Skill_Cost.png">
-        </div>
+        </nav>
+    
+        <section id="ClassAndJobs">
+            <hr>
+            <!-- <button onclick="toggleclassTable();">클래스 보기/숨기기</button> -->
+            <span class="sectionTitle">클래스 및 직업</span>
+            <div id="classTable" class="classTable">
+                <script>
+                    for(var i =0; i < jsonObject.classes.length; ++i){
+                        document.writeln("<a href='#classView' class='classProfile' onclick='onClickClass("+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
+                            <img class='classProfileImage' src=./data/"+jsonObject.classes[i].image+"><br>");
+                        document.writeln("<span>"+jsonObject.classes[i].name+"</span><br>");
+                        if(jsonObject.classes[i].nickname)
+                        {
+                            document.writeln("<span>"+jsonObject.classes[i].nickname+"</span><br>");
+                        }
+                        document.writeln("</a>");
+                    }
+                    document.addEventListener('mousemove', setPopupInfoPosition);
+                    
+                </script>
+                <div id="classPopupInfo" class='classPopupInfo'>
+                    <div>
+                        캐릭터를 설명하는 중...
+                    </div>
+                    <img src='data/dummy.png'>
+                </div>
+            </div>
+            <div id="classView">
+            </div>
+            <div id="skillPopupInfo" class="skillPopupInfo">
+                <img src="data/S_Skill_Cost.png">
+            </div>
+        </section>
+
+        <section id="ItemInfomation">
+            <hr>
+            <span class="sectionTitle">아이템 정보</span>
+        </section>
+
+        <section id="StageInfomation">
+            <hr>
+            <span class="sectionTitle">스테이지 정보</span>
+        </section>
+
+        <section id="UpgradeCostCalculator">
+            <hr>
+            <span class="sectionTitle">업그레이드 계산기</span>
+        </section> 
+
+        <section id="NuclearCalculator">
+            <hr>
+            <span class="sectionTitle">핵 데미지 계산기</span>
+        </section>  
+ 
     </body>
 </html>
