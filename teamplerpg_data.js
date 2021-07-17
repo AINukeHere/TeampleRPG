@@ -10,14 +10,17 @@ if(!_DEBUG)
 function setPopupInfoPosition(event)
 {
     var classPopupInfo = document.getElementById("classPopupInfo");
-    classPopupInfo.style.left=(event.pageX+5).toString()+"px";
-    classPopupInfo.style.top=(event.pageY+5).toString()+"px";
-
     var skillPopupInfo = document.getElementById("skillPopupInfo");
-    skillPopupInfo.style.left=(event.pageX+5).toString()+"px";
+    if(event.pageX < 960){
+        classPopupInfo.style.left=(event.pageX+5).toString()+"px";
+        skillPopupInfo.style.left=(event.pageX+5).toString()+"px";
+    }
+    else{
+        classPopupInfo.style.right=(event.pageX-5).toString()+"px";
+        skillPopupInfo.style.right=(event.pageX-5).toString()+"px";
+    }
     skillPopupInfo.style.top=(event.pageY+5).toString()+"px";
-    
-    //console.log(event.clientX, event.clientY);
+    classPopupInfo.style.top=(event.pageY+5).toString()+"px";
 }
 function toggleclassTable()
 {
@@ -31,8 +34,20 @@ function showClassPopupInfo(classIdx)
 {
     var classPopupInfo = document.getElementById("classPopupInfo");
     classPopupInfo.style.display="inline";
-    classPopupInfo.children[0].innerHTML = jsonObject.classes[classIdx].explanation;
-    classPopupInfo.children[1].src = 'data/'+jsonObject.classes[classIdx].image;
+
+    var classInfo = jsonObject.classes[classIdx];
+    var spec_str1=getSpecString(classInfo.spec1);
+    var spec_str2=getSpecString(classInfo.spec2);
+    var spec_str3=getSpecString(classInfo.spec3);
+    
+    classPopupInfo.children[0].innerHTML = "\
+    <div><span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span></div>\
+    <div><span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span></div>\
+    <div><span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span></div>\
+    <span class='explanation'>"+classInfo.explanation+"</span>\
+    <span></span>\
+    ";
+    classPopupInfo.children[1].src = 'data/'+classInfo.image;
 }
 function hideClassPopupInfo(obj)
 {
@@ -116,34 +131,27 @@ function onClickClass(classIdx)
         var job2_spec3_str = getSpecString(classInfo.jobs2.spec3);
         innerHTML_str += "\
         <div class='jobSelect'>\
-        <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
-        <div class='jobExplanation'>\
-        <div class='job1View'><span>" + classInfo.jobs1.name+ "("+classInfo.jobs1.nickname+")</span><br>\
-        <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
-        <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
-        <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
-        " + classInfo.jobs1.explanation + "</div>\
-        <div class='job2View'><span>" + classInfo.jobs2.name+ "("+classInfo.jobs1.nickname+")</span><br>\
-        <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
-        <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
-        <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
-        " + classInfo.jobs2.explanation + "</div>\
-        </div>";
-        // <tr><td>" + classInfo.jobs1.name + "</td><td>" + classInfo.jobs2.name + "</td></tr>\
-        // <tr><td class='job1Explanation'>" + classInfo.jobs1.explanation + "</td><td class='job2Explanation'>" + classInfo.jobs2.explanation + "</td></tr>";
-        // var explanationLines = classInfo.jobs1.explanation.length > classInfo.jobs2.explanation.length ? classInfo.jobs1.explanation.length : classInfo.jobs2.explanation.length;
-        // for(var i =0; i< explanationLines; ++i)
-        // {
-        //     if (i < classInfo.jobs1.explanation.length){
-        //         innerHTML_str += "\
-        //         <tr><td>" + classInfo.jobs1.explanation[i] + "</td>";
-        //     }
-        //     if (i < classInfo.jobs1.explanation.length){
-        //         innerHTML_str += "\
-        //         <td>" + classInfo.jobs2.explanation[i] + "</td></tr>";
-        //     }
-        // }
-        innerHTML_str += "\
+            <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
+            <div class='jobExplanation'>\
+                <div class='job1View'>\
+                    <span>" + classInfo.jobs1.name+ "("+classInfo.jobs1.nickname+")</span><br>\
+                    <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
+                    <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
+                    <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
+                    " + classInfo.jobs1.explanation + "\
+                </div>\
+                <div class='job2View'>\
+                    <span>" + classInfo.jobs2.name+ "("+classInfo.jobs1.nickname+")</span><br>\
+                    <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
+                    <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
+                    <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
+                    " + classInfo.jobs2.explanation + "\
+                </div>\
+            </div>\
+            <div class ='jobSelection'>\
+            <button class='jobSelectButton'>선택1</button>\
+            <button class='jobSelectButton'>선택2</button>\
+            </div>\
         </div>\
         ";
     }
@@ -154,7 +162,7 @@ function onClickClass(classIdx)
 function getSpecString(starNum)
 {
     var spec_str = "";
-    for(var i = 5, spec = starNum; i > 0; --i,--spec){
+    for(var i = 5, spec = starNum; i > 0 || spec > 0; --i,--spec){
         spec_str += (spec > 0) ? "★" : "☆";
     }
     return spec_str;

@@ -22,19 +22,24 @@
 }
 .classPopupInfo
 {
-    background-color: white;
+    background-color: black;
     padding: 4px;
     position: absolute; 
     display: none; 
     float: left; 
     overflow: hidden; 
     z-index: 999;
+    min-width: 450px;
+    max-width: 450px;
 }
 #classView{
     max-width: 950px;
     margin: 10px;
     padding: 10px;
     background-color:black;
+}
+span{
+    font-size: 16px;
 }
 .specName
 {
@@ -54,6 +59,7 @@
 .skillPopupInfo
 {
     background-color: black;
+    min-width: 128px;
     padding: 4px;
     position: absolute; 
     display: none; 
@@ -85,6 +91,7 @@
 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 10px;
 }
 .jobSelectMessage{
     color: white;
@@ -99,4 +106,11 @@
     color: white;
     text-align: right;
     position: relative;
+}
+.jobSelection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.jobSelectButton{
+    font-size: 20px;
 }
