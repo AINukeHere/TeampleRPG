@@ -14,12 +14,14 @@
 	margin:5px;
 	margin-bottom: 5px;
 	width:150px;
-	height:30px;
-	line-height: 30px;
+	height:45px;
+	line-height: 45px;
 	text-align: center;
 	font-size:16px;
     font-weight: bold;
 	color:black;
     text-decoration: none;
 }
-#index a:hover {background-color:#ff6600;}
+#index a:hover {
+    background-color:#ff6600;
+}

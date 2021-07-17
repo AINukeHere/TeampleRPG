@@ -11,16 +11,17 @@ function setPopupInfoPosition(event)
 {
     var classPopupInfo = document.getElementById("classPopupInfo");
     var skillPopupInfo = document.getElementById("skillPopupInfo");
-    skillPopupInfo.style.left=(event.pageX+5).toString()+"px";
+    var offset = 10;
+    skillPopupInfo.style.left=(event.pageX+offset).toString()+"px";
     if(event.pageX < 960){
-        classPopupInfo.style.left=(event.pageX+5).toString()+"px";
+        classPopupInfo.style.left=(event.pageX+offset).toString()+"px";
     }
     else{
-        classPopupInfo.style.left=(event.pageX-5 - 450).toString()+"px";
-        classPopupInfo.style.right=(event.pageX-5).toString()+"px";
+        classPopupInfo.style.left=(event.pageX-offset - 450).toString()+"px";
+        classPopupInfo.style.right=(event.pageX-offset).toString()+"px";
     }
-    skillPopupInfo.style.top=(event.pageY+5).toString()+"px";
-    classPopupInfo.style.top=(event.pageY+5).toString()+"px";
+    skillPopupInfo.style.top=(event.pageY+offset).toString()+"px";
+    classPopupInfo.style.top=(event.pageY+offset).toString()+"px";
 }
 function toggleclassTable()
 {
@@ -47,7 +48,7 @@ function showClassPopupInfo(classIdx)
     <span class='explanation'>"+classInfo.explanation+"</span>\
     <span></span>\
     ";
-    classPopupInfo.children[1].src = 'data/'+classInfo.image;
+    classPopupInfo.getElementsByTagName("img")[0].src = 'data/'+classInfo.image;
 }
 function hideClassPopupInfo(obj)
 {
