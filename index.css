@@ -1,9 +1,9 @@
 #title{
-    min-width: 956px;
+    /* min-width: 956px;
     min-height: 200px;
     background-image: url("data/titleBackground.jpg");
     background-repeat: no-repeat;
-    background-position:center top;
+    background-position:center top; */
 }
 #title a{
     vertical-align: middle;

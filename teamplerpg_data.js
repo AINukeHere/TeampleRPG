@@ -3,7 +3,7 @@ var jsonObject = jsonObject[0];
 if(!_DEBUG)
 {
     var request = new XMLHttpRequest();
-    request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/class_info.json", false);
+    request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/images/class_info.json", false);
     request.send(null)
     jsonObject = JSON.parse(request.responseText);
 }
@@ -48,7 +48,7 @@ function showClassPopupInfo(classIdx)
     <span class='explanation'>"+classInfo.explanation+"</span>\
     <span></span>\
     ";
-    classPopupInfo.getElementsByTagName("img")[0].src = 'data/'+classInfo.image;
+    classPopupInfo.getElementsByTagName("img")[0].src = 'data/images/'+classInfo.image;
 }
 function hideClassPopupInfo(obj)
 {
@@ -59,7 +59,7 @@ function showSkillPopupInfo(skillCommand)
 {
     var skillPopupInfo = document.getElementById("skillPopupInfo");
     skillPopupInfo.style.display="inline";
-    skillPopupInfo.getElementsByTagName("img")[0].src = "data/"+skillCommand+"_Skill_Cost.png";
+    skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/"+skillCommand+"_Skill_Cost.png";
 }
 function hideSkillPopupInfo()
 {
@@ -79,7 +79,7 @@ function onClickClass(classIdx)
     
 
     var innerHTML_str = "\
-    <img class='classProfileImage' src=data/"+jsonObject.classes[classIdx].image+"><br>\
+    <img class='classProfileImage' src=data/images/"+jsonObject.classes[classIdx].image+"><br>\
     <span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span><br>\
     <span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span><br>\
     <span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span><br>\
@@ -100,7 +100,7 @@ function onClickClass(classIdx)
                 <img class='skillIcon'\
                 onmousemove='showSkillPopupInfo(\""+skillInfo.command[cmdIdx]+"\")' \
                 onmouseout='hideSkillPopupInfo()' \
-                src='data/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
+                src='data/images/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
             }
             innerHTML_str += "\
             <span style='color:white'>" +skillInfo.type+"</span>\
@@ -150,8 +150,8 @@ function onClickClass(classIdx)
                 </div>\
             </div>\
             <div class ='jobSelection'>\
-            <img style='align-self:center;justify-self: center;' src='data/jobSelect1.png'>\
-            <img style='align-self:center;justify-self: center;' src='data/jobSelect2.png'>\
+            <img style='align-self:center;justify-self: center;' src='data/images/jobSelect1.png'>\
+            <img style='align-self:center;justify-self: center;' src='data/images/jobSelect2.png'>\
             <button class='job1SelectButton' onclick='onSelectJob("+classIdx+", 0)'>선택1</button>\
             <button class='job2SelectButton' onclick='onSelectJob("+classIdx+", 1)'>선택2</button>\
             </div>\

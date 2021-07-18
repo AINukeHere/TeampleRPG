@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta property="og:url" content="https://ainukehere.github.io/TeampleRPG">
+        <meta property="og:title" content="팀플RPG 정보 공유 사이트">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="data/images/favicon.png">
+        <meta property="og:description" content="hi">
         <title>
             팀플RPG 공식 사이트
         </title>
@@ -10,7 +15,7 @@
         </style>
     </head>
     <body>
-        <script ttype="text/javascript" src="data/d_class_info.js"></script>
+        <script ttype="text/javascript" src="data/game/d_class_info.js"></script>
         <script src="teamplerpg_data.js"></script>
         <header id="title">
             <a href="">
@@ -38,7 +43,7 @@
                 <script>
                     for(var i =0; i < jsonObject.classes.length; ++i){
                         document.writeln("<a href='#classView' class='classProfile' onclick='onClickClass("+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
-                            <img class='classProfileImage' src=./data/"+jsonObject.classes[i].image+"><br>");
+                            <img class='classProfileImage' src=./data/images/"+jsonObject.classes[i].image+"><br>");
                         document.writeln("<span>"+jsonObject.classes[i].name+"</span><br>");
                         if(jsonObject.classes[i].nickname)
                         {
@@ -54,13 +59,13 @@
                         캐릭터를 설명하는 중...
                     </div>
                     <br>
-                    <img src='data/dummy.png'>
+                    <img src='data/images/dummy.png'>
                 </div>
             </div>
             <div id="classView">
             </div>
             <div id="skillPopupInfo" class="skillPopupInfo">
-                <img src="data/S_Skill_Cost.png">
+                <img src="data/images/S_Skill_Cost.png">
             </div>
         </section>
 
