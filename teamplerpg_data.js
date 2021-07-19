@@ -72,7 +72,7 @@ function onClickClass(classIdx)
     //toggleclassTable();
     var classInfo = jsonObject.classes[classIdx];
     var classView = document.getElementById("classView");
-    
+    classView.style.display="block";
     var spec_str1=getSpecString(classInfo.spec1);
     var spec_str2=getSpecString(classInfo.spec2);
     var spec_str3=getSpecString(classInfo.spec3);
@@ -86,21 +86,99 @@ function onClickClass(classIdx)
     <span class='explanation'>"+jsonObject.classes[classIdx].explanation+"</span>\
     <br>\
     <div class='skillViewer'>\
+    "+getSkillInnerHTML(classInfo.skills)+"\
+    </div>\
     ";
-    for(var i = 0; i < classInfo.skills.length; ++i)
+    if(classInfo.jobs != null){
+        var job1_spec1_str = getSpecString(classInfo.jobs[0].spec1);
+        var job1_spec2_str = getSpecString(classInfo.jobs[0].spec2);
+        var job1_spec3_str = getSpecString(classInfo.jobs[0].spec3);
+        var job2_spec1_str = getSpecString(classInfo.jobs[1].spec1);
+        var job2_spec2_str = getSpecString(classInfo.jobs[1].spec2);
+        var job2_spec3_str = getSpecString(classInfo.jobs[1].spec3);
+        innerHTML_str += "\
+        <div class='jobSelect'>\
+            <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
+            <div class='jobExplanation'>\
+                <div class='job1View'>\
+                    <span>" + classInfo.jobs[0].name+ "("+classInfo.jobs[0].nickname+")</span><br>\
+                    <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
+                    <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
+                    <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
+                    " + classInfo.jobs[0].explanation + "\
+                </div>\
+                <div class='job2View'>\
+                    <span>" + classInfo.jobs[1].name+ "("+classInfo.jobs[1].nickname+")</span><br>\
+                    <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
+                    <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
+                    <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
+                    " + classInfo.jobs[1].explanation + "\
+                </div>\
+            </div>\
+            <div class ='jobSelection'>\
+            <img style='align-self:center;justify-self: center;' src='data/images/jobSelect1.png'>\
+            <img style='align-self:center;justify-self: center;' src='data/images/jobSelect2.png'>\
+            <button class='job1SelectButton' onclick='onSelectJob("+classIdx+", 0)'>선택1</button>\
+            <button class='job2SelectButton' onclick='onSelectJob("+classIdx+", 1)'>선택2</button>\
+            </div>\
+        </div>\
+        ";
+    }
+
+    //html DOM 수정
+    classView.innerHTML= innerHTML_str;
+}
+function onSelectJob(classIdx, jobIdx)
+{
+    console.log("onSelectJob("+classIdx + ", " + jobIdx + ")");
+    var jobView = document.getElementById("jobView");
+    var innerHTML_str = "";
+    innerHTML_str += "<div class='skillViewer'>\
+    "+getSkillInnerHTML(jsonObject.classes[classIdx].jobs[jobIdx].skills)+"\
+    </div>";
+    jobView.innerHTML = innerHTML_str;
+    jobView.style.display = "block";
+    location.href = "#jobView";
+}
+function getSpecString(starNum)
+{
+    var spec_str = "";
+    for(var i = 5, spec = starNum; i > 0 || spec > 0; --i,--spec){
+        spec_str += (spec > 0) ? "★" : "☆";
+    }
+    return spec_str;
+}
+function getSkillInnerHTML(skills){
+    var innerHTML_str = "";
+    for(var i = 0; i < skills.length; ++i)
     {
-        var skillInfo = classInfo.skills[i];
+        var skillInfo = skills[i];
         innerHTML_str += "\
         <table class='skillContent'>\
         <tr>\
             <td>";
             for(var cmdIdx = 0; cmdIdx < skillInfo.command.length; ++cmdIdx)
             {
-                innerHTML_str += "\
-                <img class='skillIcon'\
-                onmousemove='showSkillPopupInfo(\""+skillInfo.command[cmdIdx]+"\")' \
-                onmouseout='hideSkillPopupInfo()' \
-                src='data/images/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
+                switch(skillInfo.command[cmdIdx]){
+                    case "S":
+                    case "C":
+                    case "A":
+                    case "O":
+                    case "P":
+                    case "Z":
+                    case "D":
+                    case "T":
+                    case "K":
+                        innerHTML_str += "\
+                        <img class='skillIcon'\
+                        onmousemove='showSkillPopupInfo(\""+skillInfo.command[cmdIdx]+"\")' \
+                        onmouseout='hideSkillPopupInfo()' \
+                        src='data/images/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
+                        break;
+                    default:
+                        innerHTML_str += "<span style='color:white'>"+skillInfo.command[cmdIdx]+"</span>";
+                        //innerHTML_str += skillInfo.command[cmdIdx];
+                }
             }
             innerHTML_str += "\
             <span style='color:white'>" +skillInfo.type+"</span>\
@@ -120,57 +198,5 @@ function onClickClass(classIdx)
         </table>\
         ";
     }
-    innerHTML_str+="\
-    </div>\
-    ";
-    if(classInfo.jobs1 != null){
-        var job1_spec1_str = getSpecString(classInfo.jobs1.spec1);
-        var job1_spec2_str = getSpecString(classInfo.jobs1.spec2);
-        var job1_spec3_str = getSpecString(classInfo.jobs1.spec3);
-        var job2_spec1_str = getSpecString(classInfo.jobs2.spec1);
-        var job2_spec2_str = getSpecString(classInfo.jobs2.spec2);
-        var job2_spec3_str = getSpecString(classInfo.jobs2.spec3);
-        innerHTML_str += "\
-        <div class='jobSelect'>\
-            <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
-            <div class='jobExplanation'>\
-                <div class='job1View'>\
-                    <span>" + classInfo.jobs1.name+ "("+classInfo.jobs1.nickname+")</span><br>\
-                    <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
-                    <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
-                    <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
-                    " + classInfo.jobs1.explanation + "\
-                </div>\
-                <div class='job2View'>\
-                    <span>" + classInfo.jobs2.name+ "("+classInfo.jobs1.nickname+")</span><br>\
-                    <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
-                    <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
-                    <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
-                    " + classInfo.jobs2.explanation + "\
-                </div>\
-            </div>\
-            <div class ='jobSelection'>\
-            <img style='align-self:center;justify-self: center;' src='data/images/jobSelect1.png'>\
-            <img style='align-self:center;justify-self: center;' src='data/images/jobSelect2.png'>\
-            <button class='job1SelectButton' onclick='onSelectJob("+classIdx+", 0)'>선택1</button>\
-            <button class='job2SelectButton' onclick='onSelectJob("+classIdx+", 1)'>선택2</button>\
-            </div>\
-        </div>\
-        ";
-    }
-
-    //html DOM 수정
-    classView.innerHTML= innerHTML_str;
-}
-function onSelectJob(classIdx, jobIdx)
-{
-    console.log("onSelectJob("+classIdx + ", " + jobIdx + ")");
-}
-function getSpecString(starNum)
-{
-    var spec_str = "";
-    for(var i = 5, spec = starNum; i > 0 || spec > 0; --i,--spec){
-        spec_str += (spec > 0) ? "★" : "☆";
-    }
-    return spec_str;
+    return innerHTML_str;
 }

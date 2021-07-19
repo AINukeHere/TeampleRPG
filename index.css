@@ -65,7 +65,8 @@ a.classProfile:hover{
     min-width: 640px;
     max-width: 720px;
 }
-#classView{
+#classView, #jobView{
+    display: none;
     width: 950px;
     margin: 10px;
     padding: 10px;
@@ -107,6 +108,12 @@ span{
 }
 .skillContent{
     padding-bottom: 20px;
+}
+.skillContent td img{
+    vertical-align: middle;
+}
+.skillContent td > span{
+    font-weight: bold;
 }
 .skillIcon{
     width:52px;
