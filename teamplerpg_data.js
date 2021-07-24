@@ -72,6 +72,8 @@ function onClickClass(classIdx)
     //toggleclassTable();
     var classInfo = jsonObject.classes[classIdx];
     var classView = document.getElementById("classView");
+    var jobView = document.getElementById("jobView");
+    jobView.style.display="none";
     classView.style.display="block";
     var spec_str1=getSpecString(classInfo.spec1);
     var spec_str2=getSpecString(classInfo.spec2);
@@ -139,6 +141,7 @@ function onSelectJob(classIdx, jobIdx)
     jobView.innerHTML = innerHTML_str;
     jobView.style.display = "block";
     location.href = "#jobView";
+    post('',{job_index: '0'});
 }
 function getSpecString(starNum)
 {
@@ -199,4 +202,26 @@ function getSkillInnerHTML(skills){
         ";
     }
     return innerHTML_str;
+}
+function post(path, params, method='post') {
+
+    // The rest of this code assumes you are not using a library.
+    // It can be made less verbose if you use one.
+    const form = document.createElement('form');
+    form.method = method;
+    form.action = path;
+  
+    for (const key in params) {
+      if (params.hasOwnProperty(key)) {
+        const hiddenField = document.createElement('input');
+        hiddenField.type = 'hidden';
+        hiddenField.name = key;
+        hiddenField.value = params[key];
+  
+        form.appendChild(hiddenField);
+      }
+    }
+  
+    document.body.appendChild(form);
+    form.submit();
 }

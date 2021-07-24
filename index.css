@@ -30,11 +30,12 @@ section{
 }
 .classProfile
 {
-    margin: 20px;
+    margin: 10px;
     display:inline;
     text-align: center;
 }
 a.classProfile{
+    min-width: 160px;
     text-decoration: none;
 }
 a.classProfile:visited{
