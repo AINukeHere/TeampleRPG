@@ -7,6 +7,9 @@ if(!_DEBUG)
     request.send(null)
     jsonObject = JSON.parse(request.responseText);
 }
+
+
+
 function setPopupInfoPosition(event)
 {
     var classPopupInfo = document.getElementById("classPopupInfo");
@@ -75,6 +78,7 @@ function onClickClass(classIdx)
     var jobView = document.getElementById("jobView");
     jobView.style.display="none";
     classView.style.display="block";
+
     var spec_str1=getSpecString(classInfo.spec1);
     var spec_str2=getSpecString(classInfo.spec2);
     var spec_str3=getSpecString(classInfo.spec3);
@@ -129,6 +133,8 @@ function onClickClass(classIdx)
 
     //html DOM 수정
     classView.innerHTML= innerHTML_str;
+    location.href ="#classView?classIdx="+classIdx;
+    console.log(location.href);
 }
 function onSelectJob(classIdx, jobIdx)
 {
@@ -140,8 +146,7 @@ function onSelectJob(classIdx, jobIdx)
     </div>";
     jobView.innerHTML = innerHTML_str;
     jobView.style.display = "block";
-    location.href = "#jobView";
-    post('',{job_index: '0'});
+    location.href ="#jobView?classIdx="+classIdx+"&jobIdx="+jobIdx;
 }
 function getSpecString(starNum)
 {
@@ -225,3 +230,18 @@ function post(path, params, method='post') {
     document.body.appendChild(form);
     form.submit();
 }
+function get_query(){
+    var url = document.location.href;
+    var qs = url.substring(url.indexOf('?') + 1).split('&');
+    for(var i = 0, result = {}; i < qs.length; i++){
+        qs[i] = qs[i].split('=');
+        result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+    }
+    return result;
+}
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }

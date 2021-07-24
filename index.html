@@ -88,6 +88,11 @@
             <hr>
             <span class="sectionTitle">핵 데미지 계산기</span>
         </section>  
- 
+        <script>
+            var result = get_query();
+            if(result.classIdx != null && result.jobIdx != null){
+                onSelectJob(result.classIdx, result.jobIdx);
+            }
+        </script>
     </body>
 </html>
