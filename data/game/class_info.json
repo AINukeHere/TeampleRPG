@@ -431,6 +431,30 @@
                             "name":"Priest Angel Mode",
                             "explanation":"프리스트가 아름다움과 마음을 상징하는 천사로 탈바꿈합니다.",
                             "type":"유틸기"
+                        },
+                        {
+                            "command":"AngelMode+S",
+                            "name":"샤이닝 에로우",
+                            "explanation":"빛의 화살을 발사합니다.",
+                            "type":"공격형"
+                        },
+                        {
+                            "command":"AngelMode+C",
+                            "name":"힐",
+                            "explanation":"주변에 있는 아군의 HP를 전부 회복한다.(근처 모든 유닛 100%회복)",
+                            "type":"회복형"
+                        },
+                        {
+                            "command":"AngelMode+A",
+                            "name":"홀리 윙즈워드",
+                            "explanation":"천사의 깃털로 적을 제압합니다.",
+                            "type":"공격형"
+                        },
+                        {
+                            "command":"AngelMode+O",
+                            "name":"크로스 캐논",
+                            "explanation":"십자가의 모양의 캐논을 힘껏 발사합니다.",
+                            "type":"공격형"
                         }
                     ]
                 },
@@ -647,7 +671,7 @@
                             "type":"소환형"
                         },
                         {
-                            "command":"그림자 영혼 주입 + C",
+                            "command":"O + C",
                             "name":"그림자 영혼 분열",
                             "explanation":"영혼 주입된 그림자가 그림자 8개로 분열합니다.",
                             "type":"소환형"
@@ -699,7 +723,7 @@
                             "type":"소환형"
                         },
                         {
-                            "command":"대거4기+S",
+                            "command":"대거4기+O",
                             "name":"익스플로젼 대거",
                             "explanation":"포이즌대거를 제물로 소형폭탄을 장착한다.(가스600 반환)",
                             "type":"소환형"

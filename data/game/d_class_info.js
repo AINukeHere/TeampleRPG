@@ -432,6 +432,30 @@ jsonObject=[
                                 "name":"Priest Angel Mode",
                                 "explanation":"프리스트가 아름다움과 마음을 상징하는 천사로 탈바꿈합니다.",
                                 "type":"유틸기"
+                            },
+                            {
+                                "command":"엔젤모드+S",
+                                "name":"샤이닝 에로우",
+                                "explanation":"빛의 화살을 발사합니다.",
+                                "type":"공격형"
+                            },
+                            {
+                                "command":"엔젤모드+C",
+                                "name":"힐",
+                                "explanation":"주변에 있는 아군의 HP를 전부 회복한다.(근처 모든 유닛 100%회복)",
+                                "type":"회복형"
+                            },
+                            {
+                                "command":"엔젤모드+A",
+                                "name":"홀리 윙즈워드",
+                                "explanation":"천사의 깃털로 적을 제압합니다.",
+                                "type":"공격형"
+                            },
+                            {
+                                "command":"엔젤모드+O",
+                                "name":"크로스 캐논",
+                                "explanation":"십자가의 모양의 캐논을 힘껏 발사합니다.",
+                                "type":"공격형"
                             }
                         ]
                     },

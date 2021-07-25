@@ -13,6 +13,9 @@
 #title a:visited{
     color: black;
 }
+li{
+    display: inline;
+}
 section{
     margin-left: 200px;
 }

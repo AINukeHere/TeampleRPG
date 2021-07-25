@@ -18,7 +18,7 @@
         <script ttype="text/javascript" src="data/game/d_class_info.js"></script>
         <script src="teamplerpg_data.js"></script>
         <header id="title">
-            <a href="">
+            <a href=".">
                 <h1>팀플RPG의 모든것</h1>
                 <h2>팀플RPG 정보공유 사이트 (개발중)</h2>
             </a>
@@ -35,14 +35,19 @@
             </div>
         </nav>
         <hr>
-    
+        <ul>
+            <li>a</li>
+            <li>s</li>
+            <li>c</li>
+            <li>b</li>
+        </ul>
         <section id="ClassAndJobs">
             <!-- <button onclick="toggleclassTable();">클래스 보기/숨기기</button> -->
             <span class="sectionTitle">클래스 및 직업</span>
             <div id="classTable" class="classTable">
                 <script>
                     for(var i =0; i < jsonObject.classes.length; ++i){
-                        document.writeln("<a href='#classView' class='classProfile' onclick='onClickClass("+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
+                        document.writeln("<a class='classProfile' onclick='onClickClass(false,"+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
                             <img class='classProfileImage' src=./data/images/"+jsonObject.classes[i].image+"><br>");
                         document.writeln("<span>"+jsonObject.classes[i].name+"</span><br>");
                         if(jsonObject.classes[i].nickname)
@@ -90,8 +95,16 @@
         </section>  
         <script>
             var result = get_query();
-            if(result.classIdx != null && result.jobIdx != null){
-                onSelectJob(result.classIdx, result.jobIdx);
+            if(result.classIdx != null)
+            {
+                onClickClass(true, result.classIdx);
+                if(result.jobIdx != null){
+                    onSelectJob(true, result.classIdx, result.jobIdx);
+                    location.href = "#jobView";
+                }
+                else{
+                    location.href = "#classView";
+                }
             }
         </script>
     </body>

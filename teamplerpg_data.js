@@ -70,9 +70,9 @@ function hideSkillPopupInfo()
     skillPopupInfo.style.display="none";
 }
 
-function onClickClass(classIdx)
+function onClickClass(isURL, classIdx)
 {
-    //toggleclassTable();
+    console.log("onClickClass("+isURL+","+classIdx + ")");
     var classInfo = jsonObject.classes[classIdx];
     var classView = document.getElementById("classView");
     var jobView = document.getElementById("jobView");
@@ -124,8 +124,8 @@ function onClickClass(classIdx)
             <div class ='jobSelection'>\
             <img style='align-self:center;justify-self: center;' src='data/images/jobSelect1.png'>\
             <img style='align-self:center;justify-self: center;' src='data/images/jobSelect2.png'>\
-            <button class='job1SelectButton' onclick='onSelectJob("+classIdx+", 0)'>선택1</button>\
-            <button class='job2SelectButton' onclick='onSelectJob("+classIdx+", 1)'>선택2</button>\
+            <button class='job1SelectButton' onclick='onSelectJob(false,"+classIdx+", 0)'>선택1</button>\
+            <button class='job2SelectButton' onclick='onSelectJob(false,"+classIdx+", 1)'>선택2</button>\
             </div>\
         </div>\
         ";
@@ -133,12 +133,12 @@ function onClickClass(classIdx)
 
     //html DOM 수정
     classView.innerHTML= innerHTML_str;
-    location.href ="#classView?classIdx="+classIdx;
-    console.log(location.href);
+        location.href ="#classView";
+        location.href += "&?classIdx="+classIdx;
 }
-function onSelectJob(classIdx, jobIdx)
+function onSelectJob(isURL, classIdx, jobIdx)
 {
-    console.log("onSelectJob("+classIdx + ", " + jobIdx + ")");
+    console.log("onSelectJob("+isURL+","+classIdx + ", " + jobIdx + ")");
     var jobView = document.getElementById("jobView");
     var innerHTML_str = "";
     innerHTML_str += "<div class='skillViewer'>\
@@ -146,7 +146,8 @@ function onSelectJob(classIdx, jobIdx)
     </div>";
     jobView.innerHTML = innerHTML_str;
     jobView.style.display = "block";
-    location.href ="#jobView?classIdx="+classIdx+"&jobIdx="+jobIdx;
+    location.href ="#jobView";
+    location.href += "?classIdx="+classIdx+"&jobIdx="+jobIdx;
 }
 function getSpecString(starNum)
 {
