@@ -417,8 +417,8 @@ jsonObject=[
                             },
                             {
                                 "command":"A",
-                                "name":"의료장비 공급",
-                                "explanation":"사용했던 의료장비를 보충한다.",
+                                "name":"힐",
+                                "explanation":"주변에 있는 아군의 HP를 전부 회복한다.(주캐릭터만 회복)",
                                 "type":"회복형"
                             },
                             {

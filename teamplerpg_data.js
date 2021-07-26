@@ -133,14 +133,17 @@ function onClickClass(isURL, classIdx)
 
     //html DOM 수정
     classView.innerHTML= innerHTML_str;
-        location.href ="#classView";
-        location.href += "&?classIdx="+classIdx;
+    location.href ="#classView";
+    location.href += "&?classIdx="+classIdx;
 }
 function onSelectJob(isURL, classIdx, jobIdx)
 {
     console.log("onSelectJob("+isURL+","+classIdx + ", " + jobIdx + ")");
     var jobView = document.getElementById("jobView");
     var innerHTML_str = "";
+    innerHTML_str += "<div class='missionObjViewer'>\
+    " + getMissionObjInnerHTML(classIdx, jobIdx) + "\
+    </div>";
     innerHTML_str += "<div class='skillViewer'>\
     "+getSkillInnerHTML(jsonObject.classes[classIdx].jobs[jobIdx].skills)+"\
     </div>";
@@ -156,6 +159,50 @@ function getSpecString(starNum)
         spec_str += (spec > 0) ? "★" : "☆";
     }
     return spec_str;
+}
+function getMissionObjInnerHTML(classIdx, jobIdx){
+    var innerHTML_str = "";
+    var jobInfo = jsonObject.classes[classIdx].jobs[jobIdx];
+    innerHTML_str += "<div><span class='defaultFont'>임무 목표</span></div>";
+    innerHTML_str += "<div class='missionObjContent'><span class='hyphenColor'>"+jobInfo.name+"</span>\
+    <span class='missionObjSupportColor'>스킬명 색상구분 (</span>\
+    <span class='attackTypeColor'>공격형</span>\
+    <span class='summonTypeColor'>소환형</span>\
+    <span class='utilTypeColor'>유틸기</span>\
+    <span class='recoveryTypeColor'>회복형</span>\
+    <span class='missionObjSupportColor'>)</span>\
+    </div>";
+    for(var i = 0; i < jobInfo.skills.length; ++i)
+    {
+        var skillInfo = jobInfo.skills[i];
+        innerHTML_str += "\
+        <div class='missionObjContent'>";
+        
+        switch(skillInfo.type){
+            case "공격형":
+                innerHTML_str += "<span class='attackTypeColor'>" + skillInfo.name +"</span>\
+                <span class='hyphenColor'> - </span>";
+                break;
+            case "소환형":
+                innerHTML_str += "<span class='summonTypeColor'>" + skillInfo.name +"</span>\
+                <span class='hyphenColor'> - </span>";
+                break;
+            case "유틸기":
+                innerHTML_str += "<span class='utilTypeColor'>" + skillInfo.name +"</span>\
+                <span class='hyphenColor'> - </span>";
+                break;
+            case "회복형":
+                innerHTML_str += "<span class='recoveryTypeColor'>" + skillInfo.name +"</span>\
+                <span class='hyphenColor'> - </span>";
+                break;
+            default:
+                console.log("unknown skill type:"+skillInfo.type);
+                break;
+        }
+        innerHTML_str += "<span class='skillCommand'>"+skillInfo.command + "</span></div>";
+    }
+    innerHTML_str += "<div class='missionObjBtn'><img src='data/images/missionObjBtn.png'></img></div>";
+    return innerHTML_str;
 }
 function getSkillInnerHTML(skills){
     var innerHTML_str = "";
@@ -189,8 +236,24 @@ function getSkillInnerHTML(skills){
                         //innerHTML_str += skillInfo.command[cmdIdx];
                 }
             }
-            innerHTML_str += "\
-            <span style='color:white'>" +skillInfo.type+"</span>\
+            switch(skillInfo.type){
+                case "공격형":
+                    innerHTML_str += "<span class='attackTypeColor'>";
+                    break;
+                case "소환형":
+                    innerHTML_str += "<span class='summonTypeColor'>";
+                    break;
+                case "유틸기":
+                    innerHTML_str += "<span class='utilTypeColor'>";
+                    break;
+                case "회복형":
+                    innerHTML_str += "<span class='recoveryTypeColor'>";
+                    break;
+                default:
+                    console.log("unknown skill type:"+skillInfo.type);
+                    break;
+            }
+            innerHTML_str += skillInfo.type+"</span>\
             </td>\
         </tr>\
         <tr>\
@@ -209,28 +272,6 @@ function getSkillInnerHTML(skills){
     }
     return innerHTML_str;
 }
-function post(path, params, method='post') {
-
-    // The rest of this code assumes you are not using a library.
-    // It can be made less verbose if you use one.
-    const form = document.createElement('form');
-    form.method = method;
-    form.action = path;
-  
-    for (const key in params) {
-      if (params.hasOwnProperty(key)) {
-        const hiddenField = document.createElement('input');
-        hiddenField.type = 'hidden';
-        hiddenField.name = key;
-        hiddenField.value = params[key];
-  
-        form.appendChild(hiddenField);
-      }
-    }
-  
-    document.body.appendChild(form);
-    form.submit();
-}
 function get_query(){
     var url = document.location.href;
     var qs = url.substring(url.indexOf('?') + 1).split('&');
@@ -240,9 +281,3 @@ function get_query(){
     }
     return result;
 }
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-    results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }

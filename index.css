@@ -166,3 +166,61 @@ span{
     height: 50px;
     margin-left: 10px;
 }
+.missionObjViewer{
+    background-color: rgb(0, 11, 39);
+    border: 2px solid rgb(0, 6, 59);
+    border-radius: 10px;
+    padding-left: 5px;
+    margin: 25px;
+    /* min-height: 510px; */
+}
+.missionObjViewer span{
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: 1px 2px black;
+}
+span.defaultFont{
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgb(184, 184, 232);
+}
+.missionObjViewer div.missionObjContent{
+    margin-bottom: 10px;
+}
+span.attackTypeColor{
+    color:rgb(200, 24, 24);
+}
+span.summonTypeColor{
+    color:rgb(220, 220, 60);
+}
+span.recoveryTypeColor{
+    color:rgb(16, 252, 24);
+}
+span.utilTypeColor{
+    color:rgb(14, 81, 230);
+}
+span.hyphenColor{
+    color:rgb(0, 228, 252);
+}
+div.missionObjViewer > div > span.skillCommand{
+    color:white;
+}
+div.missionObjViewer > div > span.missionObjSupportColor{
+    color:rgb(64, 104, 212);
+}
+.missionObjBtn{
+    position: relative;
+    min-height: 68px;
+    margin: auto;
+    width: 450px;
+    height: 58px;
+}
+.missionObjBtn img{
+    display: block;
+    position: absolute;
+    bottom:0;
+    margin-bottom: 15px;
+}
