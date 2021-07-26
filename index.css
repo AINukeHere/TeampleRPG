@@ -166,7 +166,30 @@ span{
     height: 50px;
     margin-left: 10px;
 }
+.missionObjBtn{
+    width: 450px;
+    height: 58px;
+    margin: auto;
+    background-image: url('data/images/missionObjBtn.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height:58px;
+    font-size: 20px;
+    color: rgb(250,250,68);
+}
+.missionObjBtn:hover{
+    cursor:pointer;
+    color: white;
+}
+.missionObjBtn:active{
+    background-image: url('data/images/missionObjBtn_onClick.png');
+}
+.missionObjBtn span{
+    font-size: inherit;
+    color: white;
+}
 .missionObjViewer{
+    display: none;
     background-color: rgb(0, 11, 39);
     border: 2px solid rgb(0, 6, 59);
     border-radius: 10px;
@@ -211,16 +234,29 @@ div.missionObjViewer > div > span.skillCommand{
 div.missionObjViewer > div > span.missionObjSupportColor{
     color:rgb(64, 104, 212);
 }
-.missionObjBtn{
-    position: relative;
-    min-height: 68px;
-    margin: auto;
+.missionObjPrevBtn{
     width: 450px;
     height: 58px;
-}
-.missionObjBtn img{
-    display: block;
-    position: absolute;
+    margin: auto;
+    background-image: url('data/images/missionObjBtn.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height:58px;
+    font-size: 20px;
+    color: rgb(250,250,68);
+    background-image: url('data/images/missionObjPrevBtn.png');
+    /* position: absolute; */
     bottom:0;
     margin-bottom: 15px;
+}
+.missionObjPrevBtn:hover{
+    cursor:pointer;
+    color: white;
+}
+.missionObjPrevBtn:active{
+    background-image: url('data/images/missionObjBtn_onClick.png');
+}
+.missionObjPrevBtn span{
+    font-size: inherit;
+    color: white;
 }

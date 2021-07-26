@@ -141,7 +141,8 @@ function onSelectJob(isURL, classIdx, jobIdx)
     console.log("onSelectJob("+isURL+","+classIdx + ", " + jobIdx + ")");
     var jobView = document.getElementById("jobView");
     var innerHTML_str = "";
-    innerHTML_str += "<div class='missionObjViewer'>\
+    innerHTML_str += "<div id='missionObjBtn' class='missionObjBtn' onclick='onClickMissionObjBtn(this)'>임무 목표(<span>J</span>)<img src=''></img></div>";
+    innerHTML_str += "<div id='missionObjViewer' class='missionObjViewer'>\
     " + getMissionObjInnerHTML(classIdx, jobIdx) + "\
     </div>";
     innerHTML_str += "<div class='skillViewer'>\
@@ -201,7 +202,8 @@ function getMissionObjInnerHTML(classIdx, jobIdx){
         }
         innerHTML_str += "<span class='skillCommand'>"+skillInfo.command + "</span></div>";
     }
-    innerHTML_str += "<div class='missionObjBtn'><img src='data/images/missionObjBtn.png'></img></div>";
+    innerHTML_str += "<div class='missionObjPrevBtn' onclick='onClickMissionObjPrevBtn()'>이전 (<span>Esc</span>)</div>";
+    //innerHTML_str += "<div class='missionObjPrevBtn'><img src='data/images/missionObjPrevBtn.png'></img></div>";
     return innerHTML_str;
 }
 function getSkillInnerHTML(skills){
@@ -280,4 +282,18 @@ function get_query(){
         result[qs[i][0]] = decodeURIComponent(qs[i][1]);
     }
     return result;
+}
+
+function onClickMissionObjBtn(missionObjBtn)
+{
+    missionObjBtn.style.display='none';
+    var missionObjViewer = document.getElementById("missionObjViewer");
+    missionObjViewer.style.display="block";
+}
+function onClickMissionObjPrevBtn()
+{
+    var missionObjBtn = document.getElementById("missionObjBtn");
+    missionObjBtn.style.display='block';
+    var missionObjViewer = document.getElementById("missionObjViewer");
+    missionObjViewer.style.display="none";
 }
