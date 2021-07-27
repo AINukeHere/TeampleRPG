@@ -17,7 +17,7 @@ li{
     display: inline;
 }
 section{
-    margin-left: 200px;
+    margin-left: 100px;
 }
 .sectionTitle{
     font-size: 20px;
@@ -202,12 +202,14 @@ span{
     font-weight: normal;
     text-shadow: 1px 2px black;
 }
-span.defaultFont{
+.missionObjViewer span.defaultFont{
     display: inline-block;
     width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
+}
+span.defaultFont{
     color: rgb(184, 184, 232);
 }
 .missionObjViewer div.missionObjContent{
@@ -259,4 +261,103 @@ div.missionObjViewer > div > span.missionObjSupportColor{
 .missionObjPrevBtn span{
     font-size: inherit;
     color: white;
+}
+
+/*핵데미지 계산기*/
+#nukeCalculatorGrid{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 200px 500px auto;
+    grid-gap: 10px;
+}
+#nukeCalculatorGrid > div{
+    padding: 10px;
+    border: 1px solid black;
+}
+#nukeCalcInfoViewer{
+    background-color: black;
+    line-height: 100%;
+    text-align: center;
+}
+#nukeCalcInfoViewer img{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#armorPopupInfo{
+    background-color: black;
+    min-width: 128px;
+    padding: 4px;
+    position: absolute; 
+    display: none; 
+    float: left; 
+    overflow: hidden; 
+    z-index: 999;
+}
+#nukeCalcArmorContainer, #nukeCalcShieldArmorContainer {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+#nukeCalcArmorContainer span, #nukeCalcShieldArmorContainer span{
+    position: absolute;
+    bottom: 12px;
+    right: 6px;
+}
+/*input buttons*/
+#nukeCalcInputBtnGrid{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+}
+#nukeCalcNukeBtn, #nukeCalcHealBtn, #nukeCalcInfoBtn, #nukeCalcExportBtn, #nukeCalcImportBtn{
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 77px;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+#nukeCalcNukeBtn > span, #nukeCalcHealBtn > span, #nukeCalcInfoBtn > span, #nukeCalcExportBtn > span, #nukeCalcImportBtn > span{
+    position:absolute;
+    text-align: center;
+    width: 90px;
+    top :75px;
+}
+#nukeCalcNukeBtn{
+    background-image: url('data/images/NukeCalculator/NukeBtn.png');
+}
+#nukeCalcHealBtn{
+    background-image: url('data/images/NukeCalculator/HealBtn.png');
+}
+#nukeCalcInfoBtn{
+    background-image: url('data/images/NukeCalculator/infoBtn.png');
+}
+#nukeCalcExportBtn{
+    background-image: url('data/images/NukeCalculator/exportBtn.png');
+}
+#nukeCalcImportBtn{
+    background-image: url('data/images/NukeCalculator/importBtn.png');
+}
+#nukeCalcNukeBtn:active{
+    background-image: url('data/images/NukeCalculator/NukeBtn_push.png');
+}
+#nukeCalcHealBtn:active{
+    background-image: url('data/images/NukeCalculator/HealBtn_push.png');
+}
+#nukeCalcInfoBtn:active{
+    background-image: url('data/images/NukeCalculator/infoBtn_push.png');
+}
+#nukeCalcExportBtn:active{
+    background-image: url('data/images/NukeCalculator/exportBtn_push.png');
+}
+#nukeCalcImportBtn:active{
+    background-image: url('data/images/NukeCalculator/importBtn_push.png');
+}
+#nukeCalcLog{
+    overflow: scroll;
+    height: 250px;
 }

@@ -1,15 +1,12 @@
 #index
 {
-	position:fixed;
-    top: 35%;
-	text-align: center;
 	display:block;
-	background: green;
+	text-align: center;
 	margin-left: 25px;
 }
 #index a
 {
-	display:block;
+	display:inline-block;
 	background:red;
 	margin:5px;
 	margin-bottom: 5px;
