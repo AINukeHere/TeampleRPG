@@ -233,9 +233,16 @@ function getSkillInnerHTML(skills){
                         onmouseout='hideSkillPopupInfo()' \
                         src='data/images/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
                         break;
+                    case "o":
+                        innerHTML_str += "\
+                        <img class='skillIcon'\
+                        onmousemove='showSkillPopupInfo(\""+skillInfo.command[cmdIdx]+"\")' \
+                        onmouseout='hideSkillPopupInfo()' \
+                        src='data/images/small_o_Skill.png'>";
+                        break;
                     default:
                         innerHTML_str += "<span style='color:white'>"+skillInfo.command[cmdIdx]+"</span>";
-                        //innerHTML_str += skillInfo.command[cmdIdx];
+                        break;
                 }
             }
             switch(skillInfo.type){
