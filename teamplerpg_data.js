@@ -90,7 +90,15 @@ function onClickClass(isURL, classIdx)
     <span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span><br>\
     <span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span><br>\
     <span class='explanation'>"+jsonObject.classes[classIdx].explanation+"</span>\
-    <br>\
+    <br>";
+    if(classIdx > 13){
+        innerHTML_str += "<br>";
+        innerHTML_str += "<div id='missionObjBtn' class='missionObjBtn' onclick='onClickMissionObjBtn(this)'>임무 목표(<span>J</span>)<img src=''></img></div>";
+        innerHTML_str += "<div id='missionObjViewer' class='missionObjViewer'>\
+        " + getMissionObjInnerHTML(classIdx, -1) + "\
+        </div>";
+    }
+    innerHTML_str += "\
     <div class='skillViewer'>\
     "+getSkillInnerHTML(classInfo.skills)+"\
     </div>\
@@ -130,7 +138,7 @@ function onClickClass(isURL, classIdx)
         </div>\
         ";
     }
-
+    
     //html DOM 수정
     classView.innerHTML= innerHTML_str;
     location.href ="#classView";
@@ -162,8 +170,19 @@ function getSpecString(starNum)
     return spec_str;
 }
 function getMissionObjInnerHTML(classIdx, jobIdx){
+    console.log("getMissionObjInnerHTML("+classIdx+", "+jobIdx+");");
     var innerHTML_str = "";
-    var jobInfo = jsonObject.classes[classIdx].jobs[jobIdx];
+    switch(classIdx){
+        case 14:
+        case 15:
+            console.log('a');
+            var jobInfo = jsonObject.classes[classIdx];
+            break;
+        default:
+            console.log('b');
+            var jobInfo = jsonObject.classes[classIdx].jobs[jobIdx];
+            break;
+    }
     innerHTML_str += "<div><span class='defaultFont'>임무 목표</span></div>";
     innerHTML_str += "<div class='missionObjContent'><span class='hyphenColor'>"+jobInfo.name+"</span>\
     <span class='missionObjSupportColor'>스킬명 색상구분 (</span>\
