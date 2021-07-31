@@ -75,7 +75,7 @@ a.classProfile:hover{
     width: 950px;
     margin: 10px;
     padding: 10px;
-    background-color:black;
+    background-color:rgb(0,0, 0,90%);
 }
 span{
     font-size: 16px;
@@ -106,13 +106,26 @@ span{
     overflow: hidden; 
     z-index: 999;
 }
-.skillViewer, .jobSelect{
+#classView > div, #jobView > div {
     margin: 5px;
     padding: 10px;
-    border: 2px solid white;
+    border: 1px solid white;
+}
+.skillViewerTitle, .availableBuildingViewerTitle{
+    background-color: rgba(255, 255, 0, 0.5);
+    width: 100%;
+    margin-bottom: 10px;
+    text-indent: 10px;
+}
+.skillViewerTitle > span, .availableBuildingViewerTitle > span{
+    font-size: 20px;
+    font-weight: bold;
 }
 .skillContent{
-    padding-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: black;
+    width: 100%;
 }
 .skillContent td img{
     vertical-align: middle;
@@ -131,6 +144,13 @@ span{
 .skillName{
     color:rgb(44, 180, 148);
     font-weight: bold;
+}
+.skillUsage{
+    color: white;
+    font-weight: bold;
+}
+.jobSelect{
+    background-color: black;
 }
 .jobExplanation
 {
@@ -262,4 +282,10 @@ div.missionObjViewer > div > span.missionObjSupportColor{
 .missionObjPrevBtn span{
     font-size: inherit;
     color: white;
+}
+
+.availableBuildingViewer{
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid white;
 }

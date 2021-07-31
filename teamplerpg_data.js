@@ -130,8 +130,8 @@ function onClickClass(isURL, classIdx)
                 </div>\
             </div>\
             <div class ='jobSelection'>\
-            <img style='align-self:center;justify-self: center;' src='data/images/jobSelect1.png'>\
-            <img style='align-self:center;justify-self: center;' src='data/images/jobSelect2.png'>\
+            <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/jobSelect1.png'>\
+            <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/jobSelect2.png'>\
             <button class='job1SelectButton' onclick='onSelectJob(false,"+classIdx+", 0)'>선택1</button>\
             <button class='job2SelectButton' onclick='onSelectJob(false,"+classIdx+", 1)'>선택2</button>\
             </div>\
@@ -148,16 +148,27 @@ function onSelectJob(isURL, classIdx, jobIdx)
 {
     console.log("onSelectJob("+isURL+","+classIdx + ", " + jobIdx + ")");
     var jobView = document.getElementById("jobView");
-    var innerHTML_str = "";
+    var innerHTML_str = "<div style='background-color:black;'>";
     innerHTML_str += "<div id='missionObjBtn' class='missionObjBtn' onclick='onClickMissionObjBtn(this)'>임무 목표(<span>J</span>)<img src=''></img></div>";
     innerHTML_str += "<div id='missionObjViewer' class='missionObjViewer'>\
     " + getMissionObjInnerHTML(classIdx, jobIdx) + "\
-    </div>";
+    </div></div>";
     innerHTML_str += "<div class='skillViewer'>\
+    <div class='skillViewerTitle'><span>스킬</span></div>\
     "+getSkillInnerHTML(jsonObject.classes[classIdx].jobs[jobIdx].skills)+"\
     </div>";
+
+    if(jsonObject.classes[classIdx].jobs[jobIdx].buildings != null){
+        innerHTML_str+="<div class='availableBuildingViewer'>\
+        <div class='availableBuildingViewerTitle'><span>사용가능한 건물</span></div>\
+        "+getAvailableBuildingViewer(jsonObject.classes[classIdx].jobs[jobIdx].buildings)+"\
+        </div>";
+    }
     jobView.innerHTML = innerHTML_str;
     jobView.style.display = "block";
+
+
+
     location.href ="#jobView";
     location.href += "?classIdx="+classIdx+"&jobIdx="+jobIdx;
 }
@@ -175,11 +186,9 @@ function getMissionObjInnerHTML(classIdx, jobIdx){
     switch(classIdx){
         case 14:
         case 15:
-            console.log('a');
             var jobInfo = jsonObject.classes[classIdx];
             break;
         default:
-            console.log('b');
             var jobInfo = jsonObject.classes[classIdx].jobs[jobIdx];
             break;
     }
@@ -222,7 +231,6 @@ function getMissionObjInnerHTML(classIdx, jobIdx){
         innerHTML_str += "<span class='skillCommand'>"+skillInfo.command + "</span></div>";
     }
     innerHTML_str += "<div class='missionObjPrevBtn' onclick='onClickMissionObjPrevBtn()'>이전 (<span>Esc</span>)</div>";
-    //innerHTML_str += "<div class='missionObjPrevBtn'><img src='data/images/missionObjPrevBtn.png'></img></div>";
     return innerHTML_str;
 }
 function getSkillInnerHTML(skills){
@@ -297,6 +305,109 @@ function getSkillInnerHTML(skills){
         </tr>\
         </table>\
         ";
+    }
+    return innerHTML_str;
+}
+function getAvailableBuildingViewer(buildings){
+    var innerHTML_str="";
+    for (var i =0; i < buildings.length; ++i){
+        var buildingInfo = buildings[i];
+        innerHTML_str += "\
+        <table class='skillContent'>\
+        <tr>\
+            <td>";
+            var bRemoveFirstLetter = [];
+            for(var cmdIdx = 0; cmdIdx < buildingInfo.command.length; ++cmdIdx)
+            {
+                switch(buildingInfo.command[cmdIdx]){
+                    case "Z":
+                    case "T":
+                    case "P":
+                        var buildingName = buildingInfo.command.substring(cmdIdx,cmdIdx+3);
+
+                        innerHTML_str += "\
+                        <img class='skillIcon'\
+                        onmousemove='showSkillPopupInfo(\""+buildingName+"\")' \
+                        onmouseout='hideSkillPopupInfo()' \
+                        src='data/images/"+buildingName+"_building.png'>";
+                        bRemoveFirstLetter.push(cmdIdx);
+                        cmdIdx+=2;
+                        break;
+                    case "v":
+                        innerHTML_str += "\
+                        <img class='skillIcon'\
+                        onmousemove='showSkillPopupInfo(\""+buildingInfo.command[cmdIdx]+"\")' \
+                        onmouseout='hideSkillPopupInfo()' \
+                        src='data/images/small_v_Skill.png'>";
+                        break;
+                    case "s":
+                        innerHTML_str += "\
+                        <img class='skillIcon'\
+                        onmousemove='showSkillPopupInfo(\""+buildingInfo.command[cmdIdx]+"\")' \
+                        onmouseout='hideSkillPopupInfo()' \
+                        src='data/images/small_s_Skill.png'>";
+                        break;
+                    default:
+                        innerHTML_str += "<span style='color:white'>"+buildingInfo.command[cmdIdx]+"</span>";
+                        break;
+                }
+            }
+            var outterCommand = "";
+            var prevIdx = 0;
+            console.log(bRemoveFirstLetter);
+            for(var j = 0; j < bRemoveFirstLetter.length; ++j){
+                if(bRemoveFirstLetter[j] > 0){
+                    let t1 = buildingInfo.command.substring(prevIdx,bRemoveFirstLetter[j]);
+                    outterCommand += t1;
+                }
+                prevIdx = bRemoveFirstLetter[j]+1;
+            }
+            outterCommand += buildingInfo.command.substring(prevIdx);
+            console.log(outterCommand);
+            if(buildingInfo.type != null){
+                switch(buildingInfo.type){
+                    case "공격형":
+                        innerHTML_str += "<span class='attackTypeColor'>";
+                        break;
+                    case "소환형":
+                        innerHTML_str += "<span class='summonTypeColor'>";
+                        break;
+                    case "유틸기":
+                        innerHTML_str += "<span class='utilTypeColor'>";
+                        break;
+                    case "회복형":
+                        innerHTML_str += "<span class='recoveryTypeColor'>";
+                        break;
+                    default:
+                        console.log("unknown skill type:"+buildingInfo.type);
+                        break;
+                }
+                innerHTML_str += buildingInfo.type+"</span>";
+            }
+            innerHTML_str += "</td>\
+        </tr>\
+        <tr>\
+            <td>\
+                <span class='skillCommand'>"+outterCommand+" - </span>\
+                <span class='skillName'>"+buildingInfo.name+"</span>\
+            </td>\
+        </tr>";
+        if(buildingInfo.explanation != null){
+            innerHTML_str +="\
+            <tr>\
+                <td>\
+                    <span class='explanation'>"+buildingInfo.explanation+"</span>\
+                </td>\
+            </tr>";
+        }
+        if(buildingInfo.usage != null){
+            innerHTML_str += "<tr>\
+            <td>\
+            <span class='skillUsage'>"+buildingInfo.usage+"</span>\
+            </td>\
+            </tr>\
+            </table>";
+        }
     }
     return innerHTML_str;
 }
