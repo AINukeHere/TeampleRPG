@@ -979,8 +979,15 @@ jsonObject=[
                         "buildings":[
                             {
                                 "command":"폭탄 제조 허가서 + TBS",
+                                "name":"파이어 골램 소환",
                                 "explanation":"파이어 골램을 하나 소환합니다.",
                                 "type":"소환형"
+                            },
+                            {
+                                "command":"파이어 골램 + TBS",
+                                "name":"폭탄 장전",
+                                "explanation":"폭탄을 저장합니다.(최대 5개)",
+                                "type":"유틸기"
                             }
                         ]
                     }
@@ -1029,7 +1036,7 @@ jsonObject=[
                                 "type":"소환형"
                             },
                             {
-                                "command":"검은 그림자w+A",
+                                "command":"검은 그림자+A",
                                 "name":"그림자 영혼강탈",
                                 "explanation":"그림자의 공격으로 적의 영혼을 혼란상태에 빠집니다.",
                                 "type":"공격형"
@@ -1450,7 +1457,7 @@ jsonObject=[
                                 "type":"소환형"
                             },
                             {
-                                "command":"Poison+C",
+                                "command":"독둔화+C",
                                 "name":"분신영[分身影]",
                                 "explanation":"주위의 대지를 달구어 아지랑이를 만든후에 현혹되기 쉬운 팔괘의 순서를 따라 움직여 적에게 몸이 나누어<br>진 듯한 착각을 일으키는 기술, 모두 허상이며 본체는 하나이다.",
                                 "type":"유틸기"
@@ -1646,7 +1653,7 @@ jsonObject=[
                                 "type":"공격형"
                             },
                             {
-                                "command":"Trap+S",
+                                "command":"지뢰+S",
                                 "name":"손은 눈보다 빠르지",
                                 "explanation":"자신과 지뢰의 위치를 바꾸며 체력을 모두 회복합니다.",
                                 "type":"유틸기"
