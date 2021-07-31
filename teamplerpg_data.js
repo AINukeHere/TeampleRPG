@@ -58,11 +58,24 @@ function hideClassPopupInfo(obj)
     var classPopupInfo = document.getElementById("classPopupInfo");
     classPopupInfo.style.display="none";
 }
-function showSkillPopupInfo(skillCommand)
+function showSkillPopupInfo(skillCommand, isBuilding)
 {
     var skillPopupInfo = document.getElementById("skillPopupInfo");
     skillPopupInfo.style.display="inline";
-    skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/"+skillCommand+"_Skill_Cost.png";
+    switch(skillCommand)
+    {
+        case 'o':
+        case 's':
+        case 'v':
+            skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/small_"+skillCommand+"_skill_Cost.png";
+            break;
+        default:
+            if(isBuilding)
+                skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/"+skillCommand+"_building_Cost.png";
+            else
+                skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/"+skillCommand+"_Skill_Cost.png";
+            break;
+    }
 }
 function hideSkillPopupInfo()
 {
@@ -327,7 +340,7 @@ function getAvailableBuildingViewer(buildings){
 
                         innerHTML_str += "\
                         <img class='skillIcon'\
-                        onmousemove='showSkillPopupInfo(\""+buildingName+"\")' \
+                        onmousemove='showSkillPopupInfo(\""+buildingName+"\",true)' \
                         onmouseout='hideSkillPopupInfo()' \
                         src='data/images/"+buildingName+"_building.png'>";
                         bRemoveFirstLetter.push(cmdIdx);
@@ -336,14 +349,14 @@ function getAvailableBuildingViewer(buildings){
                     case "v":
                         innerHTML_str += "\
                         <img class='skillIcon'\
-                        onmousemove='showSkillPopupInfo(\""+buildingInfo.command[cmdIdx]+"\")' \
+                        onmousemove='showSkillPopupInfo(\""+buildingInfo.command[cmdIdx]+"\",true)' \
                         onmouseout='hideSkillPopupInfo()' \
                         src='data/images/small_v_Skill.png'>";
                         break;
                     case "s":
                         innerHTML_str += "\
                         <img class='skillIcon'\
-                        onmousemove='showSkillPopupInfo(\""+buildingInfo.command[cmdIdx]+"\")' \
+                        onmousemove='showSkillPopupInfo(\""+buildingInfo.command[cmdIdx]+"\",true)' \
                         onmouseout='hideSkillPopupInfo()' \
                         src='data/images/small_s_Skill.png'>";
                         break;
