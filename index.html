@@ -91,7 +91,17 @@
         <hr>
         <section id="NuclearCalculator">
             <div><span class="sectionTitle">핵 데미지 계산기</span></div>
-            <iframe width="1200px" height="963px" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0 src="https://ainukehere.github.io/NukeCalculator/"></iframe>
+            <script type="application/javascript">
+
+                function resizeIFrameToFitContent( iFrame ) {
+                    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+                    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+                    console.log(iFrame.contentWindow.document.body.scrollWidth,
+                    iFrame.contentWindow.document.body.scrollHeight);
+                }
+                
+            </script>
+            <iframe onload="resizeIFrameToFitContent(this)" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0 src="https://ainukehere.github.io/NukeCalculator/"></iframe>
             <!-- <script src="nukeCalculator.js"></script>
             <div id="nukeCalculatorGrid">
                 <div id="nukeCalcInfoViewer">
