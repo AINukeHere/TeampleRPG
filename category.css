@@ -19,6 +19,28 @@
 	color:black;
     text-decoration: none;
 }
-#index a:hover {
+#fixedIndex{
+	position:fixed;
+	right: 100px;
+	text-align: center;
+	display:block;
+	background: rgb(126,178,233,50%);
+	padding-top: 10px;
+}
+#fixedIndex a{
+	display:block;
+	background:rgb(0,0,255,50%);
+	margin:5px;
+	margin-bottom: 5px;
+	width:150px;
+	height:45px;
+	line-height: 45px;
+	text-align: center;
+	font-size:16px;
+    font-weight: bold;
+	color:white;
+    text-decoration: none;
+}
+:is(#index,#fixedIndex) a:hover {
     background-color:#ff6600;
 }

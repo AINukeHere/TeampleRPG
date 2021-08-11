@@ -1,11 +1,11 @@
 var _DEBUG = true;
-var jsonObject = jsonObject[0];
+var classData = classDataJson[0];
 if(!_DEBUG)
 {
     var request = new XMLHttpRequest();
     request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/images/class_info.json", false);
     request.send(null)
-    jsonObject = JSON.parse(request.responseText);
+    classData = JSON.parse(request.responseText);
 }
 
 function setPopupInfoPosition(event)
@@ -39,19 +39,24 @@ function showClassPopupInfo(classIdx)
     var classPopupInfo = document.getElementById("classPopupInfo");
     classPopupInfo.style.display="inline";
 
-    var classInfo = jsonObject.classes[classIdx];
+    var classInfo = classData.classes[classIdx];
     var spec_str1=getSpecString(classInfo.spec1);
     var spec_str2=getSpecString(classInfo.spec2);
     var spec_str3=getSpecString(classInfo.spec3);
     
-    classPopupInfo.children[0].innerHTML = "\
-    <div><span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span></div>\
-    <div><span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span></div>\
-    <div><span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span></div>\
-    <span class='explanation'>"+classInfo.explanation+"</span>\
-    <span></span>\
+    var innerHTML_str = "\
+    <div>\
+        <div><span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span></div>\
+        <div><span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span></div>\
+        <div><span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span></div>\
+        <span class='explanation'>"+classInfo.explanation+"</span>\
+    </div>\
+    <img src='data/images/"+classInfo.image+"'>\
     ";
-    classPopupInfo.getElementsByTagName("img")[0].src = 'data/images/'+classInfo.image;
+    if(classInfo.unitSpec != null){
+        innerHTML_str += getUnitSpecInnerHTML(classIdx);
+    }
+    classPopupInfo.innerHTML = innerHTML_str;
 }
 function hideClassPopupInfo(obj)
 {
@@ -86,7 +91,7 @@ function hideSkillPopupInfo()
 function onClickClass(isURL, classIdx)
 {
     console.log("onClickClass("+isURL+","+classIdx + ")");
-    var classInfo = jsonObject.classes[classIdx];
+    var classInfo = classData.classes[classIdx];
     var classView = document.getElementById("classView");
     var jobView = document.getElementById("jobView");
     jobView.style.display="none";
@@ -98,18 +103,19 @@ function onClickClass(isURL, classIdx)
     
 
     var innerHTML_str = "\
-    <img class='classProfileImage' src=data/images/"+jsonObject.classes[classIdx].image+"><br>\
+    <img class='classProfileImage' src=data/images/"+classData.classes[classIdx].image+"><br>\
     <span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span><br>\
     <span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span><br>\
     <span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span><br>\
-    <span class='explanation'>"+jsonObject.classes[classIdx].explanation+"</span>\
+    <span class='explanation'>"+classData.classes[classIdx].explanation+"</span>\
     <br>";
     if(classIdx > 13){
         innerHTML_str += "<br>";
+        innerHTML_str += "<div style='background-color:black;'>";
         innerHTML_str += "<div id='missionObjBtn' class='missionObjBtn' onclick='onClickMissionObjBtn(this)'>임무 목표(<span>J</span>)<img src=''></img></div>";
         innerHTML_str += "<div id='missionObjViewer' class='missionObjViewer'>\
         " + getMissionObjInnerHTML(classIdx, -1) + "\
-        </div>";
+        </div></div>";
     }
     innerHTML_str += "\
     <div class='skillViewer'>\
@@ -168,13 +174,13 @@ function onSelectJob(isURL, classIdx, jobIdx)
     </div></div>";
     innerHTML_str += "<div class='skillViewer'>\
     <div class='skillViewerTitle'><span>스킬</span></div>\
-    "+getSkillInnerHTML(jsonObject.classes[classIdx].jobs[jobIdx].skills)+"\
+    "+getSkillInnerHTML(classData.classes[classIdx].jobs[jobIdx].skills)+"\
     </div>";
 
-    if(jsonObject.classes[classIdx].jobs[jobIdx].buildings != null){
+    if(classData.classes[classIdx].jobs[jobIdx].buildings != null){
         innerHTML_str+="<div class='availableBuildingViewer'>\
         <div class='availableBuildingViewerTitle'><span>사용가능한 건물</span></div>\
-        "+getAvailableBuildingViewer(jsonObject.classes[classIdx].jobs[jobIdx].buildings)+"\
+        "+getAvailableBuildingViewer(classData.classes[classIdx].jobs[jobIdx].buildings)+"\
         </div>";
     }
     jobView.innerHTML = innerHTML_str;
@@ -199,10 +205,10 @@ function getMissionObjInnerHTML(classIdx, jobIdx){
     switch(classIdx){
         case 14:
         case 15:
-            var jobInfo = jsonObject.classes[classIdx];
+            var jobInfo = classData.classes[classIdx];
             break;
         default:
-            var jobInfo = jsonObject.classes[classIdx].jobs[jobIdx];
+            var jobInfo = classData.classes[classIdx].jobs[jobIdx];
             break;
     }
     innerHTML_str += "<div><span class='defaultFont'>임무 목표</span></div>";
@@ -285,6 +291,9 @@ function getSkillInnerHTML(skills){
                         break;
                 }
             }
+            innerHTML_str+="\
+            </td>\
+            <td>";
             switch(skillInfo.type){
                 case "공격형":
                     innerHTML_str += "<span class='attackTypeColor'>";
@@ -302,8 +311,7 @@ function getSkillInnerHTML(skills){
                     console.log("unknown skill type:"+skillInfo.type);
                     break;
             }
-            innerHTML_str += skillInfo.type+"</span>\
-            </td>\
+            innerHTML_str+= skillInfo.type+"</span></td>\
         </tr>\
         <tr>\
             <td>\
@@ -376,8 +384,10 @@ function getAvailableBuildingViewer(buildings){
                 prevIdx = bRemoveFirstLetter[j]+1;
             }
             outterCommand += buildingInfo.command.substring(prevIdx);
-            console.log(outterCommand);
+            innerHTML_str+="</td>";
             if(buildingInfo.type != null){
+                innerHTML_str+="\
+                <td>";
                 switch(buildingInfo.type){
                     case "공격형":
                         innerHTML_str += "<span class='attackTypeColor'>";
@@ -395,9 +405,10 @@ function getAvailableBuildingViewer(buildings){
                         console.log("unknown skill type:"+buildingInfo.type);
                         break;
                 }
-                innerHTML_str += buildingInfo.type+"</span>";
+                innerHTML_str+= buildingInfo.type+"</span>\
+                </td>";
             }
-            innerHTML_str += "</td>\
+            innerHTML_str+="\
         </tr>\
         <tr>\
             <td>\
@@ -446,4 +457,20 @@ function onClickMissionObjPrevBtn()
     missionObjBtn.style.display='block';
     var missionObjViewer = document.getElementById("missionObjViewer");
     missionObjViewer.style.display="none";
+}
+
+function getUnitSpecInnerHTML(classIdx)
+{
+    var unitSpec = classData.classes[classIdx].unitSpec;
+    var innerHTML_str = "\
+    <div class='unitSpec'>\
+        <span>체력: "+unitSpec.hp+"</span>\
+        <span>기본방어력: "+unitSpec.armor+"</span>";
+        if(unitSpec.shield > 0)
+            innerHTML_str += "<span>쉴드: "+unitSpec.shield+"</span>";
+        innerHTML_str+="\
+        <span>공격력: "+unitSpec.damage+"</span>\
+        <span>업당 공격력: "+unitSpec.damage_factor+"</span>\
+    </div>";
+    return innerHTML_str;
 }

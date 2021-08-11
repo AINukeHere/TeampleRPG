@@ -1,4 +1,4 @@
-jsonObject=[
+classDataJson=[
     {
         "classes":[
             {

@@ -13,16 +13,19 @@
 #title a:visited{
     color: black;
 }
-li{
+#index > li{
     display: inline;
 }
 section{
     margin-left: 100px;
-    margin-bottom: 100px;
+    max-width: 1133px;
 }
 .sectionTitle{
     font-size: 20px;
     font-weight: bold;
+}
+.sectionTitle:hover{
+    cursor: pointer;
 }
 .classTable
 {
@@ -80,6 +83,10 @@ a.classProfile:hover{
 span{
     font-size: 16px;
 }
+.unitSpec > span{
+    display: block;
+    color: white;
+}
 .specName
 {
     font-weight: bold;
@@ -106,7 +113,7 @@ span{
     overflow: hidden; 
     z-index: 999;
 }
-#classView > div, #jobView > div {
+:is(#classView, #jobView) > div {
     margin: 5px;
     padding: 10px;
     border: 1px solid white;
@@ -117,9 +124,12 @@ span{
     margin-bottom: 10px;
     text-indent: 10px;
 }
-.skillViewerTitle > span, .availableBuildingViewerTitle > span{
+:is(.skillViewerTitle, .availableBuildingViewerTitle) > span{
     font-size: 20px;
     font-weight: bold;
+}
+.skillContent tbody > :nth-child(1) > td{
+    width: 90%;
 }
 .skillContent{
     margin-bottom: 10px;

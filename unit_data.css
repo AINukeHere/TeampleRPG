@@ -1,0 +1,66 @@
+.unitInfoGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 500px;
+}
+.unitInfoGrid > :nth-child(1),.unitInfoGrid >:nth-child(2){
+    max-height: inherit;
+}
+.unitInfoGrid >:nth-child(1){
+    overflow-y: scroll;
+}
+.tree{
+    margin-top: 5px;
+  }
+  .tree, .tree ul{
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding-left:10px;
+  }
+  .tree *:before{
+    width:15px;
+    height:15px;
+    display:inline-block;
+  }
+  .tree label{
+    cursor: pointer;
+    font-family: NotoSansKrMedium, sans-serif !important;
+    font-size: 14px;
+    color: #0055CC;
+  }
+  .tree > li > label{
+    font-weight: bold;
+  }
+  .tree label:hover{
+    color: #00AACC;
+  }
+  .tree label:before{
+    content: '-'
+  }
+  .tree label.lastTree:before{
+    content:'o';
+  }
+  .tree label:hover:before{
+    content: '-'
+  }
+  .tree label.lastTree:hover:before{
+    content:'o';
+  }
+  .tree input[type="checkbox"] {
+    display: none;
+  }
+  .tree input[type="checkbox"]:not(:checked)~ul {
+    display: none;
+  }
+  .tree input[type="checkbox"]:not(:checked)+label:before{
+    content: '+'
+  }
+  .tree input[type="checkbox"]:not(:checked)+label:hover:before{
+    content: '+'
+  }
+  
+  .tree input[type="checkbox"]:not(:checked)+label.lastTree:before{
+    content: 'o';
+  }
+  .tree input[type="checkbox"]:not(:checked)+label.lastTree:hover:before{
+    content: 'o';
+  }

@@ -12,31 +12,37 @@
         <style type="text/css">
             @import url("index.css");
             @import url("category.css");
+            @import url("unit_data.css");
         </style>
     </head>
     <body>
+        <script src='main.js'></script>
         <script ttype="text/javascript" src="data/game/d_class_info.js"></script>
         <script src="teamplerpg_data.js"></script>
+        <script ttype="text/javascript" src="data/game/unit_info_json.js"></script>
+        <script ttype="text/javascript" src="data/game/stage_info_json.js"></script>
         <header id="title">
             <a href=".">
                 <h1>팀플RPG의 모든것</h1>
                 <h2>팀플RPG 정보공유 사이트 (개발중)</h2>
             </a>
         </header>
-        <!-- <nav>
-            <div id="index">
+        <nav>
+            <div id="fixedIndex">
                 <h3>바로가기</h3>
                 <a href="#title">맨 위로</a>
                 <a href="#ClassAndJobs">클래스 및 직업</a>
+                <a href="#UnitData">유닛 정보</a>
                 <a href="#ItemInfomation">아이템 정보</a>
                 <a href="#StageReword">스테이지 정보</a>
                 <a href="#UpgradeCostCalculator">업그레이드 계산기</a>
                 <a href="#NuclearCalculator">핵 데미지 계산기</a>
             </div>
-        </nav> -->
+        </nav>
         <hr>
         <ul id="index">
             <li><a href="#ClassAndJobs">클래스 및 직업</a></li>
+            <li><a href="#UnitData">유닛 정보</a></li>
             <li><a href="#ItemInfomation">아이템 정보</a></li>
             <li><a href="#StageReword">스테이지 정보</a></li>
             <li><a href="#UpgradeCostCalculator">업그레이드 계산기</a></li>
@@ -47,13 +53,13 @@
             <span class="sectionTitle">클래스 및 직업</span>
             <div id="classTable" class="classTable">
                 <script>
-                    for(var i =0; i < jsonObject.classes.length; ++i){
+                    for(var i =0; i < classData.classes.length; ++i){
                         document.writeln("<a class='classProfile' onclick='onClickClass(false,"+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
-                            <img class='classProfileImage' src=./data/images/"+jsonObject.classes[i].image+"><br>");
-                        document.writeln("<span>"+jsonObject.classes[i].name+"</span><br>");
-                        if(jsonObject.classes[i].nickname)
+                            <img class='classProfileImage' src=./data/images/"+classData.classes[i].image+"><br>");
+                        document.writeln("<span>"+classData.classes[i].name+"</span><br>");
+                        if(classData.classes[i].nickname)
                         {
-                            document.writeln("<span>(별칭:"+jsonObject.classes[i].nickname+")</span><br>");
+                            document.writeln("<span>(별칭:"+classData.classes[i].nickname+")</span><br>");
                         }
                         document.writeln("</a>");
                     }                    
@@ -74,115 +80,52 @@
         </section>
 
         <hr>
+        <section id="UnitData">
+            <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>유닛 정보</span>
+            <div>
+            </div>
+            <script src="unit_data.js"></script>
+        </section>
+
+        <hr>
         <section id="ItemInfomation">
-            <span class="sectionTitle">아이템 정보</span>
+            <span class="sectionTitle" onclick="toogleSection(this)">아이템 정보</span>
+            <div>content</div>
         </section>
 
         <hr>
         <section id="StageReword">
-            <span class="sectionTitle">스테이지 정보</span>
+            <span class="sectionTitle" onclick="toogleSection(this)">스테이지 정보</span>
+            <div>content</div>
         </section>
 
         <hr>
         <section id="UpgradeCostCalculator">
-            <span class="sectionTitle">업그레이드 계산기</span>
+            <span class="sectionTitle" onclick="toogleSection(this)">업그레이드 계산기</span>
+            <div>content</div>
         </section> 
 
         <hr>
         <section id="NuclearCalculator">
-            <div><span class="sectionTitle">핵 데미지 계산기</span></div>
+            <span class="sectionTitle" onclick="toogleSection(this)">핵 데미지 계산기</span>
+            <div>
             <script type="application/javascript">
 
                 function resizeIFrameToFitContent( iFrame ) {
-                    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-                    iFrame.height = iFrame.contentWindow.document.body.scrollHeight+10;
-                    console.log(iFrame.contentWindow.document.body.scrollWidth,
-                    iFrame.contentWindow.document.body.scrollHeight);
+                    try{
+                        iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+                        iFrame.height = iFrame.contentWindow.document.body.scrollHeight+10;
+                    }
+                    catch{
+                        iFrame.width  = "1133px";
+                        iFrame.height = "911px";
+                    }
+                    console.log(iFrame.width,iFrame.height);
                 }
                 
             </script>
             <iframe onload="resizeIFrameToFitContent(this)" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 scrolling=no vspace=0 src="https://ainukehere.github.io/NukeCalculator/"></iframe>
-            <!-- <script src="nukeCalculator.js"></script>
-            <div id="nukeCalculatorGrid">
-                <div id="nukeCalcInfoViewer">
-                    <div style='height: 124px; line-height: 124px; margin-bottom:10px'>
-                        <img style='vertical-align: middle; max-height: 124px;'src="data/images/NukeCalculator/small_target_with_shield.png"><br/>
-                    </div>
-                    <span class="defaultFont">9999/9999</span><br/>
-                    <span class="recoveryTypeColor">2000/2000</span><br/>
-                    <div id='nukeCalcArmorContainer'>
-                        <img onmouseenter='showNukeCalcArmorPopup(false)' onmouseout='hideNukeCalcArmorPopup(false)'  src="data/images/NukeCalculator/Armor.png">
-                        <span class='defaultFont'>100</span>
-                    </div>
-                    <div id='nukeCalcShieldArmorContainer'>
-                        <img class='nukeCalcArmorImage' onmouseenter='showNukeCalcArmorPopup(true)' onmouseout='hideNukeCalcArmorPopup(true)' src="data/images/NukeCalculator/Shield.png">
-                        <span class='defaultFont'>50</span>
-                    </div>
-                </div>
-                <div id="nukeCalcInput">
-                    <div>
-                        <span>최대체력</span>
-                        <input type="number" max="8388607" onchange="NukeCalc_ChangeHP(this)"></input>
-                    </div>
-                    <div>
-                        <span>체력방어력</span>
-                        <input type="number" max="510" onchange="NukeCalc_ChangeHPArmor(this)"></input>
-                    </div>
-                    <div>
-                        <span>쉴드</span>
-                        <input type="number" max="65535" onchange="NukeCalc_ChangeShield(this)"></input>
-                    </div>
-                    <div>
-                        <span>쉴드방어력</span>
-                        <input type="number" max="255" onchange="NukeCalc_ChangeShieldArmor(this)"></input>
-                    </div>
-                    <div>
-                        <span>유닛크기</span>
-                        <select name="coeffScaleType" onchange="NukeCalc_ChangeCoeffScaleType(this)">
-                            <option value="소형">소형</option>
-                            <option value="중형">중형</option>
-                            <option value="대형">대형</option>
-                        </select>
-                    </div>
-                    <div>
-                        <span>피격강도</span>
-                        <select name="coeffPosType" value="직격">
-                            <option value="직격">직격</option>
-                            <option value="빗맞음">빗맞음</option>
-                            <option value="맞았나">맞았나</option>
-                        </select>
-                    </div>
-                    <div id="nukeCalcInputBtnGrid">
-                        <div id="nukeCalcNukeBtn" onclick="NukeCalc_LaunchNuke()">
-                            <span>핵을 쏴라!!</span>
-                        </div>
-                        <div id="nukeCalcHealBtn" onclick="NukeCalc_Heal()">
-                            <span>체력 회복</span>
-                        </div>
-                        <div id="nukeCalcInfoBtn" onclick="NukeCalc_ShowInfo()">
-                            <span>정보</span>
-                        </div>
-                        <div id="nukeCalcExportBtn" onclick="NukeCalc_Export()">
-                            <span>내보내기</span>
-                        </div>
-                        <div id="nukeCalcImportBtn" onclick="NukeCalc_Import()">
-                            <span>가져오기</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="nukeCalcLog">
-                    <button style='display:block' onclick="NukeCalc_ClearLog()">로그 지우기</button>
-                    <span></span>
-                    <button style='display:block' onclick="NukeCalc_ClearLog()">로그 지우기</button>
-                </div>
             </div>
-            <div id="armorPopupInfo">
-                <span class="defaultFont"></span>
-            </div>
-            <script>
-                NukeCalc_InputInitFromCalculator();
-                NukeCalc_ViewerUpdateAll();
-            </script> -->
         </section>
         <hr>
         <section id="NuclearCalculator">
