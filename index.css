@@ -80,9 +80,9 @@ a.classProfile:hover{
     padding: 10px;
     background-color:rgb(0,0, 0,90%);
 }
-span{
+/* span{
     font-size: 16px;
-}
+} */
 .unitSpec > span{
     display: block;
     color: white;
@@ -118,13 +118,13 @@ span{
     padding: 10px;
     border: 1px solid white;
 }
-.skillViewerTitle, .availableBuildingViewerTitle{
+.skillViewerTitle, .availableBuildingViewerTitle, .jobSelectionTitle{
     background-color: rgba(255, 255, 0, 0.5);
     width: 100%;
     margin-bottom: 10px;
     text-indent: 10px;
 }
-:is(.skillViewerTitle, .availableBuildingViewerTitle) > span{
+:is(.skillViewerTitle, .availableBuildingViewerTitle, .jobSelectionTitle) > span{
     font-size: 20px;
     font-weight: bold;
 }
@@ -159,7 +159,7 @@ span{
     color: white;
     font-weight: bold;
 }
-.jobSelect{
+.jobSelect > :nth-child(2){
     background-color: black;
 }
 .jobExplanation

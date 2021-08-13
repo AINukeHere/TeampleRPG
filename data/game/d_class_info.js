@@ -858,6 +858,14 @@ classDataJson=[
                         "type":"유틸기"
                     }
                 ],
+                "buildings":[
+                    {
+                        "command":"TBS",
+                        "name":"전동차 제작",
+                        "usage":"전동차를 하나 소환합니다.",
+                        "type":"소환형"
+                    }
+                ],
                 "jobs":[
                     {
                         "name":"메카니즘 마스터",
@@ -1116,6 +1124,23 @@ classDataJson=[
                         "name":"건축비 지원",
                         "explanation":"정부에서 건축가에게 지원금을 줍니다 Money+5",
                         "type":"유틸기"
+                    }
+                ],
+                "buildings":[
+                    {
+                        "command":"PBP",
+                        "name":"Shiny Tower",
+                        "usage":"다른 건물을 짓기위해 필수적으로 필요한 건물입니다."
+                    },
+                    {
+                        "command":"PBC",
+                        "name":"Attacker Tower",
+                        "usage":"하나만 지을 수 있는 공격건물입니다."
+                    },
+                    {
+                        "command":"PBB",
+                        "name":"방어보충소",
+                        "usage":"버프빌더의 쉴드를 채워줄 수 있는 건물입니다."
                     }
                 ],
                 "jobs":[

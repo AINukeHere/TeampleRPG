@@ -119,9 +119,16 @@ function onClickClass(isURL, classIdx)
     }
     innerHTML_str += "\
     <div class='skillViewer'>\
+    <div class='skillViewerTitle'><span>스킬</span></div>\
     "+getSkillInnerHTML(classInfo.skills)+"\
     </div>\
     ";
+    if(classData.classes[classIdx].buildings != null){
+        innerHTML_str+="<div class='availableBuildingViewer'>\
+        <div class='availableBuildingViewerTitle'><span>사용가능한 건물</span></div>\
+        "+getAvailableBuildingViewer(classData.classes[classIdx].buildings)+"\
+        </div>";
+    }
     if(classInfo.jobs != null){
         var job1_spec1_str = getSpecString(classInfo.jobs[0].spec1);
         var job1_spec2_str = getSpecString(classInfo.jobs[0].spec2);
@@ -131,28 +138,31 @@ function onClickClass(isURL, classIdx)
         var job2_spec3_str = getSpecString(classInfo.jobs[1].spec3);
         innerHTML_str += "\
         <div class='jobSelect'>\
-            <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
-            <div class='jobExplanation'>\
-                <div class='job1View'>\
-                    <span>" + classInfo.jobs[0].name+ "("+classInfo.jobs[0].nickname+")</span><br>\
-                    <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
-                    <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
-                    <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
-                    " + classInfo.jobs[0].explanation + "\
+            <div class='jobSelectionTitle'><span>직업 선택지</span></div>\
+            <div style='padding:5px;'>\
+                <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
+                <div class='jobExplanation'>\
+                    <div class='job1View'>\
+                        <span>" + classInfo.jobs[0].name+ "("+classInfo.jobs[0].nickname+")</span><br>\
+                        <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
+                        <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
+                        <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
+                        " + classInfo.jobs[0].explanation + "\
+                    </div>\
+                    <div class='job2View'>\
+                        <span>" + classInfo.jobs[1].name+ "("+classInfo.jobs[1].nickname+")</span><br>\
+                        <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
+                        <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
+                        <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
+                        " + classInfo.jobs[1].explanation + "\
+                    </div>\
                 </div>\
-                <div class='job2View'>\
-                    <span>" + classInfo.jobs[1].name+ "("+classInfo.jobs[1].nickname+")</span><br>\
-                    <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
-                    <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
-                    <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
-                    " + classInfo.jobs[1].explanation + "\
+                <div class ='jobSelection'>\
+                <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/jobSelect1.png'>\
+                <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/jobSelect2.png'>\
+                <button class='job1SelectButton' onclick='onSelectJob(false,"+classIdx+", 0)'>선택1</button>\
+                <button class='job2SelectButton' onclick='onSelectJob(false,"+classIdx+", 1)'>선택2</button>\
                 </div>\
-            </div>\
-            <div class ='jobSelection'>\
-            <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/jobSelect1.png'>\
-            <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/jobSelect2.png'>\
-            <button class='job1SelectButton' onclick='onSelectJob(false,"+classIdx+", 0)'>선택1</button>\
-            <button class='job2SelectButton' onclick='onSelectJob(false,"+classIdx+", 1)'>선택2</button>\
             </div>\
         </div>\
         ";

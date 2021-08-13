@@ -791,7 +791,7 @@ var unitData={
     },
     "79": {
         "isDefault": 0,
-        "hitPoints": 282389504,
+        "hitPoints": 290069504,
         "shieldPoints": 1,
         "armorPoints": 25,
         "buildTime": 1500,

@@ -60,7 +60,7 @@ function getStageUnitTree(){
 }
 function getUnitStatViewer(unitID){
   var innerHTML_str = "\
-  <div style='display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto;'>\
+  <div style='display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto;height:150px;'>\
     <div style='grid-column: 1/3;'>\
       <label>Unit Name</label>\
       <input id='unitStatViewer_UnitName' type='text' readonly value='"+unitData[unitID].unitName+"'></input>\
