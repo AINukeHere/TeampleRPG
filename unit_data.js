@@ -4,11 +4,11 @@ function setSCUnitTree(){
   innerHTML_str = "";
   innerHTML_str += "\
   <div class='unitInfoGrid'>\
-  <div style='grid-column: 1/3;'>\
-  <span style='cursor:pointer; background-color:none;' onclick='setStageUnitTree()'>스테이지분류</span>\
-  <span style='cursor:pointer; background-color:rgb(128,255,128);'>스타유닛분류</span>\
-  </div>\
-  "+getSCUnitTree()+getUnitStatViewer(0)+"\
+    <div style='grid-column: 1/3;'>\
+    <span style='cursor:pointer; background-color:none;' onclick='setStageUnitTree()'>스테이지분류</span>\
+    <span style='cursor:pointer; background-color:rgb(128,255,128);'>스타유닛분류</span>\
+    </div>\
+    "+getSCUnitTree()+getUnitStatViewer(0)+"\
   </div>";
   unitDataDiv.innerHTML = innerHTML_str;
 }

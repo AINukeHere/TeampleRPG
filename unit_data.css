@@ -3,10 +3,10 @@
     grid-template-columns: 1fr 1fr;
     max-height: 500px;
 }
-.unitInfoGrid > :nth-child(1),.unitInfoGrid >:nth-child(2){
-    max-height: inherit;
+.unitInfoGrid > :nth-child(2),.unitInfoGrid >:nth-child(3){
+    max-height: 450px;
 }
-.unitInfoGrid >:nth-child(1){
+.unitInfoGrid >:nth-child(2){
     overflow-y: scroll;
 }
 .tree{
