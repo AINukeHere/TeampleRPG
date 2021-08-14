@@ -1,11 +1,29 @@
 var unitDataDiv = document.getElementById("UnitData").getElementsByTagName('div')[0];
-console.log(unitData)
-console.log(stageData)
-innerHTML_str = "";
-innerHTML_str += "\
-<div class='unitInfoGrid'>\
-"+getStageUnitTree()+getUnitStatViewer(0)+"\
-</div>";
+
+function setSCUnitTree(){
+  innerHTML_str = "";
+  innerHTML_str += "\
+  <div class='unitInfoGrid'>\
+  <div style='grid-column: 1/3;'>\
+  <span style='cursor:pointer; background-color:none;' onclick='setStageUnitTree()'>스테이지분류</span>\
+  <span style='cursor:pointer; background-color:rgb(128,255,128);'>스타유닛분류</span>\
+  </div>\
+  "+getSCUnitTree()+getUnitStatViewer(0)+"\
+  </div>";
+  unitDataDiv.innerHTML = innerHTML_str;
+}
+function setStageUnitTree(){
+  innerHTML_str = "";
+  innerHTML_str += "\
+  <div class='unitInfoGrid'>\
+  <div style='grid-column: 1/3;'>\
+  <span style='cursor:pointer; background-color:rgb(128,255,128);'>스테이지분류</span>\
+  <span style='cursor:pointer; background-color:none;' onclick='setSCUnitTree()'>스타유닛분류</span>\
+  </div>\
+  "+getStageUnitTree()+getUnitStatViewer(0)+"\
+  </div>";
+  unitDataDiv.innerHTML = innerHTML_str;
+}
 function getStageUnitTree(){
   var innerHTML_str = "\
   <ul class='tree'>";
@@ -58,6 +76,53 @@ function getStageUnitTree(){
   </ul>";
   return innerHTML_str;
 }
+function getSCUnitTree(){
+  var innerHTML_str = "\
+  <ul class='tree'>";
+  for(var rootKey in SCTreeData){
+    htmlrootID = 'SCTREE_'+rootKey;
+    //console.log(rootKey, htmlrootID);
+    innerHTML_str += "\
+    <li>\
+      <input type='checkbox' id='"+htmlrootID+"'>\
+      <label for='"+htmlrootID+"'>"+rootKey+"</label>\
+      <ul>";
+        for(var key in SCTreeData[rootKey]){
+          keyName = key.replace('_',' ');
+          htmlID = htmlrootID +'_'+ key;
+          //console.log(key, htmlID);
+          innerHTML_str += "\
+          <li>\
+            <input type='checkbox' id='"+htmlID+"'>\
+            <label for='"+htmlID+"'>"+keyName+"</label>\
+            <ul>";
+            for(i=0; i < SCTreeData[rootKey][key].length; ++i){
+              unitID = SCTreeData[rootKey][key][i];
+              if (unitData[unitID].isDefault == 1 || unitData[unitID].unitName == ""){
+                unitName = unitID2Name[unitID];
+              }
+              else
+                unitName = unitData[unitID].unitName;
+              htmlsubID = htmlID + i;
+              //console.log(unitName, htmlsubID);
+              innerHTML_str += "\
+              <li>\
+                <input type='checkbox' id='"+htmlsubID+"'>\
+                <label onclick='updateUnitStat("+unitID+")' for='"+htmlsubID+"' class='lastTree'>"+unitName+"</label>\
+              <li>";
+            }
+            innerHTML_str += "\
+            </ul>\
+          </li>";
+        }
+        innerHTML_str += "\
+      </ul>\
+    </li>";
+    }
+  innerHTML_str += "\
+  </ul>";
+  return innerHTML_str;
+}
 function getUnitStatViewer(unitID){
   var innerHTML_str = "\
   <div style='display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto;height:150px;'>\
@@ -101,4 +166,5 @@ function updateUnitStat(unitID){
   document.getElementById('unitStatViewer_Armor').value = unitData[unitID].armorPoints;
   document.getElementById('unitStatViewer_GasCost').value = unitData[unitID].gasCost;
 }
-unitDataDiv.innerHTML = innerHTML_str;
+
+setStageUnitTree();

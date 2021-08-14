@@ -21,6 +21,8 @@
         <script src="teamplerpg_data.js"></script>
         <script ttype="text/javascript" src="data/game/unit_info_json.js"></script>
         <script ttype="text/javascript" src="data/game/stage_info_json.js"></script>
+        <script ttype="text/javascript" src="data/game/SCTreeData.js"></script>
+        <script ttype="text/javascript" src="data/game/unitID2Name.js"></script>
         <header id="title">
             <a href=".">
                 <h1>팀플RPG의 모든것</h1>
@@ -48,8 +50,8 @@
             <li><a href="#UpgradeCostCalculator">업그레이드 계산기</a></li>
             <li><a href="#NuclearCalculator">핵 데미지 계산기</a></li>
         </ul>
+        <!-- 클래스 및 직업 -->
         <section id="ClassAndJobs">
-            <!-- <button onclick="toggleclassTable();">클래스 보기/숨기기</button> -->
             <span class="sectionTitle">클래스 및 직업</span>
             <div id="classTable" class="classTable">
                 <script>
@@ -79,6 +81,7 @@
             </div>
         </section>
 
+        <!-- 유닛 정보 -->
         <hr>
         <section id="UnitData">
             <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>유닛 정보</span>
