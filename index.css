@@ -85,7 +85,6 @@ a.classProfile:hover{
 } */
 .unitSpec > span{
     display: block;
-    color: white;
 }
 .specName
 {
@@ -100,7 +99,6 @@ a.classProfile:hover{
 .explanation
 {
     font-weight: bold;
-    color: white;
 }
 .skillPopupInfo
 {
@@ -147,16 +145,7 @@ a.classProfile:hover{
     width:52px;
     height:54px;
 }
-.skillCommand{
-    color:rgb(17, 255, 26);
-    font-weight: bold;
-}
-.skillName{
-    color:rgb(44, 180, 148);
-    font-weight: bold;
-}
-.skillUsage{
-    color: white;
+.skillCommand, .skillName, .skillUsage{
     font-weight: bold;
 }
 .jobSelect > :nth-child(2){
@@ -169,16 +158,13 @@ a.classProfile:hover{
     padding-bottom: 10px;
 }
 .jobSelectMessage{
-    color: white;
     text-align: center;
 }
 .job1View{
-    color: white;
     text-align: left;
     position: relative;
 }
 .job2View{
-    color: white;
     text-align: right;
     position: relative;
 }
@@ -233,38 +219,45 @@ a.classProfile:hover{
     font-weight: normal;
     text-shadow: 1px 2px black;
 }
-.missionObjViewer span.defaultFont{
+.missionObjViewer span.DPTEXT_01{
     display: inline-block;
     width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
 }
-span.defaultFont{
-    color: rgb(184, 184, 232);
-}
 .missionObjViewer div.missionObjContent{
     margin-bottom: 10px;
 }
-span.attackTypeColor{
+
+.DPTEXT_04{
+    color: white;
+}
+.DPTEXT_01{
+    color:rgb(184, 184, 232);
+}
+.DPTEXT_08{
     color:rgb(200, 24, 24);
 }
-span.summonTypeColor{
+.DPTEXT_03{
     color:rgb(220, 220, 60);
 }
-span.recoveryTypeColor{
+.DPTEXT_07{
     color:rgb(16, 252, 24);
 }
-span.utilTypeColor{
+.DPTEXT_0E{
     color:rgb(14, 81, 230);
 }
-span.hyphenColor{
+.DPTEXT_0F{
+    color:rgb(44, 180, 148);
+}
+.DPTEXT_1E{
+    color:rgb(156,156,200);
+}
+.DPTEXT_1F{
     color:rgb(0, 228, 252);
 }
-div.missionObjViewer > div > span.skillCommand{
-    color:white;
-}
-div.missionObjViewer > div > span.missionObjSupportColor{
+span.DPTEXT_1C{
     color:rgb(64, 104, 212);
 }
 .missionObjPrevBtn{
@@ -293,7 +286,6 @@ div.missionObjViewer > div > span.missionObjSupportColor{
     font-size: inherit;
     color: white;
 }
-
 .availableBuildingViewer{
     margin: 5px;
     padding: 10px;

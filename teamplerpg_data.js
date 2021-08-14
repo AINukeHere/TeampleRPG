@@ -49,7 +49,7 @@ function showClassPopupInfo(classIdx)
         <div><span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span></div>\
         <div><span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span></div>\
         <div><span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span></div>\
-        <span class='explanation'>"+classInfo.explanation+"</span>\
+        <span class='explanation DPTEXT_04'>"+classInfo.explanation+"</span>\
     </div>\
     <img src='data/images/"+classInfo.image+"'>\
     ";
@@ -107,7 +107,7 @@ function onClickClass(isURL, classIdx)
     <span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span><br>\
     <span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span><br>\
     <span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span><br>\
-    <span class='explanation'>"+classData.classes[classIdx].explanation+"</span>\
+    <span class='explanation DPTEXT_04'>"+classData.classes[classIdx].explanation+"</span>\
     <br>";
     if(classIdx > 13){
         innerHTML_str += "<br>";
@@ -130,31 +130,33 @@ function onClickClass(isURL, classIdx)
         </div>";
     }
     if(classInfo.jobs != null){
-        var job1_spec1_str = getSpecString(classInfo.jobs[0].spec1);
-        var job1_spec2_str = getSpecString(classInfo.jobs[0].spec2);
-        var job1_spec3_str = getSpecString(classInfo.jobs[0].spec3);
-        var job2_spec1_str = getSpecString(classInfo.jobs[1].spec1);
-        var job2_spec2_str = getSpecString(classInfo.jobs[1].spec2);
-        var job2_spec3_str = getSpecString(classInfo.jobs[1].spec3);
+        var job1_abstract_str = getJobAbstractString(classInfo.jobs[0]);
+        var job2_abstract_str = getJobAbstractString(classInfo.jobs[1]);
         innerHTML_str += "\
         <div class='jobSelect'>\
             <div class='jobSelectionTitle'><span>직업 선택지</span></div>\
             <div style='padding:5px;'>\
-                <div class='jobSelectMessage'>두 직업 중 하나를 선택하세요</div><br>\
+                <div class='jobSelectMessage DPTEXT_04'>두 직업 중 하나를 선택하세요</div><br>\
                 <div class='jobExplanation'>\
                     <div class='job1View'>\
-                        <span>" + classInfo.jobs[0].name+ "("+classInfo.jobs[0].nickname+")</span><br>\
-                        <span class='specName'>파괴력</span><span class='specStars'>"+job1_spec1_str+"</span><br>\
-                        <span class='specName'>내구력</span><span class='specStars'>"+job1_spec2_str+"</span><br>\
-                        <span class='specName'>기동성</span><span class='specStars'>"+job1_spec3_str+"</span><br>\
-                        " + classInfo.jobs[0].explanation + "\
+                        <span class='DPTEXT_07'>" + classInfo.jobs[0].name+ "</span><span class='DPTEXT_1E'> ("+classInfo.jobs[0].nickname+")</span><br>\
+                        " + job1_abstract_str;
+                        for(var explanationIdx = 0; explanationIdx < classInfo.jobs[0].explanation.length; ++explanationIdx){
+                            innerHTML_str+="<div style='color:rgb(208,208,213);'>\
+                            " + classInfo.jobs[0].explanation[explanationIdx] + "\
+                            </div>";
+                        }
+                        innerHTML_str+="\
                     </div>\
                     <div class='job2View'>\
-                        <span>" + classInfo.jobs[1].name+ "("+classInfo.jobs[1].nickname+")</span><br>\
-                        <span class='specName'>파괴력</span><span class='specStars'>"+job2_spec1_str+"</span><br>\
-                        <span class='specName'>내구력</span><span class='specStars'>"+job2_spec2_str+"</span><br>\
-                        <span class='specName'>기동성</span><span class='specStars'>"+job2_spec3_str+"</span><br>\
-                        " + classInfo.jobs[1].explanation + "\
+                    <span class='DPTEXT_07'>" + classInfo.jobs[1].name+ "</span><span class='DPTEXT_1E'> ("+classInfo.jobs[1].nickname+")</span><br>\
+                    " + job1_abstract_str;
+                    for(var explanationIdx = 0; explanationIdx < classInfo.jobs[1].explanation.length; ++explanationIdx){
+                        innerHTML_str+="<div style='color:rgb(208,208,213);'>\
+                        " + classInfo.jobs[1].explanation[explanationIdx] + "\
+                        </div>";
+                    }
+                    innerHTML_str+="\
                     </div>\
                 </div>\
                 <div class ='jobSelection'>\
@@ -209,6 +211,32 @@ function getSpecString(starNum)
     }
     return spec_str;
 }
+function getJobAbstractString(jobInfo)
+{
+    var job_abstract_str = "<div>";
+    job_abstract_str += "<span style='color:white;'>"+jobInfo.battleType+"</span>";
+    job_abstract_str += "<span style='color:cyan;'>│</span>";
+    job_abstract_str += "<span style='color:white;'>"+jobInfo.role+"</span>";
+    job_abstract_str += "<span style='color:cyan;'>│</span>";
+    job_abstract_str += "<span style='color:white;'>난이도: </span>";
+    switch(jobInfo.difficulty){
+        case '쉬움':
+            job_abstract_str += "<span style='color:yellow;'>"+jobInfo.difficulty+"</span>";
+            break;
+        case '보통':
+            job_abstract_str += "<span style='color:rgb(44, 180, 148);'>"+jobInfo.difficulty+"</span>";
+            break;
+        case '어려움':
+        case '매우 어려움':
+            job_abstract_str += "<span style='color:rgb(255,5,5);;'>"+jobInfo.difficulty+"</span>";
+            break;
+        default:
+            console.log("unknown difficulty:"+jobInfo.difficulty);
+            break;
+    }
+    job_abstract_str += "</div>";
+    return job_abstract_str;
+}
 function getMissionObjInnerHTML(classIdx, jobIdx){
     console.log("getMissionObjInnerHTML("+classIdx+", "+jobIdx+");");
     var innerHTML_str = "";
@@ -221,14 +249,14 @@ function getMissionObjInnerHTML(classIdx, jobIdx){
             var jobInfo = classData.classes[classIdx].jobs[jobIdx];
             break;
     }
-    innerHTML_str += "<div><span class='defaultFont'>임무 목표</span></div>";
-    innerHTML_str += "<div class='missionObjContent'><span class='hyphenColor'>"+jobInfo.name+"</span>\
-    <span class='missionObjSupportColor'>스킬명 색상구분 (</span>\
-    <span class='attackTypeColor'>공격형</span>\
-    <span class='summonTypeColor'>소환형</span>\
-    <span class='utilTypeColor'>유틸기</span>\
-    <span class='recoveryTypeColor'>회복형</span>\
-    <span class='missionObjSupportColor'>)</span>\
+    innerHTML_str += "<div><span class='DPTEXT_01'>임무 목표</span></div>";
+    innerHTML_str += "<div class='missionObjContent'><span class='DPTEXT_1F'>"+jobInfo.name+"</span>\
+    <span class='DPTEXT_1C'>스킬명 색상구분 (</span>\
+    <span class='DPTEXT_08'>공격형</span>\
+    <span class='DPTEXT_03'>소환형</span>\
+    <span class='DPTEXT_0E'>유틸기</span>\
+    <span class='DPTEXT_07'>회복형</span>\
+    <span class='DPTEXT_1C'>)</span>\
     </div>";
     for(var i = 0; i < jobInfo.skills.length; ++i)
     {
@@ -238,26 +266,26 @@ function getMissionObjInnerHTML(classIdx, jobIdx){
         
         switch(skillInfo.type){
             case "공격형":
-                innerHTML_str += "<span class='attackTypeColor'>" + skillInfo.name +"</span>\
-                <span class='hyphenColor'> - </span>";
+                innerHTML_str += "<span class='DPTEXT_08'>" + skillInfo.name +"</span>\
+                <span class='DPTEXT_1F'> - </span>";
                 break;
             case "소환형":
-                innerHTML_str += "<span class='summonTypeColor'>" + skillInfo.name +"</span>\
-                <span class='hyphenColor'> - </span>";
+                innerHTML_str += "<span class='DPTEXT_03'>" + skillInfo.name +"</span>\
+                <span class='DPTEXT_1F'> - </span>";
                 break;
             case "유틸기":
-                innerHTML_str += "<span class='utilTypeColor'>" + skillInfo.name +"</span>\
-                <span class='hyphenColor'> - </span>";
+                innerHTML_str += "<span class='DPTEXT_0E'>" + skillInfo.name +"</span>\
+                <span class='DPTEXT_1F'> - </span>";
                 break;
             case "회복형":
-                innerHTML_str += "<span class='recoveryTypeColor'>" + skillInfo.name +"</span>\
-                <span class='hyphenColor'> - </span>";
+                innerHTML_str += "<span class='DPTEXT_07'>" + skillInfo.name +"</span>\
+                <span class='DPTEXT_1F'> - </span>";
                 break;
             default:
                 console.log("unknown skill type:"+skillInfo.type);
                 break;
         }
-        innerHTML_str += "<span class='skillCommand'>"+skillInfo.command + "</span></div>";
+        innerHTML_str += "<span class='skillCommand DPTEXT_04'>"+skillInfo.command + "</span></div>";
     }
     innerHTML_str += "<div class='missionObjPrevBtn' onclick='onClickMissionObjPrevBtn()'>이전 (<span>Esc</span>)</div>";
     return innerHTML_str;
@@ -306,16 +334,16 @@ function getSkillInnerHTML(skills){
             <td>";
             switch(skillInfo.type){
                 case "공격형":
-                    innerHTML_str += "<span class='attackTypeColor'>";
+                    innerHTML_str += "<span class='DPTEXT_08'>";
                     break;
                 case "소환형":
-                    innerHTML_str += "<span class='summonTypeColor'>";
+                    innerHTML_str += "<span class='DPTEXT_03'>";
                     break;
                 case "유틸기":
-                    innerHTML_str += "<span class='utilTypeColor'>";
+                    innerHTML_str += "<span class='DPTEXT_0E'>";
                     break;
                 case "회복형":
-                    innerHTML_str += "<span class='recoveryTypeColor'>";
+                    innerHTML_str += "<span class='DPTEXT_07'>";
                     break;
                 default:
                     console.log("unknown skill type:"+skillInfo.type);
@@ -325,13 +353,13 @@ function getSkillInnerHTML(skills){
         </tr>\
         <tr>\
             <td>\
-                <span class='skillCommand'>"+skillInfo.command+" Skill - </span>\
-                <span class='skillName'>"+skillInfo.name+"</span>\
+                <span class='skillCommand DPTEXT_07'>"+skillInfo.command+" Skill - </span>\
+                <span class='skillName DPTEXT_0F'>"+skillInfo.name+"</span>\
             </td>\
         </tr>\
         <tr>\
             <td>\
-                <span class='explanation'>"+skillInfo.explanation+"</span>\
+                <span class='explanation DPTEXT_04'>"+skillInfo.explanation+"</span>\
             </td>\
         </tr>\
         </table>\
@@ -400,16 +428,16 @@ function getAvailableBuildingViewer(buildings){
                 <td>";
                 switch(buildingInfo.type){
                     case "공격형":
-                        innerHTML_str += "<span class='attackTypeColor'>";
+                        innerHTML_str += "<span class='DPTEXT_08'>";
                         break;
                     case "소환형":
-                        innerHTML_str += "<span class='summonTypeColor'>";
+                        innerHTML_str += "<span class='DPTEXT_03'>";
                         break;
                     case "유틸기":
-                        innerHTML_str += "<span class='utilTypeColor'>";
+                        innerHTML_str += "<span class='DPTEXT_0E'>";
                         break;
                     case "회복형":
-                        innerHTML_str += "<span class='recoveryTypeColor'>";
+                        innerHTML_str += "<span class='DPTEXT_07'>";
                         break;
                     default:
                         console.log("unknown skill type:"+buildingInfo.type);
@@ -422,22 +450,22 @@ function getAvailableBuildingViewer(buildings){
         </tr>\
         <tr>\
             <td>\
-                <span class='skillCommand'>"+outterCommand+" - </span>\
-                <span class='skillName'>"+buildingInfo.name+"</span>\
+                <span class='skillCommand DPTEXT_07'>"+outterCommand+" - </span>\
+                <span class='skillName DPTEXT_0F'>"+buildingInfo.name+"</span>\
             </td>\
         </tr>";
         if(buildingInfo.explanation != null){
             innerHTML_str +="\
             <tr>\
                 <td>\
-                    <span class='explanation'>"+buildingInfo.explanation+"</span>\
+                    <span class='explanation DPTEXT_04'>"+buildingInfo.explanation+"</span>\
                 </td>\
             </tr>";
         }
         if(buildingInfo.usage != null){
             innerHTML_str += "<tr>\
             <td>\
-            <span class='skillUsage'>"+buildingInfo.usage+"</span>\
+            <span class='skillUsage DPTEXT_04'>"+buildingInfo.usage+"</span>\
             </td>\
             </tr>\
             </table>";
