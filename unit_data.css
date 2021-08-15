@@ -1,6 +1,6 @@
 .unitInfoGrid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     max-height: 500px;
 }
 .unitInfoGrid > :nth-child(2),.unitInfoGrid >:nth-child(3){
@@ -8,6 +8,17 @@
 }
 .unitInfoGrid >:nth-child(2){
     overflow-y: scroll;
+}
+.unitStatViewer{
+  display:grid; 
+  grid-template-columns:1fr 1fr; 
+  grid-template-rows:auto;height:150px;
+}
+.unitStatViewer > div{
+  padding:5px;
+}
+.unitInfoGrid input{
+  width:100px;
 }
 .tree{
     margin-top: 5px;

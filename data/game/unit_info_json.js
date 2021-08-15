@@ -7,7 +7,15 @@ var unitData={
         "buildTime": 360,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "\u0007[\uc218\ud638\uc790]"
+        "unitName": "\u0007[\uc218\ud638\uc790]",
+        "groundWeapon": {
+            "damage": 54,
+            "damageFactor": 2
+        },
+        "airWeapon": {
+            "damage": 54,
+            "damageFactor": 2
+        }
     },
     "1": {
         "isDefault": 0,
@@ -17,7 +25,15 @@ var unitData={
         "buildTime": 750,
         "oreCost": 25,
         "gasCost": 75,
-        "unitName": "\u0006H\u0003unter"
+        "unitName": "\u0006H\u0003unter",
+        "groundWeapon": {
+            "damage": 55,
+            "damageFactor": 5
+        },
+        "airWeapon": {
+            "damage": 55,
+            "damageFactor": 5
+        }
     },
     "2": {
         "isDefault": 0,
@@ -27,7 +43,11 @@ var unitData={
         "buildTime": 900,
         "oreCost": 150,
         "gasCost": 0,
-        "unitName": "\u0006R\u0003ider"
+        "unitName": "\u0006R\u0003ider",
+        "groundWeapon": {
+            "damage": 40,
+            "damageFactor": 2
+        }
     },
     "3": {
         "isDefault": 0,
@@ -37,7 +57,15 @@ var unitData={
         "buildTime": 2000,
         "oreCost": 100,
         "gasCost": 50,
-        "unitName": "\u0005\ubb34\uc778\uacbd\ube44\ub85c\ubd07"
+        "unitName": "\u0005\ubb34\uc778\uacbd\ube44\ub85c\ubd07",
+        "groundWeapon": {
+            "damage": 34,
+            "damageFactor": 4
+        },
+        "airWeapon": {
+            "damage": 20,
+            "damageFactor": 4
+        }
     },
     "4": {
         "isDefault": 0,
@@ -47,7 +75,15 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Goliath Turret",
+        "groundWeapon": {
+            "damage": 34,
+            "damageFactor": 4
+        },
+        "airWeapon": {
+            "damage": 20,
+            "damageFactor": 4
+        }
     },
     "5": {
         "isDefault": 0,
@@ -57,7 +93,11 @@ var unitData={
         "buildTime": 750,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": "\u0005\ucca0\uac11 \ud0f1\ud06c"
+        "unitName": "\u0005\ucca0\uac11 \ud0f1\ud06c",
+        "groundWeapon": {
+            "damage": 50,
+            "damageFactor": 2
+        }
     },
     "6": {
         "isDefault": 0,
@@ -67,7 +107,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Siege Tank Turret (Tank Mode)",
+        "groundWeapon": {
+            "damage": 50,
+            "damageFactor": 2
+        }
     },
     "7": {
         "isDefault": 0,
@@ -77,7 +121,11 @@ var unitData={
         "buildTime": 300,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "\u0006M\u0003echanic"
+        "unitName": "\u0006M\u0003echanic",
+        "groundWeapon": {
+            "damage": 60,
+            "damageFactor": 0
+        }
     },
     "8": {
         "isDefault": 0,
@@ -87,7 +135,15 @@ var unitData={
         "buildTime": 900,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": "\u0002L\u0004asers \u0007S"
+        "unitName": "\u0002L\u0004asers \u0007S",
+        "groundWeapon": {
+            "damage": 57,
+            "damageFactor": 2
+        },
+        "airWeapon": {
+            "damage": 57,
+            "damageFactor": 2
+        }
     },
     "9": {
         "isDefault": 0,
@@ -107,7 +163,11 @@ var unitData={
         "buildTime": 720,
         "oreCost": 100,
         "gasCost": 50,
-        "unitName": "\b\ud568\uc815\uc220\uc0ac \u0004\uce74\uc77c\ub9c1"
+        "unitName": "\b\ud568\uc815\uc220\uc0ac \u0004\uce74\uc77c\ub9c1",
+        "groundWeapon": {
+            "damage": 100,
+            "damageFactor": 4
+        }
     },
     "11": {
         "isDefault": 0,
@@ -127,7 +187,15 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0006\uc624\u0002\ubca8\ub9ac\uc2a4\ud06c \u001c\uac70\uc2e0\ubcd1"
+        "unitName": "\u0006\uc624\u0002\ubca8\ub9ac\uc2a4\ud06c \u001c\uac70\uc2e0\ubcd1",
+        "groundWeapon": {
+            "damage": 250,
+            "damageFactor": 0
+        },
+        "airWeapon": {
+            "damage": 250,
+            "damageFactor": 0
+        }
     },
     "13": {
         "isDefault": 0,
@@ -137,7 +205,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 0,
-        "unitName": "\u000eTrap"
+        "unitName": "\u000eTrap",
+        "groundWeapon": {
+            "damage": 130,
+            "damageFactor": 0
+        }
     },
     "14": {
         "isDefault": 0,
@@ -147,7 +219,7 @@ var unitData={
         "buildTime": 10,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Nuclear Missile"
     },
     "15": {
         "isDefault": 0,
@@ -167,7 +239,15 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 50,
         "gasCost": 150,
-        "unitName": "\u0003P\u0004riest \u0003Angel\u0004Mode"
+        "unitName": "\u0003P\u0004riest \u0003Angel\u0004Mode",
+        "groundWeapon": {
+            "damage": 100,
+            "damageFactor": 3
+        },
+        "airWeapon": {
+            "damage": 100,
+            "damageFactor": 3
+        }
     },
     "17": {
         "isDefault": 0,
@@ -177,7 +257,15 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 100,
-        "unitName": "\b\uc800\uc8fc\ubc1b\uc740 \u0004\uacf5\uc7a5\uc7a5"
+        "unitName": "\b\uc800\uc8fc\ubc1b\uc740 \u0004\uacf5\uc7a5\uc7a5",
+        "groundWeapon": {
+            "damage": 100,
+            "damageFactor": 6
+        },
+        "airWeapon": {
+            "damage": 200,
+            "damageFactor": 10
+        }
     },
     "18": {
         "isDefault": 0,
@@ -187,7 +275,15 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@AddGas"
+        "unitName": "@AddGas",
+        "groundWeapon": {
+            "damage": 100,
+            "damageFactor": 6
+        },
+        "airWeapon": {
+            "damage": 200,
+            "damageFactor": 10
+        }
     },
     "19": {
         "isDefault": 0,
@@ -197,7 +293,11 @@ var unitData={
         "buildTime": 450,
         "oreCost": 75,
         "gasCost": 0,
-        "unitName": "\u0005\uc804\ub3d9\ucc28"
+        "unitName": "\u0005\uc804\ub3d9\ucc28",
+        "groundWeapon": {
+            "damage": 20,
+            "damageFactor": 2
+        }
     },
     "20": {
         "isDefault": 0,
@@ -207,7 +307,15 @@ var unitData={
         "buildTime": 1,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "\u0006G\u0003unner"
+        "unitName": "\u0006G\u0003unner",
+        "groundWeapon": {
+            "damage": 26,
+            "damageFactor": 2
+        },
+        "airWeapon": {
+            "damage": 26,
+            "damageFactor": 2
+        }
     },
     "21": {
         "isDefault": 0,
@@ -217,7 +325,15 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 400,
         "gasCost": 200,
-        "unitName": "\u0004A\u0002uto \bLasers"
+        "unitName": "\u0004A\u0002uto \bLasers",
+        "groundWeapon": {
+            "damage": 40,
+            "damageFactor": 1
+        },
+        "airWeapon": {
+            "damage": 40,
+            "damageFactor": 1
+        }
     },
     "22": {
         "isDefault": 0,
@@ -237,7 +353,11 @@ var unitData={
         "buildTime": 18900,
         "oreCost": 300,
         "gasCost": 9999,
-        "unitName": "\u0005\uae08\uac15 \ud0f1\ud06c"
+        "unitName": "\u0005\uae08\uac15 \ud0f1\ud06c",
+        "groundWeapon": {
+            "damage": 70,
+            "damageFactor": 4
+        }
     },
     "24": {
         "isDefault": 0,
@@ -247,7 +367,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@BossSkillTimer"
+        "unitName": "@BossSkillTimer",
+        "groundWeapon": {
+            "damage": 70,
+            "damageFactor": 4
+        }
     },
     "25": {
         "isDefault": 0,
@@ -257,7 +381,11 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 300,
         "gasCost": 200,
-        "unitName": "\u0005Rocket Launcher"
+        "unitName": "\u0005Rocket Launcher",
+        "groundWeapon": {
+            "damage": 170,
+            "damageFactor": 5
+        }
     },
     "26": {
         "isDefault": 0,
@@ -267,7 +395,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@ReviveTimer"
+        "unitName": "@ReviveTimer",
+        "groundWeapon": {
+            "damage": 170,
+            "damageFactor": 5
+        }
     },
     "27": {
         "isDefault": 0,
@@ -277,7 +409,15 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 800,
         "gasCost": 600,
-        "unitName": "\u0004\uc2e0\ubb34\uae30 \bRNN"
+        "unitName": "\u0004\uc2e0\ubb34\uae30 \bRNN",
+        "groundWeapon": {
+            "damage": 50,
+            "damageFactor": 4
+        },
+        "airWeapon": {
+            "damage": 50,
+            "damageFactor": 4
+        }
     },
     "28": {
         "isDefault": 0,
@@ -287,7 +427,15 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 800,
         "gasCost": 600,
-        "unitName": "\u0004Shot \u0005S "
+        "unitName": "\u0004Shot \u0005S ",
+        "groundWeapon": {
+            "damage": 190,
+            "damageFactor": 2
+        },
+        "airWeapon": {
+            "damage": 190,
+            "damageFactor": 2
+        }
     },
     "29": {
         "isDefault": 0,
@@ -297,7 +445,15 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 800,
         "gasCost": 600,
-        "unitName": "\u000e\ub300\u0002\ud568\uc120"
+        "unitName": "\u000e\ub300\u0002\ud568\uc120",
+        "groundWeapon": {
+            "damage": 50,
+            "damageFactor": 4
+        },
+        "airWeapon": {
+            "damage": 50,
+            "damageFactor": 4
+        }
     },
     "30": {
         "isDefault": 0,
@@ -307,7 +463,11 @@ var unitData={
         "buildTime": 750,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": "\u0005\uad70\ud3ec \uc0ac\uc218\ub300"
+        "unitName": "\u0005\uad70\ud3ec \uc0ac\uc218\ub300",
+        "groundWeapon": {
+            "damage": 74,
+            "damageFactor": 3
+        }
     },
     "31": {
         "isDefault": 0,
@@ -317,7 +477,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\uae08\ub2e8\uc758 \uc81c\uc870 \uc2a4\ud0dd"
+        "unitName": "@\uae08\ub2e8\uc758 \uc81c\uc870 \uc2a4\ud0dd",
+        "groundWeapon": {
+            "damage": 74,
+            "damageFactor": 3
+        }
     },
     "32": {
         "isDefault": 0,
@@ -327,7 +491,11 @@ var unitData={
         "buildTime": 360,
         "oreCost": 50,
         "gasCost": 25,
-        "unitName": "\u0006\ud30c\uc774\uc5b4 \u0004\uace8\ub818"
+        "unitName": "\u0006\ud30c\uc774\uc5b4 \u0004\uace8\ub818",
+        "groundWeapon": {
+            "damage": 27,
+            "damageFactor": 3
+        }
     },
     "33": {
         "isDefault": 0,
@@ -357,7 +525,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Zerg Larva"
     },
     "36": {
         "isDefault": 0,
@@ -377,7 +545,11 @@ var unitData={
         "buildTime": 420,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "\b\uc544\uae30 \ub291\ub300"
+        "unitName": "\b\uc544\uae30 \ub291\ub300",
+        "groundWeapon": {
+            "damage": 25,
+            "damageFactor": 1
+        }
     },
     "38": {
         "isDefault": 0,
@@ -387,7 +559,15 @@ var unitData={
         "buildTime": 420,
         "oreCost": 75,
         "gasCost": 25,
-        "unitName": "\b\ub291\ub300"
+        "unitName": "\b\ub291\ub300",
+        "groundWeapon": {
+            "damage": 25,
+            "damageFactor": 2
+        },
+        "airWeapon": {
+            "damage": 25,
+            "damageFactor": 2
+        }
     },
     "39": {
         "isDefault": 0,
@@ -397,7 +577,11 @@ var unitData={
         "buildTime": 900,
         "oreCost": 200,
         "gasCost": 200,
-        "unitName": "\u0006D\u0003evil"
+        "unitName": "\u0006D\u0003evil",
+        "groundWeapon": {
+            "damage": 85,
+            "damageFactor": 3
+        }
     },
     "40": {
         "isDefault": 0,
@@ -407,7 +591,11 @@ var unitData={
         "buildTime": 15,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u0010\ub9f9\ub3c5\ucda9"
+        "unitName": "\u0010\ub9f9\ub3c5\ucda9",
+        "groundWeapon": {
+            "damage": 20,
+            "damageFactor": 1
+        }
     },
     "41": {
         "isDefault": 0,
@@ -417,7 +605,11 @@ var unitData={
         "buildTime": 300,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "\b\ud558\uae09 \uc815\ub839"
+        "unitName": "\b\ud558\uae09 \uc815\ub839",
+        "groundWeapon": {
+            "damage": 50,
+            "damageFactor": 0
+        }
     },
     "42": {
         "isDefault": 0,
@@ -437,7 +629,15 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\u0002G\u0005lave Wing"
+        "unitName": "\u0002G\u0005lave Wing",
+        "groundWeapon": {
+            "damage": 43,
+            "damageFactor": 3
+        },
+        "airWeapon": {
+            "damage": 43,
+            "damageFactor": 3
+        }
     },
     "44": {
         "isDefault": 0,
@@ -447,7 +647,11 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 100,
-        "unitName": "\u0002D\u0005eath Wing"
+        "unitName": "\u0002D\u0005eath Wing",
+        "groundWeapon": {
+            "damage": 75,
+            "damageFactor": 1
+        }
     },
     "45": {
         "isDefault": 0,
@@ -477,7 +681,11 @@ var unitData={
         "buildTime": 450,
         "oreCost": 25,
         "gasCost": 75,
-        "unitName": "\b\ud53c\uc758 \uc81c\ubb3c"
+        "unitName": "\b\ud53c\uc758 \uc81c\ubb3c",
+        "airWeapon": {
+            "damage": 1100,
+            "damageFactor": 1100
+        }
     },
     "48": {
         "isDefault": 0,
@@ -487,7 +695,11 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 400,
         "gasCost": 400,
-        "unitName": "\b\ub291\ub300\uc655 \u0004\ud53c\ub9ac\uc5b4\uc2a4"
+        "unitName": "\b\ub291\ub300\uc655 \u0004\ud53c\ub9ac\uc5b4\uc2a4",
+        "groundWeapon": {
+            "damage": 80,
+            "damageFactor": 4
+        }
     },
     "49": {
         "isDefault": 0,
@@ -507,7 +719,11 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 50,
-        "unitName": "\u0006F\u0002ire"
+        "unitName": "\u0006F\u0002ire",
+        "groundWeapon": {
+            "damage": 250,
+            "damageFactor": 50
+        }
     },
     "51": {
         "isDefault": 0,
@@ -517,7 +733,11 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 200,
         "gasCost": 300,
-        "unitName": "\u0010\ud658\uac01\uc758 \u0004\uc81c\ub77c\ud234"
+        "unitName": "\u0010\ud658\uac01\uc758 \u0004\uc81c\ub77c\ud234",
+        "groundWeapon": {
+            "damage": 150,
+            "damageFactor": 20
+        }
     },
     "52": {
         "isDefault": 0,
@@ -537,7 +757,15 @@ var unitData={
         "buildTime": 780,
         "oreCost": 150,
         "gasCost": 50,
-        "unitName": "\b\uc655\uac1c\ubbf8"
+        "unitName": "\b\uc655\uac1c\ubbf8",
+        "groundWeapon": {
+            "damage": 58,
+            "damageFactor": 4
+        },
+        "airWeapon": {
+            "damage": 58,
+            "damageFactor": 4
+        }
     },
     "54": {
         "isDefault": 0,
@@ -547,7 +775,11 @@ var unitData={
         "buildTime": 840,
         "oreCost": 100,
         "gasCost": 0,
-        "unitName": "\u0006T\u0003heif"
+        "unitName": "\u0006T\u0003heif",
+        "groundWeapon": {
+            "damage": 34,
+            "damageFactor": 2
+        }
     },
     "55": {
         "isDefault": 0,
@@ -557,7 +789,15 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 200,
-        "unitName": "\u0002Glave \u0005Wing S"
+        "unitName": "\u0002Glave \u0005Wing S",
+        "groundWeapon": {
+            "damage": 220,
+            "damageFactor": 1
+        },
+        "airWeapon": {
+            "damage": 220,
+            "damageFactor": 1
+        }
     },
     "56": {
         "isDefault": 0,
@@ -567,7 +807,11 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 100,
         "gasCost": 200,
-        "unitName": "\u0006R\u0002ed \u0005moon"
+        "unitName": "\u0006R\u0002ed \u0005moon",
+        "groundWeapon": {
+            "damage": 255,
+            "damageFactor": 5
+        }
     },
     "57": {
         "isDefault": 0,
@@ -587,7 +831,11 @@ var unitData={
         "buildTime": 750,
         "oreCost": 250,
         "gasCost": 125,
-        "unitName": "\u0007Sniper!"
+        "unitName": "\u0007Sniper!",
+        "airWeapon": {
+            "damage": 1,
+            "damageFactor": 1
+        }
     },
     "59": {
         "isDefault": 0,
@@ -607,7 +855,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 500,
-        "unitName": "\u0007[4Skill]"
+        "unitName": "\u0007[4Skill]",
+        "airWeapon": {
+            "damage": 5,
+            "damageFactor": 1
+        }
     },
     "61": {
         "isDefault": 0,
@@ -617,7 +869,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 30,
         "gasCost": 30,
-        "unitName": "\u001c\u96b1\u9041\u0005\u8005"
+        "unitName": "\u001c\u96b1\u9041\u0005\u8005",
+        "groundWeapon": {
+            "damage": 90,
+            "damageFactor": 2
+        }
     },
     "62": {
         "isDefault": 0,
@@ -627,7 +883,11 @@ var unitData={
         "buildTime": 600,
         "oreCost": 150,
         "gasCost": 50,
-        "unitName": "Acid"
+        "unitName": "Acid",
+        "airWeapon": {
+            "damage": 25,
+            "damageFactor": 2
+        }
     },
     "63": {
         "isDefault": 0,
@@ -647,7 +907,11 @@ var unitData={
         "buildTime": 300,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "\u0006B\u0003uilder"
+        "unitName": "\u0006B\u0003uilder",
+        "groundWeapon": {
+            "damage": 70,
+            "damageFactor": 10
+        }
     },
     "65": {
         "isDefault": 0,
@@ -657,7 +921,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 30,
         "gasCost": 0,
-        "unitName": "\u0018\uace0\ube14\ub9b0"
+        "unitName": "\u0018\uace0\ube14\ub9b0",
+        "groundWeapon": {
+            "damage": 15,
+            "damageFactor": 2
+        }
     },
     "66": {
         "isDefault": 0,
@@ -667,7 +935,15 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0006\uc554\ud751\uae30\uc0ac"
+        "unitName": "\u0006\uc554\ud751\uae30\uc0ac",
+        "groundWeapon": {
+            "damage": 142,
+            "damageFactor": 6
+        },
+        "airWeapon": {
+            "damage": 142,
+            "damageFactor": 6
+        }
     },
     "67": {
         "isDefault": 0,
@@ -687,7 +963,15 @@ var unitData={
         "buildTime": 300,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0006C\u0003rusader"
+        "unitName": "\u0006C\u0003rusader",
+        "groundWeapon": {
+            "damage": 40,
+            "damageFactor": 3
+        },
+        "airWeapon": {
+            "damage": 40,
+            "damageFactor": 3
+        }
     },
     "69": {
         "isDefault": 0,
@@ -707,7 +991,15 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 20,
-        "unitName": "\u0007[1Skill]"
+        "unitName": "\u0007[1Skill]",
+        "groundWeapon": {
+            "damage": 1,
+            "damageFactor": 1
+        },
+        "airWeapon": {
+            "damage": 1,
+            "damageFactor": 1
+        }
     },
     "71": {
         "isDefault": 0,
@@ -717,7 +1009,15 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 100,
-        "unitName": "\u0007[3Skill]"
+        "unitName": "\u0007[3Skill]",
+        "groundWeapon": {
+            "damage": 3,
+            "damageFactor": 150
+        },
+        "airWeapon": {
+            "damage": 3,
+            "damageFactor": 150
+        }
     },
     "72": {
         "isDefault": 0,
@@ -737,7 +1037,15 @@ var unitData={
         "buildTime": 300,
         "oreCost": 0,
         "gasCost": 1000,
-        "unitName": "\bSky_\u0007Canon"
+        "unitName": "\bSky_\u0007Canon",
+        "groundWeapon": {
+            "damage": 80,
+            "damageFactor": 1
+        },
+        "airWeapon": {
+            "damage": 80,
+            "damageFactor": 1
+        }
     },
     "74": {
         "isDefault": 0,
@@ -747,7 +1055,11 @@ var unitData={
         "buildTime": 750,
         "oreCost": 150,
         "gasCost": 150,
-        "unitName": "\u0004K\u0002night"
+        "unitName": "\u0004K\u0002night",
+        "groundWeapon": {
+            "damage": 45,
+            "damageFactor": 5
+        }
     },
     "75": {
         "isDefault": 0,
@@ -757,7 +1069,11 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 100,
         "gasCost": 300,
-        "unitName": "\u0002B\u0005lack Shadow"
+        "unitName": "\u0002B\u0005lack Shadow",
+        "groundWeapon": {
+            "damage": 122,
+            "damageFactor": 6
+        }
     },
     "76": {
         "isDefault": 0,
@@ -767,7 +1083,15 @@ var unitData={
         "buildTime": 600,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u000e\ub9e4\uc9c1 \uace8\ub818(\ub9c8\uc778)"
+        "unitName": "\u000e\ub9e4\uc9c1 \uace8\ub818(\ub9c8\uc778)",
+        "groundWeapon": {
+            "damage": 54,
+            "damageFactor": 4
+        },
+        "airWeapon": {
+            "damage": 54,
+            "damageFactor": 4
+        }
     },
     "77": {
         "isDefault": 0,
@@ -777,7 +1101,11 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 0,
-        "unitName": "\u0006W\u0003arrior"
+        "unitName": "\u0006W\u0003arrior",
+        "groundWeapon": {
+            "damage": 28,
+            "damageFactor": 3
+        }
     },
     "78": {
         "isDefault": 0,
@@ -787,7 +1115,15 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 300,
         "gasCost": 100,
-        "unitName": "\u0007\uc815\ub839\uc655 \u0004\uc544\ud0c0\ub77d\uc2dc\uc544"
+        "unitName": "\u0007\uc815\ub839\uc655 \u0004\uc544\ud0c0\ub77d\uc2dc\uc544",
+        "groundWeapon": {
+            "damage": 100,
+            "damageFactor": 10
+        },
+        "airWeapon": {
+            "damage": 100,
+            "damageFactor": 10
+        }
     },
     "79": {
         "isDefault": 0,
@@ -797,7 +1133,11 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 100,
         "gasCost": 300,
-        "unitName": "\u0004\u2501\u0007\uc885\uc218\ub300\ub9c8\uc655\u0004\u2501"
+        "unitName": "\u0004\u2501\u0007\uc885\uc218\ub300\ub9c8\uc655\u0004\u2501",
+        "groundWeapon": {
+            "damage": 200,
+            "damageFactor": 25
+        }
     },
     "80": {
         "isDefault": 0,
@@ -807,7 +1147,15 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 600,
         "gasCost": 300,
-        "unitName": "\u0007Lighting"
+        "unitName": "\u0007Lighting",
+        "groundWeapon": {
+            "damage": 44,
+            "damageFactor": 2
+        },
+        "airWeapon": {
+            "damage": 20,
+            "damageFactor": 1
+        }
     },
     "81": {
         "isDefault": 0,
@@ -837,7 +1185,7 @@ var unitData={
         "buildTime": 7,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Protoss Reaver"
     },
     "84": {
         "isDefault": 0,
@@ -857,7 +1205,11 @@ var unitData={
         "buildTime": 10,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Protoss Scarab",
+        "groundWeapon": {
+            "damage": 0,
+            "damageFactor": 18
+        }
     },
     "86": {
         "isDefault": 0,
@@ -867,7 +1219,15 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 50,
         "gasCost": 1000,
-        "unitName": "\u0007\uc9c0\ub3c4\uc790- \u0004\uc81c\ud0c8\ud53c\uc2a4"
+        "unitName": "\u0007\uc9c0\ub3c4\uc790- \u0004\uc81c\ud0c8\ud53c\uc2a4",
+        "groundWeapon": {
+            "damage": 70,
+            "damageFactor": 3
+        },
+        "airWeapon": {
+            "damage": 70,
+            "damageFactor": 3
+        }
     },
     "87": {
         "isDefault": 0,
@@ -877,7 +1237,11 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 100,
         "gasCost": 300,
-        "unitName": "\u0004\ub9c8\u0005\uc655\uc758 \ubd84\uc2e0"
+        "unitName": "\u0004\ub9c8\u0005\uc655\uc758 \ubd84\uc2e0",
+        "groundWeapon": {
+            "damage": 200,
+            "damageFactor": 25
+        }
     },
     "88": {
         "isDefault": 0,
@@ -887,7 +1251,15 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 600,
         "gasCost": 300,
-        "unitName": "\u0007M\u001coon-Cross"
+        "unitName": "\u0007M\u001coon-Cross",
+        "groundWeapon": {
+            "damage": 215,
+            "damageFactor": 0
+        },
+        "airWeapon": {
+            "damage": 112,
+            "damageFactor": 0
+        }
     },
     "89": {
         "isDefault": 1,
@@ -897,7 +1269,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Rhynadon (Badlands Critter)"
     },
     "90": {
         "isDefault": 1,
@@ -907,7 +1279,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Bengalaas (Jungle Critter)"
     },
     "91": {
         "isDefault": 0,
@@ -947,7 +1319,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Kakaru (Twilight Critter)"
     },
     "95": {
         "isDefault": 0,
@@ -987,7 +1359,11 @@ var unitData={
         "buildTime": 750,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": "\u0004\uac15\ud1f4\uae30\ub2a5(3\ud45c\uc774\uc0c1)"
+        "unitName": "\u0004\uac15\ud1f4\uae30\ub2a5(3\ud45c\uc774\uc0c1)",
+        "airWeapon": {
+            "damage": 5,
+            "damageFactor": 1
+        }
     },
     "99": {
         "isDefault": 0,
@@ -997,7 +1373,15 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 200,
         "gasCost": 75,
-        "unitName": "\u0003\uc800\uaca9\ubcd1"
+        "unitName": "\u0003\uc800\uaca9\ubcd1",
+        "groundWeapon": {
+            "damage": 38,
+            "damageFactor": 5
+        },
+        "airWeapon": {
+            "damage": 38,
+            "damageFactor": 5
+        }
     },
     "100": {
         "isDefault": 0,
@@ -1007,7 +1391,15 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 200,
         "gasCost": 75,
-        "unitName": "\u0006\uc2dd\u0002\uc778\uc885"
+        "unitName": "\u0006\uc2dd\u0002\uc778\uc885",
+        "groundWeapon": {
+            "damage": 30,
+            "damageFactor": 2
+        },
+        "airWeapon": {
+            "damage": 30,
+            "damageFactor": 2
+        }
     },
     "101": {
         "isDefault": 0,
@@ -1027,7 +1419,15 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 800,
         "gasCost": 600,
-        "unitName": "\u0004\ud3ed\uaca9\uae30"
+        "unitName": "\u0004\ud3ed\uaca9\uae30",
+        "groundWeapon": {
+            "damage": 50,
+            "damageFactor": 4
+        },
+        "airWeapon": {
+            "damage": 50,
+            "damageFactor": 4
+        }
     },
     "103": {
         "isDefault": 0,
@@ -1037,7 +1437,11 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 100,
-        "unitName": "\b\ub300\uc655\uac1c\ubbf8"
+        "unitName": "\b\ub300\uc655\uac1c\ubbf8",
+        "groundWeapon": {
+            "damage": 91,
+            "damageFactor": 3
+        }
     },
     "104": {
         "isDefault": 0,
@@ -1047,7 +1451,15 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 200,
         "gasCost": 75,
-        "unitName": "\u0011\ub300\uc0ac\ub839\uad00 YMS"
+        "unitName": "\u0011\ub300\uc0ac\ub839\uad00 YMS",
+        "groundWeapon": {
+            "damage": 200,
+            "damageFactor": 3
+        },
+        "airWeapon": {
+            "damage": 200,
+            "damageFactor": 3
+        }
     },
     "105": {
         "isDefault": 0,
@@ -1087,7 +1499,7 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": ""
+        "unitName": "Terran Nuclear Silo"
     },
     "109": {
         "isDefault": 0,
@@ -1107,7 +1519,7 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Terran Refinery"
     },
     "111": {
         "isDefault": 1,
@@ -1117,7 +1529,7 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 150,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Terran Barracks"
     },
     "112": {
         "isDefault": 0,
@@ -1127,7 +1539,7 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 150,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Terran Academy"
     },
     "113": {
         "isDefault": 1,
@@ -1137,7 +1549,7 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 100,
-        "unitName": ""
+        "unitName": "Terran Factory"
     },
     "114": {
         "isDefault": 1,
@@ -1147,7 +1559,7 @@ var unitData={
         "buildTime": 1050,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": ""
+        "unitName": "Terran Starport"
     },
     "115": {
         "isDefault": 1,
@@ -1157,7 +1569,7 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": ""
+        "unitName": "Terran Control Tower"
     },
     "116": {
         "isDefault": 1,
@@ -1167,7 +1579,7 @@ var unitData={
         "buildTime": 900,
         "oreCost": 100,
         "gasCost": 150,
-        "unitName": ""
+        "unitName": "Terran Science Facility"
     },
     "117": {
         "isDefault": 0,
@@ -1247,7 +1659,11 @@ var unitData={
         "buildTime": 72,
         "oreCost": 1,
         "gasCost": 0,
-        "unitName": "\u0003\ubc29\u0005\uc5b4\ud0d1/\u0004\uc2e0\ud638\ud0c4"
+        "unitName": "\u0003\ubc29\u0005\uc5b4\ud0d1/\u0004\uc2e0\ud638\ud0c4",
+        "airWeapon": {
+            "damage": 150,
+            "damageFactor": 0
+        }
     },
     "125": {
         "isDefault": 0,
@@ -1277,7 +1693,7 @@ var unitData={
         "buildTime": 900,
         "oreCost": 200,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Ion Cannon"
     },
     "128": {
         "isDefault": 0,
@@ -1317,7 +1733,7 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 300,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Zerg Hatchery"
     },
     "132": {
         "isDefault": 1,
@@ -1327,7 +1743,7 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": ""
+        "unitName": "Zerg Lair"
     },
     "133": {
         "isDefault": 1,
@@ -1337,7 +1753,7 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 200,
         "gasCost": 150,
-        "unitName": ""
+        "unitName": "Zerg Hive"
     },
     "134": {
         "isDefault": 0,
@@ -1387,7 +1803,7 @@ var unitData={
         "buildTime": 900,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": ""
+        "unitName": "Zerg Queen's Nest"
     },
     "139": {
         "isDefault": 0,
@@ -1407,7 +1823,7 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 150,
         "gasCost": 200,
-        "unitName": ""
+        "unitName": "Zerg Ultralisk Cavern"
     },
     "141": {
         "isDefault": 0,
@@ -1427,7 +1843,7 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Zerg Spawning Pool"
     },
     "143": {
         "isDefault": 1,
@@ -1437,7 +1853,7 @@ var unitData={
         "buildTime": 300,
         "oreCost": 75,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Zerg Creep Colony"
     },
     "144": {
         "isDefault": 0,
@@ -1447,7 +1863,11 @@ var unitData={
         "buildTime": 300,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "\u0006H\u0002ell \u0005Keeper"
+        "unitName": "\u0006H\u0002ell \u0005Keeper",
+        "airWeapon": {
+            "damage": 10000,
+            "damageFactor": 0
+        }
     },
     "145": {
         "isDefault": 0,
@@ -1467,7 +1887,11 @@ var unitData={
         "buildTime": 300,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "\b\uc9c0\uc625\ud608\uc0ac\uc218"
+        "unitName": "\b\uc9c0\uc625\ud608\uc0ac\uc218",
+        "groundWeapon": {
+            "damage": 200,
+            "damageFactor": 800
+        }
     },
     "147": {
         "isDefault": 1,
@@ -1477,7 +1901,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Zerg Overmind (With Shell)"
     },
     "148": {
         "isDefault": 0,
@@ -1497,7 +1921,7 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Zerg Extractor"
     },
     "150": {
         "isDefault": 0,
@@ -1527,7 +1951,7 @@ var unitData={
         "buildTime": 0,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Zerg Cerebrate Daggoth"
     },
     "153": {
         "isDefault": 0,
@@ -1577,7 +2001,7 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Protoss Assimilator"
     },
     "158": {
         "isDefault": 0,
@@ -1627,7 +2051,15 @@ var unitData={
         "buildTime": 60,
         "oreCost": 0,
         "gasCost": 30,
-        "unitName": "\u0004Attack Tower"
+        "unitName": "\u0004Attack Tower",
+        "groundWeapon": {
+            "damage": 100,
+            "damageFactor": 50
+        },
+        "airWeapon": {
+            "damage": 100,
+            "damageFactor": 50
+        }
     },
     "163": {
         "isDefault": 0,
@@ -1747,7 +2179,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 250,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Protoss Temple"
     },
     "175": {
         "isDefault": 1,
@@ -1757,7 +2189,7 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 1500,
         "gasCost": 500,
-        "unitName": ""
+        "unitName": "Xel'Naga Temple"
     },
     "176": {
         "isDefault": 1,
@@ -1767,7 +2199,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Mineral Field (Type 1)"
     },
     "177": {
         "isDefault": 1,
@@ -1777,7 +2209,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Mineral Field (Type 2)"
     },
     "178": {
         "isDefault": 1,
@@ -1787,7 +2219,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Mineral Field (Type 3)"
     },
     "179": {
         "isDefault": 0,
@@ -1827,7 +2259,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Time 5"
+        "unitName": "Time 5",
+        "groundWeapon": {
+            "damage": 7,
+            "damageFactor": 1
+        }
     },
     "183": {
         "isDefault": 0,
@@ -1847,7 +2283,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Time 8"
+        "unitName": "Time 8",
+        "groundWeapon": {
+            "damage": 7,
+            "damageFactor": 1
+        }
     },
     "185": {
         "isDefault": 0,
@@ -1907,7 +2347,7 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 1000,
         "gasCost": 400,
-        "unitName": ""
+        "unitName": "Psi Disrupter"
     },
     "191": {
         "isDefault": 0,
@@ -1987,7 +2427,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": ""
+        "unitName": "Terran Flag Beacon"
     },
     "199": {
         "isDefault": 0,
@@ -2037,7 +2477,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\ud50c\ub85c\uc5b4 \ubbf8\uc0ac\uc77c \ud2b8\ub7a9"
+        "unitName": "\b\ud50c\ub85c\uc5b4 \ubbf8\uc0ac\uc77c \ud2b8\ub7a9",
+        "groundWeapon": {
+            "damage": 65,
+            "damageFactor": 1
+        }
     },
     "204": {
         "isDefault": 0,
@@ -2097,7 +2541,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\uac74\ud2b8\ub7a9"
+        "unitName": "\b\uac74\ud2b8\ub7a9",
+        "groundWeapon": {
+            "damage": 135,
+            "damageFactor": 1
+        }
     },
     "210": {
         "isDefault": 0,
@@ -2107,7 +2555,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\ubbf8\uc0ac\uc77c trap 2"
+        "unitName": "\b\ubbf8\uc0ac\uc77c trap 2",
+        "groundWeapon": {
+            "damage": 62,
+            "damageFactor": 1
+        }
     },
     "211": {
         "isDefault": 0,
@@ -2117,7 +2569,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\ud504\ub808\uc784 \ud2b8\ub7a91"
+        "unitName": "\b\ud504\ub808\uc784 \ud2b8\ub7a91",
+        "groundWeapon": {
+            "damage": 300,
+            "damageFactor": 1
+        }
     },
     "212": {
         "isDefault": 0,
@@ -2127,7 +2583,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\ubbf8\uc0ac\uc77c trap"
+        "unitName": "\b\ubbf8\uc0ac\uc77c trap",
+        "groundWeapon": {
+            "damage": 62,
+            "damageFactor": 1
+        }
     },
     "213": {
         "isDefault": 0,
@@ -2137,7 +2597,11 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\ud504\ub808\uc784 \ud2b8\ub7a92"
+        "unitName": "\b\ud504\ub808\uc784 \ud2b8\ub7a92",
+        "groundWeapon": {
+            "damage": 300,
+            "damageFactor": 1
+        }
     },
     "214": {
         "isDefault": 1,
@@ -2147,7 +2611,7 @@ var unitData={
         "buildTime": 0,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": ""
+        "unitName": "Start Location"
     },
     "215": {
         "isDefault": 0,
@@ -2227,7 +2691,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Protoss Vespene Gas Orb Type 1"
     },
     "223": {
         "isDefault": 0,
@@ -2257,7 +2721,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Zerg Vespene Gas Sac Type 2"
     },
     "226": {
         "isDefault": 1,
@@ -2267,7 +2731,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Terran Vespene Gas Tank Type 1"
     },
     "227": {
         "isDefault": 1,
@@ -2277,6 +2741,6 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": ""
+        "unitName": "Terran Vespene Gas Tank Type 2"
     }
-};
+}

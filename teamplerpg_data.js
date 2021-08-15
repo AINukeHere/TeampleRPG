@@ -46,9 +46,9 @@ function showClassPopupInfo(classIdx)
     
     var innerHTML_str = "\
     <div>\
-        <div><span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span></div>\
-        <div><span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span></div>\
-        <div><span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span></div>\
+        <div><span class='specName DPTEXT_07'>파괴력</span><span class='specStars DPTEXT_08'>"+spec_str1+"</span></div>\
+        <div><span class='specName DPTEXT_07'>내구력</span><span class='specStars DPTEXT_08'>"+spec_str2+"</span></div>\
+        <div><span class='specName DPTEXT_07'>기동성</span><span class='specStars DPTEXT_08'>"+spec_str3+"</span></div>\
         <span class='explanation DPTEXT_04'>"+classInfo.explanation+"</span>\
     </div>\
     <img src='data/images/"+classInfo.image+"'>\
@@ -104,9 +104,9 @@ function onClickClass(isURL, classIdx)
 
     var innerHTML_str = "\
     <img class='classProfileImage' src=data/images/"+classData.classes[classIdx].image+"><br>\
-    <span class='specName'>파괴력</span><span class='specStars'>"+spec_str1+"</span><br>\
-    <span class='specName'>내구력</span><span class='specStars'>"+spec_str2+"</span><br>\
-    <span class='specName'>기동성</span><span class='specStars'>"+spec_str3+"</span><br>\
+        <span class='specName DPTEXT_07'>파괴력</span><span class='specStars DPTEXT_08'>"+spec_str1+"</span><br>\
+        <span class='specName DPTEXT_07'>내구력</span><span class='specStars DPTEXT_08'>"+spec_str2+"</span><br>\
+        <span class='specName DPTEXT_07'>기동성</span><span class='specStars DPTEXT_08'>"+spec_str3+"</span><br>\
     <span class='explanation DPTEXT_04'>"+classData.classes[classIdx].explanation+"</span>\
     <br>";
     if(classIdx > 13){

@@ -98,11 +98,7 @@ function getSCUnitTree(){
             <ul>";
             for(i=0; i < SCTreeData[rootKey][key].length; ++i){
               unitID = SCTreeData[rootKey][key][i];
-              if (unitData[unitID].isDefault == 1 || unitData[unitID].unitName == ""){
-                unitName = unitID2Name[unitID];
-              }
-              else
-                unitName = unitData[unitID].unitName;
+              unitName = unitData[unitID].unitName;
               htmlsubID = htmlID + i;
               //console.log(unitName, htmlsubID);
               innerHTML_str += "\
@@ -125,34 +121,50 @@ function getSCUnitTree(){
 }
 function getUnitStatViewer(unitID){
   var innerHTML_str = "\
-  <div style='display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto;height:150px;'>\
-    <div style='grid-column: 1/3;'>\
-      <label>Unit Name</label>\
-      <input id='unitStatViewer_UnitName' type='text' readonly value='"+unitData[unitID].unitName+"'></input>\
+  <div class='unitStatViewer'>\
+    <div style='grid-column: 1/3; width:50%; margin:auto;'>\
+      <label>이름</label>\
+      <input style='width:325px;' id='unitStatViewer_UnitName' type='text' readonly value='"+unitData[unitID].unitName+"'></input>\
     </div>\
     <div>\
-      <label>Hit Points</label>\
+      <label>체력</label>\
       <input id='unitStatViewer_HitPoints' type='text' readonly value='"+unitData[unitID].hitPoints / 256+"'></input>\
     </div>\
     <div>\
-      <label>Build Time</label>\
+      <label>생산시간(프레임)</label>\
       <input id='unitStatViewer_BuildTime' type='text' readonly value='"+unitData[unitID].buildTime+"'></input>\
     </div>\
     <div>\
-      <label>Shield Points</label>\
+      <label>쉴드</label>\
       <input id='unitStatViewer_ShieldPoints' type='text' readonly value='"+unitData[unitID].shieldPoints+"'></input>\
     </div>\
     <div>\
-      <label>Mineral Cost</label>\
+      <label>미네랄 가격</label>\
       <input id='unitStatViewer_MineralCost' type='text' readonly value='"+unitData[unitID].oreCost+"'></input>\
     </div>\
     <div>\
-      <label>Armor</label>\
+      <label>방어력</label>\
       <input id='unitStatViewer_Armor' type='text' readonly value='"+unitData[unitID].armorPoints+"'></input>\
     </div>\
     <div>\
-      <label>Gas Cost</label>\
+      <label>가스 가격</label>\
       <input id='unitStatViewer_GasCost' type='text' readonly value='"+unitData[unitID].gasCost+"'></input>\
+    </div>\
+    <div>\
+      <label>지상 공격력</label>\
+      <input id='unitStatViewer_GroundWeapon_damage' type='text' readonly value='"+(unitData[unitID].groundWeapon == null ? '무기 없음' : unitData[unitID].groundWeapon.damage)+"'></input>\
+    </div>\
+    <div>\
+      <label>지상 추가 공격력</label>\
+      <input id='unitStatViewer_GroundWeapon_damageFactor' type='text' readonly value='"+(unitData[unitID].groundWeapon == null ? '무기 없음' : unitData[unitID].groundWeapon.damageFactor)+"'></input>\
+    </div>\
+    <div>\
+      <label>공중 공격력</label>\
+      <input id='unitStatViewer_AirWeapon_damage' type='text' readonly value='"+(unitData[unitID].airWeapon == null ? '무기 없음' : unitData[unitID].airWeapon.damage)+"'></input>\
+    </div>\
+    <div>\
+      <label>공중 추가 공격력</label>\
+      <input id='unitStatViewer_AirWeapon_damageFactor' type='text' readonly value='"+(unitData[unitID].airWeapon == null ? '무기 없음' : unitData[unitID].airWeapon.damageFactor)+"'></input>\
     </div>\
   </div>";
   return innerHTML_str;
@@ -165,6 +177,10 @@ function updateUnitStat(unitID){
   document.getElementById('unitStatViewer_MineralCost').value = unitData[unitID].oreCost;
   document.getElementById('unitStatViewer_Armor').value = unitData[unitID].armorPoints;
   document.getElementById('unitStatViewer_GasCost').value = unitData[unitID].gasCost;
+  document.getElementById('unitStatViewer_GroundWeapon_damage').value = (unitData[unitID].groundWeapon == null ? '무기 없음' : unitData[unitID].groundWeapon.damage)
+  document.getElementById('unitStatViewer_GroundWeapon_damageFactor').value = (unitData[unitID].groundWeapon == null ? '무기 없음' : unitData[unitID].groundWeapon.damageFactor)
+  document.getElementById('unitStatViewer_AirWeapon_damage').value = (unitData[unitID].airWeapon == null ? '무기 없음' : unitData[unitID].airWeapon.damage)
+  document.getElementById('unitStatViewer_AirWeapon_damageFactor').value = (unitData[unitID].airWeapon == null ? '무기 없음' : unitData[unitID].airWeapon.damageFactor)
 }
 
 setStageUnitTree();

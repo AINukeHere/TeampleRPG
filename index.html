@@ -22,7 +22,6 @@
         <script ttype="text/javascript" src="data/game/unit_info_json.js"></script>
         <script ttype="text/javascript" src="data/game/stage_info_json.js"></script>
         <script ttype="text/javascript" src="data/game/SCTreeData.js"></script>
-        <script ttype="text/javascript" src="data/game/unitID2Name.js"></script>
         <header id="title">
             <a href=".">
                 <h1>팀플RPG의 모든것</h1>
@@ -50,34 +49,38 @@
             <li><a href="#UpgradeCostCalculator">업그레이드 계산기</a></li>
             <li><a href="#NuclearCalculator">핵 데미지 계산기</a></li>
         </ul>
+
+
         <!-- 클래스 및 직업 -->
         <section id="ClassAndJobs">
-            <span class="sectionTitle">클래스 및 직업</span>
-            <div id="classTable" class="classTable">
-                <script>
-                    for(var i =0; i < classData.classes.length; ++i){
-                        document.writeln("<a class='classProfile' onclick='onClickClass(false,"+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
-                            <img class='classProfileImage' src=./data/images/"+classData.classes[i].image+"><br>");
-                        document.writeln("<span>"+classData.classes[i].name+"</span><br>");
-                        if(classData.classes[i].nickname)
-                        {
-                            document.writeln("<span>(별칭:"+classData.classes[i].nickname+")</span><br>");
-                        }
-                        document.writeln("</a>");
-                    }                    
-                </script>
-                <div id="classPopupInfo" class='classPopupInfo'>
-                    <div>
-                        캐릭터를 설명하는 중...
+            <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>클래스 및 직업</span>
+            <div>
+                <div id="classTable" class="classTable">
+                    <script>
+                        for(var i =0; i < classData.classes.length; ++i){
+                            document.writeln("<a class='classProfile' onclick='onClickClass(false,"+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
+                                <img class='classProfileImage' src=./data/images/"+classData.classes[i].image+"><br>");
+                            document.writeln("<span>"+classData.classes[i].name+"</span><br>");
+                            if(classData.classes[i].nickname)
+                            {
+                                document.writeln("<span>(별칭:"+classData.classes[i].nickname+")</span><br>");
+                            }
+                            document.writeln("</a>");
+                        }                    
+                    </script>
+                    <div id="classPopupInfo" class='classPopupInfo'>
+                        <div>
+                            캐릭터를 설명하는 중...
+                        </div>
+                        <br>
+                        <img src='data/images/dummy.png'>
                     </div>
-                    <br>
-                    <img src='data/images/dummy.png'>
                 </div>
-            </div>
-            <div id="classView"></div>
-            <div id="jobView"></div>
-            <div id="skillPopupInfo" class="skillPopupInfo">
-                <img src="data/images/S_Skill_Cost.png">
+                <div id="classView"></div>
+                <div id="jobView"></div>
+                <div id="skillPopupInfo" class="skillPopupInfo">
+                    <img src="data/images/S_Skill_Cost.png">
+                </div>
             </div>
         </section>
 
@@ -92,25 +95,25 @@
 
         <hr>
         <section id="ItemInfomation">
-            <span class="sectionTitle" onclick="toogleSection(this)">아이템 정보</span>
+            <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>아이템 정보</span>
             <div>content</div>
         </section>
 
         <hr>
         <section id="StageReword">
-            <span class="sectionTitle" onclick="toogleSection(this)">스테이지 정보</span>
+            <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>스테이지 정보</span>
             <div>content</div>
         </section>
 
         <hr>
         <section id="UpgradeCostCalculator">
-            <span class="sectionTitle" onclick="toogleSection(this)">업그레이드 계산기</span>
+            <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>업그레이드 계산기</span>
             <div>content</div>
         </section> 
 
         <hr>
         <section id="NuclearCalculator">
-            <span class="sectionTitle" onclick="toogleSection(this)">핵 데미지 계산기</span>
+            <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>핵 데미지 계산기</span>
             <div>
             <script type="application/javascript">
 
