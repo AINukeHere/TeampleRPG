@@ -1,0 +1,229 @@
+
+.classTable
+{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 1280px;
+}
+.classProfile
+{
+    margin: 10px;
+    display:inline;
+    text-align: center;
+}
+a.classProfile{
+    min-width: 160px;
+    text-decoration: none;
+}
+a.classProfile:visited{
+    color:black;
+}
+a.classProfile:hover{
+    text-decoration: underline;
+    color:blue;
+}
+.classProfile:hover
+{
+    cursor: pointer;
+}
+.classProfileImage
+{
+    width: 128px;
+    height: 128px;
+}
+.classPopupInfo
+{
+    background-color: black;
+    padding: 4px;
+    position: absolute; 
+    display: none; 
+    float: left; 
+    overflow: hidden; 
+    z-index: 999;
+    min-width: 640px;
+    max-width: 720px;
+}
+#classView, #jobView{
+    display: none;
+    width: 950px;
+    margin: 10px;
+    padding: 10px;
+    background-color:rgb(0,0, 0,90%);
+}
+.unitSpec > span{
+    display: block;
+}
+.specName
+{
+    font-weight: bold;
+}
+.specStars
+{
+    font-weight: bold;
+}
+.explanation
+{
+    font-weight: bold;
+}
+.skillPopupInfo
+{
+    background-color: black;
+    min-width: 128px;
+    padding: 4px;
+    position: absolute; 
+    display: none; 
+    float: left; 
+    overflow: hidden; 
+    z-index: 999;
+}
+:is(#classView, #jobView) > div {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid white;
+}
+.skillViewerTitle, .availableBuildingViewerTitle, .jobSelectionTitle{
+    background-color: rgba(255, 255, 0, 0.5);
+    width: 100%;
+    margin-bottom: 10px;
+    text-indent: 10px;
+}
+:is(.skillViewerTitle, .availableBuildingViewerTitle, .jobSelectionTitle) > span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.skillContent tbody > :nth-child(1) > td{
+    width: 90%;
+}
+.skillContent{
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: black;
+    width: 100%;
+}
+.skillContent td img{
+    vertical-align: middle;
+}
+.skillContent td > span{
+    font-weight: bold;
+}
+.skillIcon{
+    width:52px;
+    height:54px;
+}
+.skillCommand, .skillName, .skillUsage{
+    font-weight: bold;
+}
+.jobSelect > :nth-child(2){
+    background-color: black;
+}
+.jobExplanation
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 10px;
+}
+.jobSelectMessage{
+    text-align: center;
+}
+.job1View{
+    text-align: left;
+    position: relative;
+}
+.job2View{
+    text-align: right;
+    position: relative;
+}
+.jobSelection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.job1SelectButton{
+    font-size: 20px;
+    height: 50px;
+    margin-right: 10px;
+}
+.job2SelectButton{
+    font-size: 20px;
+    height: 50px;
+    margin-left: 10px;
+}
+.missionObjBtn{
+    width: 450px;
+    height: 58px;
+    margin: auto;
+    background-image: url('data/images/missionObjBtn.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height:58px;
+    font-size: 20px;
+    color: rgb(250,250,68);
+}
+.missionObjBtn:hover{
+    cursor:pointer;
+    color: white;
+}
+.missionObjBtn:active{
+    background-image: url('data/images/missionObjBtn_onClick.png');
+}
+.missionObjBtn span{
+    font-size: inherit;
+    color: white;
+}
+.missionObjViewer{
+    display: none;
+    background-color: rgb(0, 11, 39);
+    border: 2px solid rgb(0, 6, 59);
+    border-radius: 10px;
+    padding-left: 5px;
+    margin: 25px;
+    /* min-height: 510px; */
+}
+.missionObjViewer span{
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: 1px 2px black;
+}
+.missionObjViewer span.DPTEXT_01{
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.missionObjViewer div.missionObjContent{
+    margin-bottom: 10px;
+}
+.missionObjPrevBtn{
+    width: 450px;
+    height: 58px;
+    margin: auto;
+    background-image: url('data/images/missionObjBtn.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height:58px;
+    font-size: 20px;
+    color: rgb(250,250,68);
+    background-image: url('data/images/missionObjPrevBtn.png');
+    /* position: absolute; */
+    bottom:0;
+    margin-bottom: 15px;
+}
+.missionObjPrevBtn:hover{
+    cursor:pointer;
+    color: white;
+}
+.missionObjPrevBtn:active{
+    background-image: url('data/images/missionObjBtn_onClick.png');
+}
+.missionObjPrevBtn span{
+    font-size: inherit;
+    color: white;
+}
+.availableBuildingViewer{
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid white;
+}
