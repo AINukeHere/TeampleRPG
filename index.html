@@ -12,13 +12,12 @@
         <style type="text/css">
             @import url("index.css");
             @import url("category.css");
-            @import url("unit_data.css");
+            @import url("unit_info_section.css");
         </style>
     </head>
     <body>
         <script src='main.js'></script>
         <script ttype="text/javascript" src="data/game/d_class_info.js"></script>
-        <script src="teamplerpg_data.js"></script>
         <script ttype="text/javascript" src="data/game/unit_info_json.js"></script>
         <script ttype="text/javascript" src="data/game/stage_info_json.js"></script>
         <script ttype="text/javascript" src="data/game/SCTreeData.js"></script>
@@ -55,33 +54,8 @@
         <section id="ClassAndJobs">
             <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>클래스 및 직업</span>
             <div>
-                <div id="classTable" class="classTable">
-                    <script>
-                        for(var i =0; i < classData.classes.length; ++i){
-                            document.writeln("<a class='classProfile' onclick='onClickClass(false,"+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
-                                <img class='classProfileImage' src=./data/images/"+classData.classes[i].image+"><br>");
-                            document.writeln("<span>"+classData.classes[i].name+"</span><br>");
-                            if(classData.classes[i].nickname)
-                            {
-                                document.writeln("<span>(별칭:"+classData.classes[i].nickname+")</span><br>");
-                            }
-                            document.writeln("</a>");
-                        }                    
-                    </script>
-                    <div id="classPopupInfo" class='classPopupInfo'>
-                        <div>
-                            캐릭터를 설명하는 중...
-                        </div>
-                        <br>
-                        <img src='data/images/dummy.png'>
-                    </div>
-                </div>
-                <div id="classView"></div>
-                <div id="jobView"></div>
-                <div id="skillPopupInfo" class="skillPopupInfo">
-                    <img src="data/images/S_Skill_Cost.png">
-                </div>
             </div>
+            <script src="class_job_section.js"></script>
         </section>
 
         <!-- 유닛 정보 -->
@@ -90,7 +64,7 @@
             <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>유닛 정보</span>
             <div>
             </div>
-            <script src="unit_data.js"></script>
+            <script src="unit_info_section.js"></script>
         </section>
 
         <hr>

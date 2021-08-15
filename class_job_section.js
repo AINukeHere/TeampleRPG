@@ -8,6 +8,34 @@ if(!_DEBUG)
     classData = JSON.parse(request.responseText);
 }
 
+var classJobSectionDiv = document.getElementById("ClassAndJobs").getElementsByTagName('div')[0];
+//static
+innerHTML_str = "\
+<div id='classTable' class='classTable'>";
+    for(var i =0; i < classData.classes.length; ++i){
+        innerHTML_str += "\
+        <a class='classProfile' onclick='onClickClass(false,"+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
+        <img class='classProfileImage' src=./data/images/"+classData.classes[i].image+"><br><span>"+classData.classes[i].name+"</span><br>";
+        if(classData.classes[i].nickname)
+            innerHTML_str += "<span>(별칭:"+classData.classes[i].nickname+")</span><br>";
+        innerHTML_str += "</a>";
+    }
+    innerHTML_str += "\
+    <div id='classPopupInfo' class='classPopupInfo'>\
+        <div>\
+            캐릭터를 설명하는 중...\
+        </div\
+        <br>\
+        <img src='data/images/dummy.png'>\
+    </div>\
+</div>\
+<div id='classView'></div>\
+<div id='jobView'></div>\
+<div id='skillPopupInfo' class='skillPopupInfo'>\
+    <img src='data/images/S_Skill_Cost.png'>\
+</div>";
+classJobSectionDiv.innerHTML = innerHTML_str;
+
 function setPopupInfoPosition(event)
 {
     var classPopupInfo = document.getElementById("classPopupInfo");
