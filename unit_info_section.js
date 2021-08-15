@@ -122,9 +122,9 @@ function getSCUnitTree(){
 function getUnitStatViewer(unitID){
   var innerHTML_str = "\
   <div class='unitStatViewer'>\
-    <div style='grid-column: 1/3; width:50%; margin:auto;'>\
-      <label>이름</label>\
-      <input style='width:325px;' id='unitStatViewer_UnitName' type='text' readonly value='"+unitData[unitID].unitName+"'></input>\
+    <div style='grid-column: 1/3;'>\
+      <label style='width:20%;' >이름</label>\
+      <input style='width:73%;' id='unitStatViewer_UnitName' type='text' readonly value='"+unitData[unitID].unitName+"'></input>\
     </div>\
     <div>\
       <label>체력</label>\
