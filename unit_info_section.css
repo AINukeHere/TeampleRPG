@@ -19,10 +19,10 @@
 }
 .unitInfoGrid label{
   display: inline-block;
-  width: 40%;
+  width: 135px;
 }
 .unitInfoGrid input{
-  width: auto;
+  width: 100px;
 }
 .tree{
     margin-top: 5px;
