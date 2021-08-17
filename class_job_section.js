@@ -177,14 +177,14 @@ function onClickClass(isURL, classIdx)
                         innerHTML_str+="\
                     </div>\
                     <div class='job2View'>\
-                    <span class='DPTEXT_07'>" + classInfo.jobs[1].name+ "</span><span class='DPTEXT_1E'> ("+classInfo.jobs[1].nickname+")</span><br>\
-                    " + job1_abstract_str;
-                    for(var explanationIdx = 0; explanationIdx < classInfo.jobs[1].explanation.length; ++explanationIdx){
-                        innerHTML_str+="<div style='color:rgb(208,208,213);'>\
-                        " + classInfo.jobs[1].explanation[explanationIdx] + "\
-                        </div>";
-                    }
-                    innerHTML_str+="\
+                        <span class='DPTEXT_07'>" + classInfo.jobs[1].name+ "</span><span class='DPTEXT_1E'> ("+classInfo.jobs[1].nickname+")</span><br>\
+                        " + job2_abstract_str;
+                        for(var explanationIdx = 0; explanationIdx < classInfo.jobs[1].explanation.length; ++explanationIdx){
+                            innerHTML_str+="<div style='color:rgb(208,208,213);'>\
+                            " + classInfo.jobs[1].explanation[explanationIdx] + "\
+                            </div>";
+                        }
+                        innerHTML_str+="\
                     </div>\
                 </div>\
                 <div class ='jobSelection'>\
