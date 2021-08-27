@@ -20,7 +20,10 @@
 }
 .unitInfoGrid label{
   display: inline-block;
-  /* width: 180px; */
+}
+.unitStatViewer label{
+  display: inline-block;
+  width: 135px;
 }
 .unitInfoGrid input{
   width: 100px;
