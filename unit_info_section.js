@@ -1,4 +1,4 @@
-var unitDataDiv = document.getElementById("UnitData").getElementsByTagName('div')[0];
+var unitDataDiv = document.getElementById("UnitInfomation").getElementsByTagName('div')[0];
 
 function setSCUnitTree(){
   innerHTML_str = "";
@@ -42,11 +42,12 @@ function getStageUnitTree(){
           for(j=0; j < stageData[i].units.length; ++j){
             unitID = stageData[i].units[j];
             unitName = unitData[unitID].unitName;
+            unitOriginName = unitData[unitID].unitOriginName;
             htmlID = "StageUnit" + i + "_"+ j;
             innerHTML_str += "\
             <li>\
               <input type='checkbox' id='"+htmlID+"'>\
-              <label onclick='updateUnitStat("+unitID+")' for='"+htmlID+"' class='lastTree'>"+unitName+"</label>\
+              <label onclick='updateUnitStat("+unitID+")' for='"+htmlID+"' class='lastTree'>"+unitName+" ("+ unitOriginName+")</label>\
             <li>";
           }
           innerHTML_str += "\
@@ -63,7 +64,7 @@ function getStageUnitTree(){
             innerHTML_str += "\
             <li>\
               <input type='checkbox' id='"+htmlID+"'>\
-              <label onclick='updateUnitStat("+unitID+")' for='"+htmlID+"' class='lastTree'>"+unitName+"</label>\
+              <label onclick='updateUnitStat("+unitID+")' for='"+htmlID+"' class='lastTree'>"+unitName+" ("+ unitOriginName+")</label>\
             <li>";
           }
           innerHTML_str += "\
@@ -99,12 +100,13 @@ function getSCUnitTree(){
             for(i=0; i < SCTreeData[rootKey][key].length; ++i){
               unitID = SCTreeData[rootKey][key][i];
               unitName = unitData[unitID].unitName;
+              unitOriginName = unitData[unitID].unitOriginName;
               htmlsubID = htmlID + i;
               //console.log(unitName, htmlsubID);
               innerHTML_str += "\
               <li>\
                 <input type='checkbox' id='"+htmlsubID+"'>\
-                <label onclick='updateUnitStat("+unitID+")' for='"+htmlsubID+"' class='lastTree'>"+unitName+"</label>\
+                <label onclick='updateUnitStat("+unitID+")' for='"+htmlsubID+"' class='lastTree'>"+unitName+" ("+ unitOriginName+")</label>\
               <li>";
             }
             innerHTML_str += "\

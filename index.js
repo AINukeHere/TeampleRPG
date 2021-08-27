@@ -1,6 +1,5 @@
 function toogleSection(spanTag)
 {
-    
     var sectionDiv = spanTag.parentElement.getElementsByTagName('div')[0];
     if (sectionDiv.style.display != 'none'){
         sectionDiv.style.display = 'none';

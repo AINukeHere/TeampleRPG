@@ -5,6 +5,7 @@
 }
 .unitInfoGrid > :nth-child(2),.unitInfoGrid >:nth-child(3){
     max-height: 450px;
+    min-height: 210px;
 }
 .unitInfoGrid >:nth-child(2){
     overflow-y: scroll;
@@ -19,7 +20,7 @@
 }
 .unitInfoGrid label{
   display: inline-block;
-  width: 135px;
+  /* width: 180px; */
 }
 .unitInfoGrid input{
   width: 100px;

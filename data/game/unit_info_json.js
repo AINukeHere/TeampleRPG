@@ -15,7 +15,8 @@ var unitData={
         "airWeapon": {
             "damage": 54,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Terran Marine"
     },
     "1": {
         "isDefault": 0,
@@ -33,7 +34,8 @@ var unitData={
         "airWeapon": {
             "damage": 55,
             "damageFactor": 5
-        }
+        },
+        "unitOriginName": "Terran Ghost"
     },
     "2": {
         "isDefault": 0,
@@ -47,7 +49,8 @@ var unitData={
         "groundWeapon": {
             "damage": 40,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Terran Vulture"
     },
     "3": {
         "isDefault": 0,
@@ -58,6 +61,7 @@ var unitData={
         "oreCost": 100,
         "gasCost": 50,
         "unitName": "\u0005\ubb34\uc778\uacbd\ube44\ub85c\ubd07",
+        "unitOriginName": "Terran Goliath",
         "groundWeapon": {
             "damage": 34,
             "damageFactor": 4
@@ -83,7 +87,8 @@ var unitData={
         "airWeapon": {
             "damage": 20,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Goliath Turret"
     },
     "5": {
         "isDefault": 0,
@@ -94,6 +99,7 @@ var unitData={
         "oreCost": 150,
         "gasCost": 100,
         "unitName": "\u0005\ucca0\uac11 \ud0f1\ud06c",
+        "unitOriginName": "Terran Siege Tank (Tank Mode)",
         "groundWeapon": {
             "damage": 50,
             "damageFactor": 2
@@ -111,7 +117,8 @@ var unitData={
         "groundWeapon": {
             "damage": 50,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Siege Tank Turret (Tank Mode)"
     },
     "7": {
         "isDefault": 0,
@@ -125,7 +132,8 @@ var unitData={
         "groundWeapon": {
             "damage": 60,
             "damageFactor": 0
-        }
+        },
+        "unitOriginName": "Terran SCV"
     },
     "8": {
         "isDefault": 0,
@@ -143,7 +151,8 @@ var unitData={
         "airWeapon": {
             "damage": 57,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Terran Wraith"
     },
     "9": {
         "isDefault": 0,
@@ -153,7 +162,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0016\ud575\ud3ed\uaca9\uc7a5\uce58"
+        "unitName": "\u0016\ud575\ud3ed\uaca9\uc7a5\uce58",
+        "unitOriginName": "Terran Science Vessel"
     },
     "10": {
         "isDefault": 0,
@@ -167,7 +177,8 @@ var unitData={
         "groundWeapon": {
             "damage": 100,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Gui Montag (Firebat)"
     },
     "11": {
         "isDefault": 0,
@@ -177,7 +188,8 @@ var unitData={
         "buildTime": 750,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\u0004\uc18c\ud615 \ud3ed\uaca9\uae30"
+        "unitName": "\u0004\uc18c\ud615 \ud3ed\uaca9\uae30",
+        "unitOriginName": "Terran Dropship"
     },
     "12": {
         "isDefault": 0,
@@ -195,7 +207,8 @@ var unitData={
         "airWeapon": {
             "damage": 250,
             "damageFactor": 0
-        }
+        },
+        "unitOriginName": "Terran Battlecruiser"
     },
     "13": {
         "isDefault": 0,
@@ -209,7 +222,8 @@ var unitData={
         "groundWeapon": {
             "damage": 130,
             "damageFactor": 0
-        }
+        },
+        "unitOriginName": "Spider Mine"
     },
     "14": {
         "isDefault": 0,
@@ -219,7 +233,8 @@ var unitData={
         "buildTime": 10,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "Nuclear Missile"
+        "unitName": "Nuclear Missile",
+        "unitOriginName": "Nuclear Missile"
     },
     "15": {
         "isDefault": 0,
@@ -229,7 +244,8 @@ var unitData={
         "buildTime": 15,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0007Man"
+        "unitName": "\u0007Man",
+        "unitOriginName": "Terran Civilian"
     },
     "16": {
         "isDefault": 0,
@@ -247,7 +263,8 @@ var unitData={
         "airWeapon": {
             "damage": 100,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Sarah Kerrigan (Ghost)"
     },
     "17": {
         "isDefault": 0,
@@ -258,6 +275,7 @@ var unitData={
         "oreCost": 200,
         "gasCost": 100,
         "unitName": "\b\uc800\uc8fc\ubc1b\uc740 \u0004\uacf5\uc7a5\uc7a5",
+        "unitOriginName": "Alan Schezar (Goliath)",
         "groundWeapon": {
             "damage": 100,
             "damageFactor": 6
@@ -283,7 +301,8 @@ var unitData={
         "airWeapon": {
             "damage": 200,
             "damageFactor": 10
-        }
+        },
+        "unitOriginName": "Alan Schezar Turret"
     },
     "19": {
         "isDefault": 0,
@@ -297,7 +316,8 @@ var unitData={
         "groundWeapon": {
             "damage": 20,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Jim Raynor (Vulture)"
     },
     "20": {
         "isDefault": 0,
@@ -315,7 +335,8 @@ var unitData={
         "airWeapon": {
             "damage": 26,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Jim Raynor (Marine)"
     },
     "21": {
         "isDefault": 0,
@@ -333,7 +354,8 @@ var unitData={
         "airWeapon": {
             "damage": 40,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Tom Kazansky (Wraith)"
     },
     "22": {
         "isDefault": 0,
@@ -343,7 +365,8 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 50,
         "gasCost": 600,
-        "unitName": "\u0004Magic \u0003Shield"
+        "unitName": "\u0004Magic \u0003Shield",
+        "unitOriginName": "Magellan (Science Vessel)"
     },
     "23": {
         "isDefault": 0,
@@ -354,6 +377,7 @@ var unitData={
         "oreCost": 300,
         "gasCost": 9999,
         "unitName": "\u0005\uae08\uac15 \ud0f1\ud06c",
+        "unitOriginName": "Edmund Duke (Tank Mode)",
         "groundWeapon": {
             "damage": 70,
             "damageFactor": 4
@@ -371,7 +395,8 @@ var unitData={
         "groundWeapon": {
             "damage": 70,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Edmund Duke Turret (Tank Mode)"
     },
     "25": {
         "isDefault": 0,
@@ -382,6 +407,7 @@ var unitData={
         "oreCost": 300,
         "gasCost": 200,
         "unitName": "\u0005Rocket Launcher",
+        "unitOriginName": "Edmund Duke (Siege Mode)",
         "groundWeapon": {
             "damage": 170,
             "damageFactor": 5
@@ -399,7 +425,8 @@ var unitData={
         "groundWeapon": {
             "damage": 170,
             "damageFactor": 5
-        }
+        },
+        "unitOriginName": "Edmund Duke Turret (Siege Mode)"
     },
     "27": {
         "isDefault": 0,
@@ -417,7 +444,8 @@ var unitData={
         "airWeapon": {
             "damage": 50,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Arcturus Mengsk (Battlecruiser)"
     },
     "28": {
         "isDefault": 0,
@@ -435,7 +463,8 @@ var unitData={
         "airWeapon": {
             "damage": 190,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Hyperion (Battlecruiser)"
     },
     "29": {
         "isDefault": 0,
@@ -453,7 +482,8 @@ var unitData={
         "airWeapon": {
             "damage": 50,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Norad II (Battlecruiser)"
     },
     "30": {
         "isDefault": 0,
@@ -464,6 +494,7 @@ var unitData={
         "oreCost": 150,
         "gasCost": 100,
         "unitName": "\u0005\uad70\ud3ec \uc0ac\uc218\ub300",
+        "unitOriginName": "Terran Siege Tank (Siege Mode)",
         "groundWeapon": {
             "damage": 74,
             "damageFactor": 3
@@ -481,7 +512,8 @@ var unitData={
         "groundWeapon": {
             "damage": 74,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Siege Tank Turret (Siege Mode)"
     },
     "32": {
         "isDefault": 0,
@@ -495,7 +527,8 @@ var unitData={
         "groundWeapon": {
             "damage": 27,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Terran Firebat"
     },
     "33": {
         "isDefault": 0,
@@ -505,7 +538,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "@HP\ud3ec\uc158\uc7ac\uace0"
+        "unitName": "@HP\ud3ec\uc158\uc7ac\uace0",
+        "unitOriginName": "Scanner Sweep"
     },
     "34": {
         "isDefault": 0,
@@ -515,7 +549,8 @@ var unitData={
         "buildTime": 450,
         "oreCost": 50,
         "gasCost": 25,
-        "unitName": "\u0006H\u0003ealer"
+        "unitName": "\u0006H\u0003ealer",
+        "unitOriginName": "Terran Medic"
     },
     "35": {
         "isDefault": 0,
@@ -525,7 +560,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Zerg Larva"
+        "unitName": "Zerg Larva",
+        "unitOriginName": "Zerg Larva"
     },
     "36": {
         "isDefault": 0,
@@ -535,7 +571,8 @@ var unitData={
         "buildTime": 15,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\uac1c\ubbf8\uc54c"
+        "unitName": "\b\uac1c\ubbf8\uc54c",
+        "unitOriginName": "Zerg Egg"
     },
     "37": {
         "isDefault": 0,
@@ -549,7 +586,8 @@ var unitData={
         "groundWeapon": {
             "damage": 25,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Zerg Zergling"
     },
     "38": {
         "isDefault": 0,
@@ -567,7 +605,8 @@ var unitData={
         "airWeapon": {
             "damage": 25,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Zerg Hydralisk"
     },
     "39": {
         "isDefault": 0,
@@ -581,7 +620,8 @@ var unitData={
         "groundWeapon": {
             "damage": 85,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Zerg Ultralisk"
     },
     "40": {
         "isDefault": 0,
@@ -595,7 +635,8 @@ var unitData={
         "groundWeapon": {
             "damage": 20,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Zerg Broodling"
     },
     "41": {
         "isDefault": 0,
@@ -609,7 +650,8 @@ var unitData={
         "groundWeapon": {
             "damage": 50,
             "damageFactor": 0
-        }
+        },
+        "unitOriginName": "Zerg Drone"
     },
     "42": {
         "isDefault": 0,
@@ -619,7 +661,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 0,
-        "unitName": "\u0007F\u0004airy \u0003^^"
+        "unitName": "\u0007F\u0004airy \u0003^^",
+        "unitOriginName": "Zerg Overlord"
     },
     "43": {
         "isDefault": 0,
@@ -637,7 +680,8 @@ var unitData={
         "airWeapon": {
             "damage": 43,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Zerg Mutalisk"
     },
     "44": {
         "isDefault": 0,
@@ -651,7 +695,8 @@ var unitData={
         "groundWeapon": {
             "damage": 75,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Zerg Guardian"
     },
     "45": {
         "isDefault": 0,
@@ -661,7 +706,8 @@ var unitData={
         "buildTime": 750,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\u0010Poison"
+        "unitName": "\u0010Poison",
+        "unitOriginName": "Zerg Queen"
     },
     "46": {
         "isDefault": 0,
@@ -671,7 +717,8 @@ var unitData={
         "buildTime": 750,
         "oreCost": 50,
         "gasCost": 150,
-        "unitName": "\b\uc7ac\uc0dd\ub825\uc758 \u0004\uc544\ud0a4\uc544"
+        "unitName": "\b\uc7ac\uc0dd\ub825\uc758 \u0004\uc544\ud0a4\uc544",
+        "unitOriginName": "Zerg Defiler"
     },
     "47": {
         "isDefault": 0,
@@ -685,7 +732,8 @@ var unitData={
         "airWeapon": {
             "damage": 1100,
             "damageFactor": 1100
-        }
+        },
+        "unitOriginName": "Zerg Scourge"
     },
     "48": {
         "isDefault": 0,
@@ -699,7 +747,8 @@ var unitData={
         "groundWeapon": {
             "damage": 80,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Torrasque (Ultralisk)"
     },
     "49": {
         "isDefault": 0,
@@ -709,7 +758,8 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 200,
         "gasCost": 300,
-        "unitName": "\u0005\u0004\uc218\uc1a1\uc120"
+        "unitName": "\u0005\u0004\uc218\uc1a1\uc120",
+        "unitOriginName": "Matriarch (Queen)"
     },
     "50": {
         "isDefault": 0,
@@ -723,7 +773,8 @@ var unitData={
         "groundWeapon": {
             "damage": 250,
             "damageFactor": 50
-        }
+        },
+        "unitOriginName": "Infested Terran"
     },
     "51": {
         "isDefault": 0,
@@ -737,7 +788,8 @@ var unitData={
         "groundWeapon": {
             "damage": 150,
             "damageFactor": 20
-        }
+        },
+        "unitOriginName": "Infested Kerrigan (Infested Terran)"
     },
     "52": {
         "isDefault": 0,
@@ -747,7 +799,8 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 50,
         "gasCost": 200,
-        "unitName": "\u0006S\u0003orcerer"
+        "unitName": "\u0006S\u0003orcerer",
+        "unitOriginName": "Unclean One (Defiler)"
     },
     "53": {
         "isDefault": 0,
@@ -765,7 +818,8 @@ var unitData={
         "airWeapon": {
             "damage": 58,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Hunter Killer (Hydralisk)"
     },
     "54": {
         "isDefault": 0,
@@ -779,7 +833,8 @@ var unitData={
         "groundWeapon": {
             "damage": 34,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Devouring One (Zergling)"
     },
     "55": {
         "isDefault": 0,
@@ -797,7 +852,8 @@ var unitData={
         "airWeapon": {
             "damage": 220,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Kukulza (Mutalisk)"
     },
     "56": {
         "isDefault": 0,
@@ -811,7 +867,8 @@ var unitData={
         "groundWeapon": {
             "damage": 255,
             "damageFactor": 5
-        }
+        },
+        "unitOriginName": "Kukulza (Guardian)"
     },
     "57": {
         "isDefault": 0,
@@ -821,7 +878,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 0,
-        "unitName": "\b\uc9c0\uc625\ubb38"
+        "unitName": "\b\uc9c0\uc625\ubb38",
+        "unitOriginName": "Yggdrasill (Overlord)"
     },
     "58": {
         "isDefault": 0,
@@ -835,7 +893,8 @@ var unitData={
         "airWeapon": {
             "damage": 1,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Terran Valkyrie"
     },
     "59": {
         "isDefault": 0,
@@ -845,7 +904,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u0003R\u0004andom\u0005[Hidden_?]"
+        "unitName": "\u0003R\u0004andom\u0005[Hidden_?]",
+        "unitOriginName": "Mutalisk Cocoon"
     },
     "60": {
         "isDefault": 0,
@@ -859,7 +919,8 @@ var unitData={
         "airWeapon": {
             "damage": 5,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Protoss Corsair"
     },
     "61": {
         "isDefault": 0,
@@ -873,7 +934,8 @@ var unitData={
         "groundWeapon": {
             "damage": 90,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Protoss Dark Templar (Unit)"
     },
     "62": {
         "isDefault": 0,
@@ -887,7 +949,8 @@ var unitData={
         "airWeapon": {
             "damage": 25,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Zerg Devourer"
     },
     "63": {
         "isDefault": 0,
@@ -897,7 +960,8 @@ var unitData={
         "buildTime": 300,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0006R\u0003ecaller"
+        "unitName": "\u0006R\u0003ecaller",
+        "unitOriginName": "Protoss Dark Archon"
     },
     "64": {
         "isDefault": 0,
@@ -911,7 +975,8 @@ var unitData={
         "groundWeapon": {
             "damage": 70,
             "damageFactor": 10
-        }
+        },
+        "unitOriginName": "Protoss Probe"
     },
     "65": {
         "isDefault": 0,
@@ -925,7 +990,8 @@ var unitData={
         "groundWeapon": {
             "damage": 15,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Protoss Zealot"
     },
     "66": {
         "isDefault": 0,
@@ -943,7 +1009,8 @@ var unitData={
         "airWeapon": {
             "damage": 142,
             "damageFactor": 6
-        }
+        },
+        "unitOriginName": "Protoss Dragoon"
     },
     "67": {
         "isDefault": 0,
@@ -953,7 +1020,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 35,
         "gasCost": 10,
-        "unitName": "\u0006W\u0003izard"
+        "unitName": "\u0006W\u0003izard",
+        "unitOriginName": "Protoss High Templar"
     },
     "68": {
         "isDefault": 0,
@@ -971,7 +1039,8 @@ var unitData={
         "airWeapon": {
             "damage": 40,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Protoss Archon"
     },
     "69": {
         "isDefault": 0,
@@ -981,7 +1050,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u000edelete Punch!"
+        "unitName": "\u000edelete Punch!",
+        "unitOriginName": "Protoss Shuttle"
     },
     "70": {
         "isDefault": 0,
@@ -999,7 +1069,8 @@ var unitData={
         "airWeapon": {
             "damage": 1,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Protoss Scout"
     },
     "71": {
         "isDefault": 0,
@@ -1017,7 +1088,8 @@ var unitData={
         "airWeapon": {
             "damage": 3,
             "damageFactor": 150
-        }
+        },
+        "unitOriginName": "Protoss Arbiter"
     },
     "72": {
         "isDefault": 0,
@@ -1027,7 +1099,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 40,
-        "unitName": "\u0007[2Skill]"
+        "unitName": "\u0007[2Skill]",
+        "unitOriginName": "Protoss Carrier"
     },
     "73": {
         "isDefault": 0,
@@ -1045,7 +1118,8 @@ var unitData={
         "airWeapon": {
             "damage": 80,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Protoss Interceptor"
     },
     "74": {
         "isDefault": 0,
@@ -1059,7 +1133,8 @@ var unitData={
         "groundWeapon": {
             "damage": 45,
             "damageFactor": 5
-        }
+        },
+        "unitOriginName": "Protoss Dark Templar (Hero)"
     },
     "75": {
         "isDefault": 0,
@@ -1073,7 +1148,8 @@ var unitData={
         "groundWeapon": {
             "damage": 122,
             "damageFactor": 6
-        }
+        },
+        "unitOriginName": "Zeratul (Dark Templar)"
     },
     "76": {
         "isDefault": 0,
@@ -1091,7 +1167,8 @@ var unitData={
         "airWeapon": {
             "damage": 54,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Tassadar/Zeratul (Archon)"
     },
     "77": {
         "isDefault": 0,
@@ -1105,7 +1182,8 @@ var unitData={
         "groundWeapon": {
             "damage": 28,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Fenix (Zealot)"
     },
     "78": {
         "isDefault": 0,
@@ -1123,7 +1201,8 @@ var unitData={
         "airWeapon": {
             "damage": 100,
             "damageFactor": 10
-        }
+        },
+        "unitOriginName": "Fenix (Dragoon)"
     },
     "79": {
         "isDefault": 0,
@@ -1137,7 +1216,8 @@ var unitData={
         "groundWeapon": {
             "damage": 200,
             "damageFactor": 25
-        }
+        },
+        "unitOriginName": "Tassadar (Templar)"
     },
     "80": {
         "isDefault": 0,
@@ -1155,7 +1235,8 @@ var unitData={
         "airWeapon": {
             "damage": 20,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Mojo (Scout)"
     },
     "81": {
         "isDefault": 0,
@@ -1165,7 +1246,8 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 400,
         "gasCost": 200,
-        "unitName": "\u0004\ud658\uace8\ud0c8\ud0dc"
+        "unitName": "\u0004\ud658\uace8\ud0c8\ud0dc",
+        "unitOriginName": "Warbringer (Reaver)"
     },
     "82": {
         "isDefault": 0,
@@ -1175,7 +1257,8 @@ var unitData={
         "buildTime": 4200,
         "oreCost": 700,
         "gasCost": 600,
-        "unitName": "\u0003Cross\u0002_\u000eC\u0004anon"
+        "unitName": "\u0003Cross\u0002_\u000eC\u0004anon",
+        "unitOriginName": "Gantrithor (Carrier)"
     },
     "83": {
         "isDefault": 0,
@@ -1185,7 +1268,8 @@ var unitData={
         "buildTime": 7,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "Protoss Reaver"
+        "unitName": "Protoss Reaver",
+        "unitOriginName": "Protoss Reaver"
     },
     "84": {
         "isDefault": 0,
@@ -1195,7 +1279,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0003M\u0004ind Eye"
+        "unitName": "\u0003M\u0004ind Eye",
+        "unitOriginName": "Protoss Observer"
     },
     "85": {
         "isDefault": 0,
@@ -1209,7 +1294,8 @@ var unitData={
         "groundWeapon": {
             "damage": 0,
             "damageFactor": 18
-        }
+        },
+        "unitOriginName": "Protoss Scarab"
     },
     "86": {
         "isDefault": 0,
@@ -1227,7 +1313,8 @@ var unitData={
         "airWeapon": {
             "damage": 70,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Danimoth (Arbiter)"
     },
     "87": {
         "isDefault": 0,
@@ -1241,7 +1328,8 @@ var unitData={
         "groundWeapon": {
             "damage": 200,
             "damageFactor": 25
-        }
+        },
+        "unitOriginName": "Aldaris (Templar)"
     },
     "88": {
         "isDefault": 0,
@@ -1259,7 +1347,8 @@ var unitData={
         "airWeapon": {
             "damage": 112,
             "damageFactor": 0
-        }
+        },
+        "unitOriginName": "Artanis (Scout)"
     },
     "89": {
         "isDefault": 1,
@@ -1269,7 +1358,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Rhynadon (Badlands Critter)"
+        "unitName": "Rhynadon (Badlands Critter)",
+        "unitOriginName": "Rhynadon (Badlands Critter)"
     },
     "90": {
         "isDefault": 1,
@@ -1279,7 +1369,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Bengalaas (Jungle Critter)"
+        "unitName": "Bengalaas (Jungle Critter)",
+        "unitOriginName": "Bengalaas (Jungle Critter)"
     },
     "91": {
         "isDefault": 0,
@@ -1289,7 +1380,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\uc21c\uc704\ud45c\ub370\uc2a4"
+        "unitName": "\uc21c\uc704\ud45c\ub370\uc2a4",
+        "unitOriginName": "Cargo Ship (Unused)"
     },
     "92": {
         "isDefault": 0,
@@ -1299,7 +1391,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\ud2b8\ub7a9\ud37c\uc9c0\ub8b0\uc218"
+        "unitName": "\ud2b8\ub7a9\ud37c\uc9c0\ub8b0\uc218",
+        "unitOriginName": "Mercenary Gunship (Unused)"
     },
     "93": {
         "isDefault": 0,
@@ -1309,7 +1402,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\uc5ec\uc655\uac1c\ubbf8 H"
+        "unitName": "\b\uc5ec\uc655\uac1c\ubbf8 H",
+        "unitOriginName": "Scantid (Desert Critter)"
     },
     "94": {
         "isDefault": 0,
@@ -1319,7 +1413,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Kakaru (Twilight Critter)"
+        "unitName": "Kakaru (Twilight Critter)",
+        "unitOriginName": "Kakaru (Twilight Critter)"
     },
     "95": {
         "isDefault": 0,
@@ -1329,7 +1424,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u0007\uace0\ube14\ub9b0 \uc871\uc7a5 \u0004\uc694\ub974\ub2e8\uc2a4"
+        "unitName": "\u0007\uace0\ube14\ub9b0 \uc871\uc7a5 \u0004\uc694\ub974\ub2e8\uc2a4",
+        "unitOriginName": "Ragnasaur (Ashworld Critter)"
     },
     "96": {
         "isDefault": 0,
@@ -1339,7 +1435,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\uc815\ucc30\uacac-\uc870\uc774"
+        "unitName": "\u000f\uc815\ucc30\uacac-\uc870\uc774",
+        "unitOriginName": "Ursadon (Ice World Critter)"
     },
     "97": {
         "isDefault": 0,
@@ -1349,7 +1446,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\b\ub3cc\uc5f0\ubcc0\uc774\uc6d0 \ucd94\uac00 \u0004(\ub09c\uc774\ub3c4 \u2191)"
+        "unitName": "\b\ub3cc\uc5f0\ubcc0\uc774\uc6d0 \ucd94\uac00 \u0004(\ub09c\uc774\ub3c4 \u2191)",
+        "unitOriginName": "Lurker Egg"
     },
     "98": {
         "isDefault": 0,
@@ -1363,7 +1461,8 @@ var unitData={
         "airWeapon": {
             "damage": 5,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Raszagal (Corsair)"
     },
     "99": {
         "isDefault": 0,
@@ -1381,7 +1480,8 @@ var unitData={
         "airWeapon": {
             "damage": 38,
             "damageFactor": 5
-        }
+        },
+        "unitOriginName": "Samir Duran (Ghost)"
     },
     "100": {
         "isDefault": 0,
@@ -1399,7 +1499,8 @@ var unitData={
         "airWeapon": {
             "damage": 30,
             "damageFactor": 2
-        }
+        },
+        "unitOriginName": "Alexei Stukov (Ghost)"
     },
     "101": {
         "isDefault": 0,
@@ -1409,7 +1510,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "@\uba54\uce74\ub2c9\uc8fc\ubb38\uc81c\uc791"
+        "unitName": "@\uba54\uce74\ub2c9\uc8fc\ubb38\uc81c\uc791",
+        "unitOriginName": "Map Revealer"
     },
     "102": {
         "isDefault": 0,
@@ -1427,7 +1529,8 @@ var unitData={
         "airWeapon": {
             "damage": 50,
             "damageFactor": 4
-        }
+        },
+        "unitOriginName": "Gerard DuGalle (BattleCruiser)"
     },
     "103": {
         "isDefault": 0,
@@ -1441,7 +1544,8 @@ var unitData={
         "groundWeapon": {
             "damage": 91,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Zerg Lurker"
     },
     "104": {
         "isDefault": 0,
@@ -1459,7 +1563,8 @@ var unitData={
         "airWeapon": {
             "damage": 200,
             "damageFactor": 3
-        }
+        },
+        "unitOriginName": "Infested Duran (Infested Terran)"
     },
     "105": {
         "isDefault": 0,
@@ -1469,7 +1574,8 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 250,
         "gasCost": 250,
-        "unitName": "@\ud30c\uc5c5\uce90\ub9ad\uc120\ud0dd\ud568"
+        "unitName": "@\ud30c\uc5c5\uce90\ub9ad\uc120\ud0dd\ud568",
+        "unitOriginName": "Disruption Web"
     },
     "106": {
         "isDefault": 0,
@@ -1479,7 +1585,8 @@ var unitData={
         "buildTime": 200,
         "oreCost": 9,
         "gasCost": 0,
-        "unitName": "\u0007\uc911\uae09\uc81c\uc791\uc911 ..."
+        "unitName": "\u0007\uc911\uae09\uc81c\uc791\uc911 ...",
+        "unitOriginName": "Terran Command Center"
     },
     "107": {
         "isDefault": 0,
@@ -1489,7 +1596,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "\u0007Eye"
+        "unitName": "\u0007Eye",
+        "unitOriginName": "Terran Comsat Station"
     },
     "108": {
         "isDefault": 1,
@@ -1499,7 +1607,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "Terran Nuclear Silo"
+        "unitName": "Terran Nuclear Silo",
+        "unitOriginName": "Terran Nuclear Silo"
     },
     "109": {
         "isDefault": 0,
@@ -1509,7 +1618,8 @@ var unitData={
         "buildTime": 300,
         "oreCost": 3,
         "gasCost": 0,
-        "unitName": "\u0007\ud558\uae09\uc81c\uc791\uc911 ..."
+        "unitName": "\u0007\ud558\uae09\uc81c\uc791\uc911 ...",
+        "unitOriginName": "Terran Supply Depot"
     },
     "110": {
         "isDefault": 1,
@@ -1519,7 +1629,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 0,
-        "unitName": "Terran Refinery"
+        "unitName": "Terran Refinery",
+        "unitOriginName": "Terran Refinery"
     },
     "111": {
         "isDefault": 1,
@@ -1529,7 +1640,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 150,
         "gasCost": 0,
-        "unitName": "Terran Barracks"
+        "unitName": "Terran Barracks",
+        "unitOriginName": "Terran Barracks"
     },
     "112": {
         "isDefault": 0,
@@ -1539,7 +1651,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 150,
         "gasCost": 0,
-        "unitName": "Terran Academy"
+        "unitName": "Terran Academy",
+        "unitOriginName": "Terran Academy"
     },
     "113": {
         "isDefault": 1,
@@ -1549,7 +1662,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 100,
-        "unitName": "Terran Factory"
+        "unitName": "Terran Factory",
+        "unitOriginName": "Terran Factory"
     },
     "114": {
         "isDefault": 1,
@@ -1559,7 +1673,8 @@ var unitData={
         "buildTime": 1050,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": "Terran Starport"
+        "unitName": "Terran Starport",
+        "unitOriginName": "Terran Starport"
     },
     "115": {
         "isDefault": 1,
@@ -1569,7 +1684,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "Terran Control Tower"
+        "unitName": "Terran Control Tower",
+        "unitOriginName": "Terran Control Tower"
     },
     "116": {
         "isDefault": 1,
@@ -1579,7 +1695,8 @@ var unitData={
         "buildTime": 900,
         "oreCost": 100,
         "gasCost": 150,
-        "unitName": "Terran Science Facility"
+        "unitName": "Terran Science Facility",
+        "unitOriginName": "Terran Science Facility"
     },
     "117": {
         "isDefault": 0,
@@ -1589,7 +1706,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "\u0004\uc9c1\uc5c5 \uc120\ud0dd\uc9c01"
+        "unitName": "\u0004\uc9c1\uc5c5 \uc120\ud0dd\uc9c01",
+        "unitOriginName": "Terran Covert Ops"
     },
     "118": {
         "isDefault": 0,
@@ -1599,7 +1717,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "\u0004\uc9c1\uc5c5 \uc120\ud0dd\uc9c02"
+        "unitName": "\u0004\uc9c1\uc5c5 \uc120\ud0dd\uc9c02",
+        "unitOriginName": "Terran Physics Lab"
     },
     "119": {
         "isDefault": 0,
@@ -1609,7 +1728,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\uc5b4\uc314\uc2e0 \ubb34\uc801\uc2dc\uac04"
+        "unitName": "@\uc5b4\uc314\uc2e0 \ubb34\uc801\uc2dc\uac04",
+        "unitOriginName": "Starbase (Unused)"
     },
     "120": {
         "isDefault": 0,
@@ -1619,7 +1739,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "\u0007\uac15\ud654 \u0004\ubc14\ub9ac\uac8c\uc774\ud2b8"
+        "unitName": "\u0007\uac15\ud654 \u0004\ubc14\ub9ac\uac8c\uc774\ud2b8",
+        "unitOriginName": "Terran Machine Shop"
     },
     "121": {
         "isDefault": 0,
@@ -1629,7 +1750,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Time 4"
+        "unitName": "Time 4",
+        "unitOriginName": "Repair Bay (Unused)"
     },
     "122": {
         "isDefault": 0,
@@ -1639,7 +1761,8 @@ var unitData={
         "buildTime": 300,
         "oreCost": 0,
         "gasCost": 60,
-        "unitName": "\u0007\ud14c\ub780 \ubc14\uc774\uc624\ub2c9 \uc5c5\uadf8\ub808\uc774\ub4dc"
+        "unitName": "\u0007\ud14c\ub780 \ubc14\uc774\uc624\ub2c9 \uc5c5\uadf8\ub808\uc774\ub4dc",
+        "unitOriginName": "Terran Engineering Bay"
     },
     "123": {
         "isDefault": 0,
@@ -1649,7 +1772,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 100,
         "gasCost": 50,
-        "unitName": "\u0004\ubc14\ub9ac\uac8c\uc774\ud2b8"
+        "unitName": "\u0004\ubc14\ub9ac\uac8c\uc774\ud2b8",
+        "unitOriginName": "Terran Armory"
     },
     "124": {
         "isDefault": 0,
@@ -1663,7 +1787,8 @@ var unitData={
         "airWeapon": {
             "damage": 150,
             "damageFactor": 0
-        }
+        },
+        "unitOriginName": "Terran Missile Turret"
     },
     "125": {
         "isDefault": 0,
@@ -1673,7 +1798,8 @@ var unitData={
         "buildTime": 72,
         "oreCost": 12,
         "gasCost": 0,
-        "unitName": "\u0003\ubc29\uc5b4\uc694\uc0c8"
+        "unitName": "\u0003\ubc29\uc5b4\uc694\uc0c8",
+        "unitOriginName": "Terran Bunker"
     },
     "126": {
         "isDefault": 0,
@@ -1683,7 +1809,8 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 800,
         "gasCost": 600,
-        "unitName": "\u0007\ubaa8\uc2a4\ud2b8 \ube4c\ub354\uc758 \uc7a0\uc7ac\ub825"
+        "unitName": "\u0007\ubaa8\uc2a4\ud2b8 \ube4c\ub354\uc758 \uc7a0\uc7ac\ub825",
+        "unitOriginName": "Norad II (Crashed)"
     },
     "127": {
         "isDefault": 1,
@@ -1693,7 +1820,8 @@ var unitData={
         "buildTime": 900,
         "oreCost": 200,
         "gasCost": 0,
-        "unitName": "Ion Cannon"
+        "unitName": "Ion Cannon",
+        "unitOriginName": "Ion Cannon"
     },
     "128": {
         "isDefault": 0,
@@ -1703,7 +1831,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\ub9c8\ub098\uc11d \u0003($300)\u0004(+\ud68c\ubcf5\ub7c9)"
+        "unitName": "\u000f\ub9c8\ub098\uc11d \u0003($300)\u0004(+\ud68c\ubcf5\ub7c9)",
+        "unitOriginName": "Uraj Crystal"
     },
     "129": {
         "isDefault": 0,
@@ -1713,7 +1842,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f \uc9c1\uc5c5\uc758 \uc11c\u0003($500)"
+        "unitName": "\u000f \uc9c1\uc5c5\uc758 \uc11c\u0003($500)",
+        "unitOriginName": "Khalis Crystal"
     },
     "130": {
         "isDefault": 0,
@@ -1723,7 +1853,8 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u0006H\u0002ell \u0005Stone"
+        "unitName": "\u0006H\u0002ell \u0005Stone",
+        "unitOriginName": "Infested Command Center"
     },
     "131": {
         "isDefault": 1,
@@ -1733,7 +1864,8 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 300,
         "gasCost": 0,
-        "unitName": "Zerg Hatchery"
+        "unitName": "Zerg Hatchery",
+        "unitOriginName": "Zerg Hatchery"
     },
     "132": {
         "isDefault": 1,
@@ -1743,7 +1875,8 @@ var unitData={
         "buildTime": 1500,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": "Zerg Lair"
+        "unitName": "Zerg Lair",
+        "unitOriginName": "Zerg Lair"
     },
     "133": {
         "isDefault": 1,
@@ -1753,7 +1886,8 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 200,
         "gasCost": 150,
-        "unitName": "Zerg Hive"
+        "unitName": "Zerg Hive",
+        "unitOriginName": "Zerg Hive"
     },
     "134": {
         "isDefault": 0,
@@ -1763,7 +1897,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 150,
         "gasCost": 0,
-        "unitName": "\b\t\t\uac1c\ubbf8\uad74"
+        "unitName": "\b\t\t\uac1c\ubbf8\uad74",
+        "unitOriginName": "Zerg Nydus Canal"
     },
     "135": {
         "isDefault": 0,
@@ -1773,7 +1908,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 50,
-        "unitName": "\ubc84\uc11c\ucee4\uad81\ub370\uc2a4"
+        "unitName": "\ubc84\uc11c\ucee4\uad81\ub370\uc2a4",
+        "unitOriginName": "Zerg Hydralisk Den"
     },
     "136": {
         "isDefault": 0,
@@ -1783,7 +1919,8 @@ var unitData={
         "buildTime": 900,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\ubaa8\ube4c\uad81\uadf9\uce90\ub17c\ud655\uc778"
+        "unitName": "\ubaa8\ube4c\uad81\uadf9\uce90\ub17c\ud655\uc778",
+        "unitOriginName": "Zerg Defiler Mound"
     },
     "137": {
         "isDefault": 0,
@@ -1793,7 +1930,8 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 100,
         "gasCost": 150,
-        "unitName": "\b\uc800\uadf8\uacf5\uc911 \uc5c5\uadf8\ub808\uc774\ub4dc"
+        "unitName": "\b\uc800\uadf8\uacf5\uc911 \uc5c5\uadf8\ub808\uc774\ub4dc",
+        "unitOriginName": "Zerg Greater Spire"
     },
     "138": {
         "isDefault": 1,
@@ -1803,7 +1941,8 @@ var unitData={
         "buildTime": 900,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": "Zerg Queen's Nest"
+        "unitName": "Zerg Queen's Nest",
+        "unitOriginName": "Zerg Queen's Nest"
     },
     "139": {
         "isDefault": 0,
@@ -1813,7 +1952,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 75,
         "gasCost": 0,
-        "unitName": "\b\uc800\uadf8\uc9c0\uc0c1 \uc5c5\uadf8\ub808\uc774\ub4dc"
+        "unitName": "\b\uc800\uadf8\uc9c0\uc0c1 \uc5c5\uadf8\ub808\uc774\ub4dc",
+        "unitOriginName": "Zerg Evolution Chamber"
     },
     "140": {
         "isDefault": 1,
@@ -1823,7 +1963,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 150,
         "gasCost": 200,
-        "unitName": "Zerg Ultralisk Cavern"
+        "unitName": "Zerg Ultralisk Cavern",
+        "unitOriginName": "Zerg Ultralisk Cavern"
     },
     "141": {
         "isDefault": 0,
@@ -1833,7 +1974,8 @@ var unitData={
         "buildTime": 1800,
         "oreCost": 200,
         "gasCost": 150,
-        "unitName": "\ubaa8\ube4c S"
+        "unitName": "\ubaa8\ube4c S",
+        "unitOriginName": "Zerg Spire"
     },
     "142": {
         "isDefault": 1,
@@ -1843,7 +1985,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 0,
-        "unitName": "Zerg Spawning Pool"
+        "unitName": "Zerg Spawning Pool",
+        "unitOriginName": "Zerg Spawning Pool"
     },
     "143": {
         "isDefault": 1,
@@ -1853,7 +1996,8 @@ var unitData={
         "buildTime": 300,
         "oreCost": 75,
         "gasCost": 0,
-        "unitName": "Zerg Creep Colony"
+        "unitName": "Zerg Creep Colony",
+        "unitOriginName": "Zerg Creep Colony"
     },
     "144": {
         "isDefault": 0,
@@ -1867,7 +2011,8 @@ var unitData={
         "airWeapon": {
             "damage": 10000,
             "damageFactor": 0
-        }
+        },
+        "unitOriginName": "Zerg Spore Colony"
     },
     "145": {
         "isDefault": 0,
@@ -1877,7 +2022,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@Class"
+        "unitName": "@Class",
+        "unitOriginName": "Unused Zerg Building1"
     },
     "146": {
         "isDefault": 0,
@@ -1891,7 +2037,8 @@ var unitData={
         "groundWeapon": {
             "damage": 200,
             "damageFactor": 800
-        }
+        },
+        "unitOriginName": "Zerg Sunken Colony"
     },
     "147": {
         "isDefault": 1,
@@ -1901,7 +2048,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Zerg Overmind (With Shell)"
+        "unitName": "Zerg Overmind (With Shell)",
+        "unitOriginName": "Zerg Overmind (With Shell)"
     },
     "148": {
         "isDefault": 0,
@@ -1911,7 +2059,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\uc5b4\uc314\uc2e0\uc8fd\uc74c\uc778\uc2dd"
+        "unitName": "\uc5b4\uc314\uc2e0\uc8fd\uc74c\uc778\uc2dd",
+        "unitOriginName": "Zerg Overmind"
     },
     "149": {
         "isDefault": 1,
@@ -1921,7 +2070,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 50,
         "gasCost": 0,
-        "unitName": "Zerg Extractor"
+        "unitName": "Zerg Extractor",
+        "unitOriginName": "Zerg Extractor"
     },
     "150": {
         "isDefault": 0,
@@ -1931,7 +2081,8 @@ var unitData={
         "buildTime": 0,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0006\ud30c\uc5c5"
+        "unitName": "\u0006\ud30c\uc5c5",
+        "unitOriginName": "Mature Chrysalis"
     },
     "151": {
         "isDefault": 0,
@@ -1941,7 +2092,8 @@ var unitData={
         "buildTime": 0,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\b\uc2ec\uc7a5"
+        "unitName": "\b\uc2ec\uc7a5",
+        "unitOriginName": "Zerg Cerebrate"
     },
     "152": {
         "isDefault": 1,
@@ -1951,7 +2103,8 @@ var unitData={
         "buildTime": 0,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "Zerg Cerebrate Daggoth"
+        "unitName": "Zerg Cerebrate Daggoth",
+        "unitOriginName": "Zerg Cerebrate Daggoth"
     },
     "153": {
         "isDefault": 0,
@@ -1961,7 +2114,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@Job"
+        "unitName": "@Job",
+        "unitOriginName": "Unused Zerg Building2"
     },
     "154": {
         "isDefault": 0,
@@ -1971,7 +2125,8 @@ var unitData={
         "buildTime": 450,
         "oreCost": 0,
         "gasCost": 175,
-        "unitName": "\u0019Heal Tower"
+        "unitName": "\u0019Heal Tower",
+        "unitOriginName": "Protoss Nexus"
     },
     "155": {
         "isDefault": 0,
@@ -1981,7 +2136,8 @@ var unitData={
         "buildTime": 1200,
         "oreCost": 200,
         "gasCost": 200,
-        "unitName": "\u0004\ud3ec\uc158 \uc0ac\uc6a9 (\uccb4\ub825 : S, \ub9c8\ub098 : V)"
+        "unitName": "\u0004\ud3ec\uc158 \uc0ac\uc6a9 (\uccb4\ub825 : S, \ub9c8\ub098 : V)",
+        "unitOriginName": "Protoss Robotics Facility"
     },
     "156": {
         "isDefault": 0,
@@ -1991,7 +2147,8 @@ var unitData={
         "buildTime": 50,
         "oreCost": 0,
         "gasCost": 20,
-        "unitName": "\u0004Shiny Tower"
+        "unitName": "\u0004Shiny Tower",
+        "unitOriginName": "Protoss Pylon"
     },
     "157": {
         "isDefault": 1,
@@ -2001,7 +2158,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 0,
-        "unitName": "Protoss Assimilator"
+        "unitName": "Protoss Assimilator",
+        "unitOriginName": "Protoss Assimilator"
     },
     "158": {
         "isDefault": 0,
@@ -2011,7 +2169,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\ubc84\uc11c\ucee4\ubaa8\ub4dc"
+        "unitName": "@\ubc84\uc11c\ucee4\ubaa8\ub4dc",
+        "unitOriginName": "Unused Protoss Building1"
     },
     "159": {
         "isDefault": 0,
@@ -2021,7 +2180,8 @@ var unitData={
         "buildTime": 450,
         "oreCost": 0,
         "gasCost": 263,
-        "unitName": "\b\uae08\ub2e8\uc758 \uc81c\uc870\uc2e4(S or V)"
+        "unitName": "\b\uae08\ub2e8\uc758 \uc81c\uc870\uc2e4(S or V)",
+        "unitOriginName": "Protoss Observatory"
     },
     "160": {
         "isDefault": 0,
@@ -2031,7 +2191,8 @@ var unitData={
         "buildTime": 60,
         "oreCost": 0,
         "gasCost": 80,
-        "unitName": "\u0007\uc6a9\ubcd1 \ud6c8\ub828\uc18c"
+        "unitName": "\u0007\uc6a9\ubcd1 \ud6c8\ub828\uc18c",
+        "unitOriginName": "Protoss Gateway"
     },
     "161": {
         "isDefault": 0,
@@ -2041,7 +2202,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Time 7"
+        "unitName": "Time 7",
+        "unitOriginName": "Unused Protoss Building2"
     },
     "162": {
         "isDefault": 0,
@@ -2059,7 +2221,8 @@ var unitData={
         "airWeapon": {
             "damage": 100,
             "damageFactor": 50
-        }
+        },
+        "unitOriginName": "Protoss Photon Cannon"
     },
     "163": {
         "isDefault": 0,
@@ -2069,7 +2232,8 @@ var unitData={
         "buildTime": 50,
         "oreCost": 25,
         "gasCost": 0,
-        "unitName": "\u0007\ubc84\ud504 - \uad6c\uc18d"
+        "unitName": "\u0007\ubc84\ud504 - \uad6c\uc18d",
+        "unitOriginName": "Protoss Citadel of Adun"
     },
     "164": {
         "isDefault": 0,
@@ -2079,7 +2243,8 @@ var unitData={
         "buildTime": 900,
         "oreCost": 200,
         "gasCost": 0,
-        "unitName": "\u0007\ud50c\ud1a0\uacf5\uc911 \uc5c5\uadf8\ub808\uc774\ub4dc"
+        "unitName": "\u0007\ud50c\ud1a0\uacf5\uc911 \uc5c5\uadf8\ub808\uc774\ub4dc",
+        "unitOriginName": "Protoss Cybernetics Core"
     },
     "165": {
         "isDefault": 0,
@@ -2089,7 +2254,8 @@ var unitData={
         "buildTime": 60,
         "oreCost": 1,
         "gasCost": 250,
-        "unitName": "\u0019Knight\uc5f0\uad6c\uc18c / \uad81\uadf9\uce90\ub17c"
+        "unitName": "\u0019Knight\uc5f0\uad6c\uc18c / \uad81\uadf9\uce90\ub17c",
+        "unitOriginName": "Protoss Templar Archives"
     },
     "166": {
         "isDefault": 0,
@@ -2099,7 +2265,8 @@ var unitData={
         "buildTime": 600,
         "oreCost": 150,
         "gasCost": 0,
-        "unitName": "\u0007\ud50c\ud1a0\uc9c0\uc0c1 \uc5c5\uadf8\ub808\uc774\ub4dc"
+        "unitName": "\u0007\ud50c\ud1a0\uc9c0\uc0c1 \uc5c5\uadf8\ub808\uc774\ub4dc",
+        "unitOriginName": "Protoss Forge"
     },
     "167": {
         "isDefault": 0,
@@ -2109,7 +2276,8 @@ var unitData={
         "buildTime": 1050,
         "oreCost": 150,
         "gasCost": 150,
-        "unitName": "\u0004Skill (\ucee4\uc138\uc5b4(O) = \uad81\uadf9\uae30)"
+        "unitName": "\u0004Skill (\ucee4\uc138\uc5b4(O) = \uad81\uadf9\uae30)",
+        "unitOriginName": "Protoss Stargate"
     },
     "168": {
         "isDefault": 0,
@@ -2119,7 +2287,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 150,
         "gasCost": 0,
-        "unitName": "\b?\u0010?\u0007?"
+        "unitName": "\b?\u0010?\u0007?",
+        "unitOriginName": "Stasis Cell/Prison"
     },
     "169": {
         "isDefault": 0,
@@ -2129,7 +2298,8 @@ var unitData={
         "buildTime": 50,
         "oreCost": 25,
         "gasCost": 0,
-        "unitName": "\u0007\ubc84\ud504 - \ubcf4\ud638"
+        "unitName": "\u0007\ubc84\ud504 - \ubcf4\ud638",
+        "unitOriginName": "Protoss Fleet Beacon"
     },
     "170": {
         "isDefault": 0,
@@ -2139,7 +2309,8 @@ var unitData={
         "buildTime": 50,
         "oreCost": 25,
         "gasCost": 0,
-        "unitName": "\u0007\ubc84\ud504 - \uacb0\uacc4"
+        "unitName": "\u0007\ubc84\ud504 - \uacb0\uacc4",
+        "unitOriginName": "Protoss Arbiter Tribunal"
     },
     "171": {
         "isDefault": 0,
@@ -2149,7 +2320,8 @@ var unitData={
         "buildTime": 450,
         "oreCost": 150,
         "gasCost": 100,
-        "unitName": "\u0007\ud3ed\ubc1c\ub958 \uc5c5\uadf8\ub808\uc774\ub4dc"
+        "unitName": "\u0007\ud3ed\ubc1c\ub958 \uc5c5\uadf8\ub808\uc774\ub4dc",
+        "unitOriginName": "Protoss Robotics Support Bay"
     },
     "172": {
         "isDefault": 0,
@@ -2159,7 +2331,8 @@ var unitData={
         "buildTime": 200,
         "oreCost": 0,
         "gasCost": 50,
-        "unitName": "\u0007\ubc29\uc5b4\ubcf4\ucda9\uc18c"
+        "unitName": "\u0007\ubc29\uc5b4\ubcf4\ucda9\uc18c",
+        "unitOriginName": "Protoss Shield Battery"
     },
     "173": {
         "isDefault": 0,
@@ -2169,7 +2342,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 250,
         "gasCost": 0,
-        "unitName": "\ub51c\ub9ac\ud2b8\ud380\uce58\ub370\uc2a4\uac12"
+        "unitName": "\ub51c\ub9ac\ud2b8\ud380\uce58\ub370\uc2a4\uac12",
+        "unitOriginName": "Khaydarin Crystal Formation"
     },
     "174": {
         "isDefault": 1,
@@ -2179,7 +2353,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 250,
         "gasCost": 0,
-        "unitName": "Protoss Temple"
+        "unitName": "Protoss Temple",
+        "unitOriginName": "Protoss Temple"
     },
     "175": {
         "isDefault": 1,
@@ -2189,7 +2364,8 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 1500,
         "gasCost": 500,
-        "unitName": "Xel'Naga Temple"
+        "unitName": "Xel'Naga Temple",
+        "unitOriginName": "Xel'Naga Temple"
     },
     "176": {
         "isDefault": 1,
@@ -2199,7 +2375,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Mineral Field (Type 1)"
+        "unitName": "Mineral Field (Type 1)",
+        "unitOriginName": "Mineral Field (Type 1)"
     },
     "177": {
         "isDefault": 1,
@@ -2209,7 +2386,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Mineral Field (Type 2)"
+        "unitName": "Mineral Field (Type 2)",
+        "unitOriginName": "Mineral Field (Type 2)"
     },
     "178": {
         "isDefault": 1,
@@ -2219,7 +2397,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Mineral Field (Type 3)"
+        "unitName": "Mineral Field (Type 3)",
+        "unitOriginName": "Mineral Field (Type 3)"
     },
     "179": {
         "isDefault": 0,
@@ -2229,7 +2408,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Time"
+        "unitName": "Time",
+        "unitOriginName": "Cave (Unused)"
     },
     "180": {
         "isDefault": 0,
@@ -2239,7 +2419,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\uc8fc\uce90\ub9ad\ud130\uc0ac\ub9dd"
+        "unitName": "@\uc8fc\uce90\ub9ad\ud130\uc0ac\ub9dd",
+        "unitOriginName": "Cave-in (Unused)"
     },
     "181": {
         "isDefault": 0,
@@ -2249,7 +2430,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "[Hidden]"
+        "unitName": "[Hidden]",
+        "unitOriginName": "Cantina (Unused)"
     },
     "182": {
         "isDefault": 0,
@@ -2263,7 +2445,8 @@ var unitData={
         "groundWeapon": {
             "damage": 7,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Mining Platform (Unused)"
     },
     "183": {
         "isDefault": 0,
@@ -2273,7 +2456,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\ud2b9\uae09\ubc30\ub2ec\uc791\uc804"
+        "unitName": "@\ud2b9\uae09\ubc30\ub2ec\uc791\uc804",
+        "unitOriginName": "Independent Command Center (Unused)"
     },
     "184": {
         "isDefault": 0,
@@ -2287,7 +2471,8 @@ var unitData={
         "groundWeapon": {
             "damage": 7,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Independent Starport (Unused)"
     },
     "185": {
         "isDefault": 0,
@@ -2297,7 +2482,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\ud2b8\ub9ac\uac70\ub098\ub204\uae30\uc6a9"
+        "unitName": "@\ud2b8\ub9ac\uac70\ub098\ub204\uae30\uc6a9",
+        "unitOriginName": "Independent Jump Gate (Unused)"
     },
     "186": {
         "isDefault": 0,
@@ -2307,7 +2493,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Time 3"
+        "unitName": "Time 3",
+        "unitOriginName": "Ruins (Unused)"
     },
     "187": {
         "isDefault": 0,
@@ -2317,7 +2504,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@Cycle_24"
+        "unitName": "@Cycle_24",
+        "unitOriginName": "Khaydarin Crystal Formation (Unused)"
     },
     "188": {
         "isDefault": 0,
@@ -2327,7 +2515,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Passive"
+        "unitName": "Passive",
+        "unitOriginName": "Vespene Geyser"
     },
     "189": {
         "isDefault": 0,
@@ -2337,7 +2526,8 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 600,
         "gasCost": 200,
-        "unitName": "\u0004\uc6cc\ud504\uac8c\uc774\ud2b8"
+        "unitName": "\u0004\uc6cc\ud504\uac8c\uc774\ud2b8",
+        "unitOriginName": "Warp Gate"
     },
     "190": {
         "isDefault": 1,
@@ -2347,7 +2537,8 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 1000,
         "gasCost": 400,
-        "unitName": "Psi Disrupter"
+        "unitName": "Psi Disrupter",
+        "unitOriginName": "Psi Disrupter"
     },
     "191": {
         "isDefault": 0,
@@ -2357,7 +2548,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 250,
         "gasCost": 0,
-        "unitName": "@Notice2"
+        "unitName": "@Notice2",
+        "unitOriginName": "Zerg Marker"
     },
     "192": {
         "isDefault": 0,
@@ -2367,7 +2559,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "@MP\ud3ec\uc158\uc7ac\uace0"
+        "unitName": "@MP\ud3ec\uc158\uc7ac\uace0",
+        "unitOriginName": "Terran Marker"
     },
     "193": {
         "isDefault": 0,
@@ -2377,7 +2570,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "Time 6"
+        "unitName": "Time 6",
+        "unitOriginName": "Protoss Marker"
     },
     "194": {
         "isDefault": 0,
@@ -2387,7 +2581,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 250,
         "gasCost": 0,
-        "unitName": "@Notice1"
+        "unitName": "@Notice1",
+        "unitOriginName": "Zerg Beacon"
     },
     "195": {
         "isDefault": 0,
@@ -2397,7 +2592,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "\u0011 \uc544\uc774\ud15c \ub3c4\uc6c0\ub9d0"
+        "unitName": "\u0011 \uc544\uc774\ud15c \ub3c4\uc6c0\ub9d0",
+        "unitOriginName": "Terran Beacon"
     },
     "196": {
         "isDefault": 0,
@@ -2407,7 +2603,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\u0004\ubc14\ub85c \uc9c4\ud589\ud558\uae30(Only 1P)"
+        "unitName": "\u0004\ubc14\ub85c \uc9c4\ud589\ud558\uae30(Only 1P)",
+        "unitOriginName": "Protoss Beacon"
     },
     "197": {
         "isDefault": 0,
@@ -2417,7 +2614,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 250,
         "gasCost": 0,
-        "unitName": "\u000f\ub3cc\uc5f0\ubcc0\uc774\uc6d0 \uc815\ubcf4"
+        "unitName": "\u000f\ub3cc\uc5f0\ubcc0\uc774\uc6d0 \uc815\ubcf4",
+        "unitOriginName": "Zerg Flag Beacon"
     },
     "198": {
         "isDefault": 1,
@@ -2427,7 +2625,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "Terran Flag Beacon"
+        "unitName": "Terran Flag Beacon",
+        "unitOriginName": "Terran Flag Beacon"
     },
     "199": {
         "isDefault": 0,
@@ -2437,7 +2636,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\u0004\uc2e0\uc131\ud55c \ub545"
+        "unitName": "\u0004\uc2e0\uc131\ud55c \ub545",
+        "unitOriginName": "Protoss Flag Beacon"
     },
     "200": {
         "isDefault": 0,
@@ -2447,7 +2647,8 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 200,
         "gasCost": 50,
-        "unitName": "\u0006Hell \u0002Time"
+        "unitName": "\u0006Hell \u0002Time",
+        "unitOriginName": "Power Generator"
     },
     "201": {
         "isDefault": 0,
@@ -2457,7 +2658,8 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 1000,
         "gasCost": 500,
-        "unitName": "\b\uc774\ubca4\ud2b8 \ub3cc\uc5f0\ubcc0\uc774"
+        "unitName": "\b\uc774\ubca4\ud2b8 \ub3cc\uc5f0\ubcc0\uc774",
+        "unitOriginName": "Overmind Cocoon"
     },
     "202": {
         "isDefault": 0,
@@ -2467,7 +2669,8 @@ var unitData={
         "buildTime": 2400,
         "oreCost": 250,
         "gasCost": 200,
-        "unitName": "@\uc774\uc804\uc2a4\ud14c\uc774\uc9c0"
+        "unitName": "@\uc774\uc804\uc2a4\ud14c\uc774\uc9c0",
+        "unitOriginName": "Dark Swarm"
     },
     "203": {
         "isDefault": 0,
@@ -2481,7 +2684,8 @@ var unitData={
         "groundWeapon": {
             "damage": 65,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Floor Missile Trap"
     },
     "204": {
         "isDefault": 0,
@@ -2491,7 +2695,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\uc0c8\ud06c\ub9ac\ud30c\uc774\uc2a4\uc2dc\uc804\uc911"
+        "unitName": "@\uc0c8\ud06c\ub9ac\ud30c\uc774\uc2a4\uc2dc\uc804\uc911",
+        "unitOriginName": "Floor Hatch (Unused)"
     },
     "205": {
         "isDefault": 0,
@@ -2501,7 +2706,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\ub2cc\uc790\uad81\uc2dc\uc791"
+        "unitName": "\ub2cc\uc790\uad81\uc2dc\uc791",
+        "unitOriginName": "Left Upper Level Door"
     },
     "206": {
         "isDefault": 0,
@@ -2511,7 +2717,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\ub9c8\ub098\ub514\ubc84\ud504"
+        "unitName": "@\ub9c8\ub098\ub514\ubc84\ud504",
+        "unitOriginName": "Right Upper Level Door"
     },
     "207": {
         "isDefault": 0,
@@ -2521,7 +2728,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\ubc9e\ube4c\uac15\uc81c\uc18c\ud658"
+        "unitName": "@\ubc9e\ube4c\uac15\uc81c\uc18c\ud658",
+        "unitOriginName": "Left Pit Door"
     },
     "208": {
         "isDefault": 0,
@@ -2531,7 +2739,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Time 2"
+        "unitName": "Time 2",
+        "unitOriginName": "Right Pit Door"
     },
     "209": {
         "isDefault": 0,
@@ -2545,7 +2754,8 @@ var unitData={
         "groundWeapon": {
             "damage": 135,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Floor Gun Trap"
     },
     "210": {
         "isDefault": 0,
@@ -2559,7 +2769,8 @@ var unitData={
         "groundWeapon": {
             "damage": 62,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Left Wall Missile Trap"
     },
     "211": {
         "isDefault": 0,
@@ -2573,7 +2784,8 @@ var unitData={
         "groundWeapon": {
             "damage": 300,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Left Wall Flame Trap"
     },
     "212": {
         "isDefault": 0,
@@ -2587,7 +2799,8 @@ var unitData={
         "groundWeapon": {
             "damage": 62,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Right Wall Missile Trap"
     },
     "213": {
         "isDefault": 0,
@@ -2601,7 +2814,8 @@ var unitData={
         "groundWeapon": {
             "damage": 300,
             "damageFactor": 1
-        }
+        },
+        "unitOriginName": "Right Wall Flame Trap"
     },
     "214": {
         "isDefault": 1,
@@ -2611,7 +2825,8 @@ var unitData={
         "buildTime": 0,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "Start Location"
+        "unitName": "Start Location",
+        "unitOriginName": "Start Location"
     },
     "215": {
         "isDefault": 0,
@@ -2621,7 +2836,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\uccb4\ub825\ud3ec\uc158 \u0003($50)"
+        "unitName": "\u000f\uccb4\ub825\ud3ec\uc158 \u0003($50)",
+        "unitOriginName": "Flag"
     },
     "216": {
         "isDefault": 0,
@@ -2631,7 +2847,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\ubab8\uc744 \uc704\ud5d8\ud55c \uacf3\uc5d0 \ub450\uae30 \u0003($1000)"
+        "unitName": "\u000f\ubab8\uc744 \uc704\ud5d8\ud55c \uacf3\uc5d0 \ub450\uae30 \u0003($1000)",
+        "unitOriginName": "Young Chrysalis"
     },
     "217": {
         "isDefault": 0,
@@ -2641,7 +2858,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\ub9c8\ub825\uc99d\ud3ed\uae30 \u0003($200)\u0004(+\ucd5c\ub300)"
+        "unitName": "\u000f\ub9c8\ub825\uc99d\ud3ed\uae30 \u0003($200)\u0004(+\ucd5c\ub300)",
+        "unitOriginName": "Psi Emitter"
     },
     "218": {
         "isDefault": 0,
@@ -2651,7 +2869,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\uc2a4\ud0ac\ubd81 \u0003($500)\u0004(+\uc2a4\ud0ac)"
+        "unitName": "\u000f\uc2a4\ud0ac\ubd81 \u0003($500)\u0004(+\uc2a4\ud0ac)",
+        "unitOriginName": "Data Disc"
     },
     "219": {
         "isDefault": 0,
@@ -2661,7 +2880,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\ub9c8\ub098\ud3ec\uc158 \u0003($100)"
+        "unitName": "\u000f\ub9c8\ub098\ud3ec\uc158 \u0003($100)",
+        "unitOriginName": "Khaydarin Crystal"
     },
     "220": {
         "isDefault": 0,
@@ -2671,7 +2891,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@7p\uc815\uc57c\ub3c5"
+        "unitName": "@7p\uc815\uc57c\ub3c5",
+        "unitOriginName": "Mineral Cluster Type 1"
     },
     "221": {
         "isDefault": 0,
@@ -2681,7 +2902,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u0004\uac15\uc81c\uc18c\ud658 \u0007\ud5c8\uc6a9"
+        "unitName": "\u0004\uac15\uc81c\uc18c\ud658 \u0007\ud5c8\uc6a9",
+        "unitOriginName": "Mineral Cluster Type 2"
     },
     "222": {
         "isDefault": 1,
@@ -2691,7 +2913,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Protoss Vespene Gas Orb Type 1"
+        "unitName": "Protoss Vespene Gas Orb Type 1",
+        "unitOriginName": "Protoss Vespene Gas Orb Type 1"
     },
     "223": {
         "isDefault": 0,
@@ -2701,7 +2924,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u0004\uac15\uc81c\uc18c\ud658 \b\ube44\ud5c8\uc6a9"
+        "unitName": "\u0004\uac15\uc81c\uc18c\ud658 \b\ube44\ud5c8\uc6a9",
+        "unitOriginName": "Protoss Vespene Gas Orb Type 2"
     },
     "224": {
         "isDefault": 0,
@@ -2711,7 +2935,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u0004\uc6d0\ucf54\uc778 \uc0ac\uc6a9\ud558\uae30"
+        "unitName": "\u0004\uc6d0\ucf54\uc778 \uc0ac\uc6a9\ud558\uae30",
+        "unitOriginName": "Zerg Vespene Gas Sac Type 1"
     },
     "225": {
         "isDefault": 1,
@@ -2721,7 +2946,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Zerg Vespene Gas Sac Type 2"
+        "unitName": "Zerg Vespene Gas Sac Type 2",
+        "unitOriginName": "Zerg Vespene Gas Sac Type 2"
     },
     "226": {
         "isDefault": 1,
@@ -2731,7 +2957,8 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Terran Vespene Gas Tank Type 1"
+        "unitName": "Terran Vespene Gas Tank Type 1",
+        "unitOriginName": "Terran Vespene Gas Tank Type 1"
     },
     "227": {
         "isDefault": 1,
@@ -2741,6 +2968,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Terran Vespene Gas Tank Type 2"
+        "unitName": "Terran Vespene Gas Tank Type 2",
+        "unitOriginName": "Terran Vespene Gas Tank Type 2"
     }
 }
