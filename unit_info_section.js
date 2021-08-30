@@ -28,7 +28,7 @@ function getStageUnitTree(){
   var innerHTML_str = "\
   <ul class='tree'>";
 
-  for(i=0; i < stageData.length; ++i){
+  for(i=0; i < 10; ++i){
     stageLabel = ''+(i+1)+ ' Stage';
     innerHTML_str += "\
     <li>\
@@ -41,7 +41,7 @@ function getStageUnitTree(){
           <ul>";
           for(j=0; j < stageData[i].units.length; ++j){
             unitID = stageData[i].units[j];
-            unitName = unitData[unitID].unitName;
+            unitName = removeColorSign(unitData[unitID].unitName);
             unitOriginName = unitData[unitID].unitOriginName;
             htmlID = "StageUnit" + i + "_"+ j;
             innerHTML_str += "\
@@ -59,7 +59,8 @@ function getStageUnitTree(){
           <ul>";
           for(j=0; j < stageData[i].skillUnits.length; ++j){
             unitID = stageData[i].skillUnits[j];
-            unitName = unitData[unitID].unitName;
+            unitName = removeColorSign(unitData[unitID].unitName);
+            unitOriginName = unitData[unitID].unitOriginName;
             htmlID = "StageSkillUnit" + i + "_"+ j;
             innerHTML_str += "\
             <li>\
@@ -99,7 +100,7 @@ function getSCUnitTree(){
             <ul>";
             for(i=0; i < SCTreeData[rootKey][key].length; ++i){
               unitID = SCTreeData[rootKey][key][i];
-              unitName = unitData[unitID].unitName;
+              unitName = removeColorSign(unitData[unitID].unitName);
               unitOriginName = unitData[unitID].unitOriginName;
               htmlsubID = htmlID + i;
               //console.log(unitName, htmlsubID);
@@ -126,7 +127,7 @@ function getUnitStatViewer(unitID){
   <div class='unitStatViewer'>\
     <div style='grid-column: 1/3;'>\
       <label style='width:135px;' >이름</label>\
-      <input style='width:480px;' id='unitStatViewer_UnitName' type='text' readonly value='"+unitData[unitID].unitName+"'></input>\
+      <input style='width:480px;' id='unitStatViewer_UnitName' type='text' readonly value='"+removeColorSign(unitData[unitID].unitName)+"'></input>\
     </div>\
     <div>\
       <label>체력</label>\
@@ -172,7 +173,7 @@ function getUnitStatViewer(unitID){
   return innerHTML_str;
 }
 function updateUnitStat(unitID){
-  document.getElementById('unitStatViewer_UnitName').value = unitData[unitID].unitName;
+  document.getElementById('unitStatViewer_UnitName').value = removeColorSign(unitData[unitID].unitName);
   document.getElementById('unitStatViewer_HitPoints').value = unitData[unitID].hitPoints / 256;
   document.getElementById('unitStatViewer_BuildTime').value = unitData[unitID].buildTime;
   document.getElementById('unitStatViewer_ShieldPoints').value = unitData[unitID].shieldPoints;
@@ -183,6 +184,41 @@ function updateUnitStat(unitID){
   document.getElementById('unitStatViewer_GroundWeapon_damageFactor').value = (unitData[unitID].groundWeapon == null ? '무기 없음' : unitData[unitID].groundWeapon.damageFactor)
   document.getElementById('unitStatViewer_AirWeapon_damage').value = (unitData[unitID].airWeapon == null ? '무기 없음' : unitData[unitID].airWeapon.damage)
   document.getElementById('unitStatViewer_AirWeapon_damageFactor').value = (unitData[unitID].airWeapon == null ? '무기 없음' : unitData[unitID].airWeapon.damageFactor)
+}
+function removeColorSign(unitName){
+  unitName = unitName.replace('\u0000','');
+  unitName = unitName.replace('\u0001','');
+  unitName = unitName.replace('\u0002','');
+  unitName = unitName.replace('\u0003','');
+  unitName = unitName.replace('\u0004','');
+  unitName = unitName.replace('\u0005','');
+  unitName = unitName.replace('\u0006','');
+  unitName = unitName.replace('\u0007','');
+  unitName = unitName.replace('\u0008','');
+  unitName = unitName.replace('\u0009','');
+  unitName = unitName.replace('\u000A','');
+  unitName = unitName.replace('\u000B','');
+  unitName = unitName.replace('\u000C','');
+  unitName = unitName.replace('\u000D','');
+  unitName = unitName.replace('\u000E','');
+  unitName = unitName.replace('\u000F','');
+  unitName = unitName.replace('\u0010','');
+  unitName = unitName.replace('\u0011','');
+  unitName = unitName.replace('\u0012','');
+  unitName = unitName.replace('\u0013','');
+  unitName = unitName.replace('\u0014','');
+  unitName = unitName.replace('\u0015','');
+  unitName = unitName.replace('\u0016','');
+  unitName = unitName.replace('\u0017','');
+  unitName = unitName.replace('\u0018','');
+  unitName = unitName.replace('\u0019','');
+  unitName = unitName.replace('\u001A','');
+  unitName = unitName.replace('\u001B','');
+  unitName = unitName.replace('\u001C','');
+  unitName = unitName.replace('\u001D','');
+  unitName = unitName.replace('\u001E','');
+  unitName = unitName.replace('\u001F','');
+  return unitName;
 }
 
 setStageUnitTree();

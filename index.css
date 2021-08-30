@@ -28,20 +28,20 @@ section{
     cursor: pointer;
 }
 
-.DPTEXT_04{
-    color: white;
-}
 .DPTEXT_01{
     color:rgb(184, 184, 232);
-}
-.DPTEXT_08{
-    color:rgb(200, 24, 24);
 }
 .DPTEXT_03{
     color:rgb(220, 220, 60);
 }
+.DPTEXT_04{
+    color:white;
+}
 .DPTEXT_07{
     color:rgb(16, 252, 24);
+}
+.DPTEXT_08{
+    color:rgb(255, 5, 5);
 }
 .DPTEXT_0E{
     color:rgb(14, 81, 230);
@@ -49,12 +49,18 @@ section{
 .DPTEXT_0F{
     color:rgb(44, 180, 148);
 }
+.DPTEXT_10{
+    color:rgb(126,59,145);
+}
+.DPTEXT_11{
+    color:rgb(255,150,21);
+}
+.DPTEXT_1C{
+    color:rgb(64, 104, 212);
+}
 .DPTEXT_1E{
     color:rgb(156,156,200);
 }
 .DPTEXT_1F{
     color:rgb(0, 228, 252);
-}
-.DPTEXT_1C{
-    color:rgb(64, 104, 212);
 }
