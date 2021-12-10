@@ -7,3 +7,7 @@
     max-width: 1123px;
     height: auto;
 }
+.StageViewButton:hover{
+    color: blue;
+    cursor: pointer;
+}

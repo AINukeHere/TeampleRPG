@@ -2,9 +2,23 @@ var stageInfoDiv = document.getElementById("StageInfomation").getElementsByTagNa
 
 var innerHTML_str = "";
 
+for(i = 1; i <= 10; ++i)
+{
+    innerHTML_str += getStageViewerHTML(i);
+}
+stageInfoDiv.innerHTML = innerHTML_str;
+function toggleStageView(stageNum){
+    var stageViewDiv = document.getElementById("StageView"+stageNum)
+
+    if(stageViewDiv.style.display == "none")
+        stageViewDiv.style.display = "block";
+    else
+        stageViewDiv.style.display = "none";
+}
 function getStageViewerHTML(stageNum){
     var innerHTML_str = "\
-    <div class='StageView'>\
+    <div class='StageViewButton' onclick=\"toggleStageView("+stageNum+")\">스테이지"+stageNum+" 접기/펼치기</div>\
+    <div class='StageView' id='StageView"+stageNum+"' style='display:none'>\
         <div>\
             <span class='DPTEXT_08'>S </span>\
             <span class='DPTEXT_11'>T </span>\
@@ -54,9 +68,3 @@ function getDifficultyStr(stageNum){
     }
     return str;
 }
-
-for(i = 1; i <= 10; ++i)
-{
-    innerHTML_str += getStageViewerHTML(i);
-}
-stageInfoDiv.innerHTML = innerHTML_str;
