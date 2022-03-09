@@ -218,7 +218,7 @@ classDataJson=[
                         "nickname":"마법과 힘을 융합시키는 자",
                         "battleType":"근거리형",
                         "role":"딜러",
-                        "difficulty":"보통",
+                        "difficulty":"어려움",
                         "explanation":[
                             "적과 근접하여 전투하는 직업입니다.",
                             "어느정도 유지기를 사용할 줄 알아야 합니다.",
