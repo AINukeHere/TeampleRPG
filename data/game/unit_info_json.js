@@ -48,7 +48,7 @@ var unitData={
         "unitName": "\u0006R\u0003ider",
         "groundWeapon": {
             "damage": 40,
-            "damageFactor": 2
+            "damageFactor": 3
         },
         "unitOriginName": "Terran Vulture"
     },
@@ -321,7 +321,7 @@ var unitData={
     },
     "20": {
         "isDefault": 0,
-        "hitPoints": 222720,
+        "hitPoints": 248320,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 1,
@@ -380,7 +380,7 @@ var unitData={
         "unitOriginName": "Edmund Duke (Tank Mode)",
         "groundWeapon": {
             "damage": 70,
-            "damageFactor": 4
+            "damageFactor": 5
         }
     },
     "24": {
@@ -394,7 +394,7 @@ var unitData={
         "unitName": "@BossSkillTimer",
         "groundWeapon": {
             "damage": 70,
-            "damageFactor": 4
+            "damageFactor": 5
         },
         "unitOriginName": "Edmund Duke Turret (Tank Mode)"
     },
@@ -786,8 +786,8 @@ var unitData={
         "gasCost": 300,
         "unitName": "\u0010\ud658\uac01\uc758 \u0004\uc81c\ub77c\ud234",
         "groundWeapon": {
-            "damage": 150,
-            "damageFactor": 20
+            "damage": 200,
+            "damageFactor": 9
         },
         "unitOriginName": "Infested Kerrigan (Infested Terran)"
     },
@@ -1015,7 +1015,7 @@ var unitData={
     "67": {
         "isDefault": 0,
         "hitPoints": 217600,
-        "shieldPoints": 15,
+        "shieldPoints": 30,
         "armorPoints": 1,
         "buildTime": 1,
         "oreCost": 35,
@@ -1104,9 +1104,9 @@ var unitData={
     },
     "73": {
         "isDefault": 0,
-        "hitPoints": 2560000,
-        "shieldPoints": 10000,
-        "armorPoints": 0,
+        "hitPoints": 192256,
+        "shieldPoints": 0,
+        "armorPoints": 255,
         "buildTime": 300,
         "oreCost": 0,
         "gasCost": 1000,
@@ -1391,7 +1391,7 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\ud2b8\ub7a9\ud37c\uc9c0\ub8b0\uc218",
+        "unitName": "@\uc0ac\ud68c\uc801\uac70\ub9ac\ub450\uae30\uce74\uc6b4\ud2b8",
         "unitOriginName": "Mercenary Gunship (Unused)"
     },
     "93": {
@@ -1440,9 +1440,9 @@ var unitData={
     },
     "97": {
         "isDefault": 0,
-        "hitPoints": 42949632,
-        "shieldPoints": 0,
-        "armorPoints": 255,
+        "hitPoints": 1,
+        "shieldPoints": 10000,
+        "armorPoints": 0,
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
@@ -1551,18 +1551,18 @@ var unitData={
         "isDefault": 0,
         "hitPoints": 40960000,
         "shieldPoints": 100,
-        "armorPoints": 12,
+        "armorPoints": 30,
         "buildTime": 1500,
         "oreCost": 200,
         "gasCost": 75,
         "unitName": "\u0011\ub300\uc0ac\ub839\uad00 YMS",
         "groundWeapon": {
             "damage": 200,
-            "damageFactor": 3
+            "damageFactor": 8
         },
         "airWeapon": {
             "damage": 200,
-            "damageFactor": 3
+            "damageFactor": 8
         },
         "unitOriginName": "Infested Duran (Infested Terran)"
     },
@@ -2075,8 +2075,8 @@ var unitData={
     },
     "150": {
         "isDefault": 0,
-        "hitPoints": 64000,
-        "shieldPoints": 100,
+        "hitPoints": 0,
+        "shieldPoints": 10000,
         "armorPoints": 1,
         "buildTime": 0,
         "oreCost": 0,
@@ -2603,7 +2603,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\u0004\ubc14\ub85c \uc9c4\ud589\ud558\uae30(Only 1P)",
+        "unitName": "\u0004\ubc14\ub85c \uc9c4\ud589\ud558\uae30(Only 1P, 1:30\u2193)",
         "unitOriginName": "Protoss Beacon"
     },
     "197": {

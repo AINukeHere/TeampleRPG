@@ -72,7 +72,7 @@ classDataJson=[
                             {
                                 "command":"A+A",
                                 "name":"크라이",
-                                "explanation":"광범위한 적들을 도발한다",
+                                "explanation":"광범위한 적들을 5초동안 도발한다",
                                 "type":"유틸기"
                             },
                             {
@@ -128,7 +128,7 @@ classDataJson=[
                             {
                                 "command":"O",
                                 "name":"리젠트먼트",
-                                "explanation":"버서커가 분노하여 방어를 포기한 극공상태로 태세를 전환한다.<br>마나가 150이하일때 1초에 4씩 마나가 회복됩니다.",
+                                "explanation":"버서커가 분노하여 방어를 포기한 극공상태로 태세를 전환한다.<br>마나가 100이하일때 1초에 4씩 마나가 회복됩니다.",
                                 "type":"유틸기"
                             },
                             {
@@ -706,24 +706,24 @@ classDataJson=[
                             },
                             {
                                 "command":"C",
-                                "name":"수리검",
-                                "explanation":"독이 묻어있는 날카로운 수리검을 던진다.",
-                                "type":"공격형"
-                            },
-                            {
-                                "command":"A",
                                 "name":"그림자 분신",
-                                "explanation":"자신과 똑같은 그림자를 만든다.",
+                                "explanation":"자신과 똑같은 그림자를 만든다. (최대 12기)",
                                 "type":"소환형"
                             },
                             {
+                                "command":"A",
+                                "name":"그림자 수리검",
+                                "explanation":"그림자들이 독이 묻어있는 날카로운 수리검을 던진다.",
+                                "type":"공격형"
+                            },
+                            {
                                 "command":"O",
-                                "name":"그림자 영혼주입",
+                                "name":"그림자 영혼 주입",
                                 "explanation":"자신의 영혼을 그림자들에게 주입하여 더 강력하게 만듭니다.(자신체력1%)",
                                 "type":"소환형"
                             },
                             {
-                                "command":"O + C",
+                                "command":"O + S",
                                 "name":"그림자 영혼 분열",
                                 "explanation":"영혼 주입된 그림자가 그림자 8개로 분열합니다.",
                                 "type":"소환형"
