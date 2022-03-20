@@ -182,7 +182,7 @@ var unitData={
     },
     "11": {
         "isDefault": 0,
-        "hitPoints": 307200,
+        "hitPoints": 512000,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 750,
@@ -1187,8 +1187,8 @@ var unitData={
     },
     "78": {
         "isDefault": 0,
-        "hitPoints": 3200000,
-        "shieldPoints": 65535,
+        "hitPoints": 12800000,
+        "shieldPoints": 48000,
         "armorPoints": 30,
         "buildTime": 1500,
         "oreCost": 300,
@@ -1549,7 +1549,7 @@ var unitData={
     },
     "104": {
         "isDefault": 0,
-        "hitPoints": 40960000,
+        "hitPoints": 50342400,
         "shieldPoints": 100,
         "armorPoints": 30,
         "buildTime": 1500,
@@ -1567,14 +1567,14 @@ var unitData={
         "unitOriginName": "Infested Duran (Infested Terran)"
     },
     "105": {
-        "isDefault": 0,
+        "isDefault": 1,
         "hitPoints": 204800,
         "shieldPoints": 100,
         "armorPoints": 0,
         "buildTime": 2400,
         "oreCost": 250,
         "gasCost": 250,
-        "unitName": "@\ud30c\uc5c5\uce90\ub9ad\uc120\ud0dd\ud568",
+        "unitName": "Disruption Web",
         "unitOriginName": "Disruption Web"
     },
     "106": {
@@ -2858,7 +2858,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\ub9c8\ub825\uc99d\ud3ed\uae30 \u0003($200)\u0004(+\ucd5c\ub300)",
+        "unitName": "\u000f\ub9c8\ub098\uc99d\ud3ed\uae30 \u0003($200)\u0004(+\ucd5c\ub300)",
         "unitOriginName": "Psi Emitter"
     },
     "218": {
