@@ -3,6 +3,7 @@ classDataJson=[
         "classes":[
             {
                 "name":"워리어",
+                "unitIdx":77,
                 "image":"warrior.png",
                 "spec1":2,
                 "spec2":3,
@@ -143,6 +144,7 @@ classDataJson=[
             },
             {
                 "name":"위자드",
+                "unitIdx":67,
                 "image":"wizard.png",
                 "spec1":2,
                 "spec2":1,
@@ -267,6 +269,7 @@ classDataJson=[
             },
             {
                 "name":"헌터",
+                "unitIdx":1,
                 "image":"hunter.png",
                 "spec1":2,
                 "spec2":1,
@@ -404,6 +407,7 @@ classDataJson=[
             },
             {
                 "name":"힐러",
+                "unitIdx":34,
                 "image":"healer.png",
                 "spec1":1,
                 "spec2":2,
@@ -553,6 +557,7 @@ classDataJson=[
             },
             {
                 "name":"거너",
+                "unitIdx":20,
                 "image":"gunner.png",
                 "spec1":2,
                 "spec2":2,
@@ -677,6 +682,7 @@ classDataJson=[
             },
             {
                 "name":"시프",
+                "unitIdx":54,
                 "image":"thief.png",
                 "spec1":3,
                 "spec2":1,
@@ -809,6 +815,7 @@ classDataJson=[
             },
             {
                 "name":"데빌",
+                "unitIdx":39,
                 "image":"devil.png",
                 "spec1":5,
                 "spec2":1,
@@ -916,6 +923,7 @@ classDataJson=[
             },
             {
                 "name":"메카닉",
+                "unitIdx":7,
                 "image":"mechanic.png",
                 "spec1":1,
                 "spec2":1,
@@ -1083,6 +1091,7 @@ classDataJson=[
             },
             {
                 "name":"리콜러",
+                "unitIdx":63,
                 "image":"recaller.png",
                 "spec1":1,
                 "spec2":1,
@@ -1202,6 +1211,7 @@ classDataJson=[
             },
             {
                 "name":"빌더",
+                "unitIdx":64,
                 "image":"builder.png",
                 "spec1":1,
                 "spec2":1,
@@ -1460,6 +1470,7 @@ classDataJson=[
             },
             {
                 "name":"소서러",
+                "unitIdx":52,
                 "image":"sorcerer.png",
                 "spec1":1,
                 "spec2":1,
@@ -1555,6 +1566,7 @@ classDataJson=[
             },
             {
                 "name":"은둔자",
+                "unitIdx":61,
                 "image":"dmsenswk.png",
                 "spec1":4,
                 "spec2":1,
@@ -1669,6 +1681,7 @@ classDataJson=[
             },
             {
                 "name":"크루세이더",
+                "unitIdx":68,
                 "image":"crusader.png",
                 "spec1":3,
                 "spec2":3,
@@ -1776,6 +1789,7 @@ classDataJson=[
             },
             {
                 "name":"라이더",
+                "unitIdx":2,
                 "image":"rider.png",
                 "spec1":1,
                 "spec2":1,
@@ -1896,6 +1910,7 @@ classDataJson=[
             },
             {
                 "name":"알려진 바 없음",
+                "unitIdx":77,
                 "nickname":"광기의 살육자",
                 "image":"warrior.png",
                 "spec1":5,
@@ -1949,6 +1964,7 @@ classDataJson=[
             },
             {
                 "name":"마제",
+                "unitIdx":61,
                 "nickname":"의문의 사나이",
                 "image":"dmsenswk.png",
                 "spec1":5,

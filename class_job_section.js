@@ -129,14 +129,31 @@ function onClickClass(isURL, classIdx)
     var spec_str2=getSpecString(classInfo.spec2);
     var spec_str3=getSpecString(classInfo.spec3);
     
-
+    curClassUnitData = unitData[classData.classes[classIdx].unitIdx];
     var innerHTML_str = "\
-    <img class='classProfileImage' src=data/images/"+classData.classes[classIdx].image+"><br>\
-        <span class='specName DPTEXT_07'>파괴력</span><span class='specStars DPTEXT_08'>"+spec_str1+"</span><br>\
-        <span class='specName DPTEXT_07'>내구력</span><span class='specStars DPTEXT_08'>"+spec_str2+"</span><br>\
-        <span class='specName DPTEXT_07'>기동성</span><span class='specStars DPTEXT_08'>"+spec_str3+"</span><br>\
-    <span class='explanation DPTEXT_04'>"+classData.classes[classIdx].explanation+"</span>\
-    <br>";
+    <div class='classProfileSummary'>\
+        <div>\
+            <img class='classProfileImage' src=data/images/"+classData.classes[classIdx].image+"><br>\
+            <span class='specName DPTEXT_07'>파괴력</span><span class='specStars DPTEXT_08'>"+spec_str1+"</span><br>\
+            <span class='specName DPTEXT_07'>내구력</span><span class='specStars DPTEXT_08'>"+spec_str2+"</span><br>\
+            <span class='specName DPTEXT_07'>기동성</span><span class='specStars DPTEXT_08'>"+spec_str3+"</span><br>\
+        </div>\
+        <div class='classUnitStat'>\
+        <span class='DPTEXT_08'>체력: </span><span class='DPTEXT_04'>"+ curClassUnitData.hitPoints / 256 +"</span><br>\
+        <span class='DPTEXT_0E'>쉴드: </span><span class='DPTEXT_04'>"+ curClassUnitData.shieldPoints +"</span><br>\
+        <span class='DPTEXT_01'>기본방어력: </span><span class='DPTEXT_04'>"+ curClassUnitData.armorPoints +"</span><br>";
+        if (curClassUnitData.groundWeapon != null){
+            innerHTML_str += "\
+            <span class='DPTEXT_01'>지상공격력: </span><span class='DPTEXT_04'>"+ curClassUnitData.groundWeapon.damage +" + " + curClassUnitData.groundWeapon.damageFactor + "n</span><br>";
+        }
+        if (curClassUnitData.airWeapon != null){
+            innerHTML_str += "\
+            <span class='DPTEXT_01'>공중공격력: </span><span class='DPTEXT_04'>"+ curClassUnitData.airWeapon.damage +" + " + curClassUnitData.airWeapon.damageFactor + "n</span><br>";
+        }
+        innerHTML_str += "\
+        </div>\
+        <span style='grid-column:1/3;' class='explanation DPTEXT_04'>"+classData.classes[classIdx].explanation+"</span>\
+    </div>";
     if(classIdx > 13){
         innerHTML_str += "<br>";
         innerHTML_str += "<div style='background-color:black;'>";
