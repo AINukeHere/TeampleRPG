@@ -160,7 +160,7 @@ a.classProfile:hover{
     width: 450px;
     height: 58px;
     margin: auto;
-    background-image: url('data/images/missionObjBtn.png');
+    background-image: url('data/images/ClassInfo/missionObjBtn.png');
     background-repeat: no-repeat;
     text-align: center;
     line-height:58px;
@@ -172,7 +172,7 @@ a.classProfile:hover{
     color: white;
 }
 .missionObjBtn:active{
-    background-image: url('data/images/missionObjBtn_onClick.png');
+    background-image: url('data/images/ClassInfo/missionObjBtn_onClick.png');
 }
 .missionObjBtn span{
     font-size: inherit;
@@ -206,13 +206,13 @@ a.classProfile:hover{
     width: 450px;
     height: 58px;
     margin: auto;
-    background-image: url('data/images/missionObjBtn.png');
+    background-image: url('data/images/ClassInfo/missionObjBtn.png');
     background-repeat: no-repeat;
     text-align: center;
     line-height:58px;
     font-size: 20px;
     color: rgb(250,250,68);
-    background-image: url('data/images/missionObjPrevBtn.png');
+    background-image: url('data/images/ClassInfo/missionObjPrevBtn.png');
     /* position: absolute; */
     bottom:0;
     margin-bottom: 15px;
@@ -222,7 +222,7 @@ a.classProfile:hover{
     color: white;
 }
 .missionObjPrevBtn:active{
-    background-image: url('data/images/missionObjBtn_onClick.png');
+    background-image: url('data/images/ClassInfo/missionObjBtn_onClick.png');
 }
 .missionObjPrevBtn span{
     font-size: inherit;

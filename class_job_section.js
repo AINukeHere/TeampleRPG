@@ -3,7 +3,7 @@ var classData = classDataJson[0];
 if(!_DEBUG)
 {
     var request = new XMLHttpRequest();
-    request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/images/class_info.json", false);
+    request.open("GET", "https://raw.githubusercontent.com/AINukeHere/TeampleRPG/main/data/images/ClassInfo/class_info.json", false);
     request.send(null)
     classData = JSON.parse(request.responseText);
 }
@@ -15,7 +15,7 @@ innerHTML_str = "\
     for(var i =0; i < classData.classes.length; ++i){
         innerHTML_str += "\
         <a class='classProfile' onclick='onClickClass(false,"+i+")' onmousemove='showClassPopupInfo("+i+")' onmouseout='hideClassPopupInfo(this)'>\
-        <img class='classProfileImage' src=./data/images/"+classData.classes[i].image+"><br><span>"+classData.classes[i].name+"</span><br>";
+        <img class='classProfileImage' src=./data/images/ClassInfo/"+classData.classes[i].image+"><br><span>"+classData.classes[i].name+"</span><br>";
         if(classData.classes[i].nickname)
             innerHTML_str += "<span>(별칭:"+classData.classes[i].nickname+")</span><br>";
         innerHTML_str += "</a>";
@@ -26,13 +26,13 @@ innerHTML_str = "\
             캐릭터를 설명하는 중...\
         </div\
         <br>\
-        <img src='data/images/dummy.png'>\
+        <img src='data/images/ClassInfo/dummy.png'>\
     </div>\
 </div>\
 <div id='classView'></div>\
 <div id='jobView'></div>\
 <div id='skillPopupInfo' class='skillPopupInfo'>\
-    <img src='data/images/S_Skill_Cost.png'>\
+    <img src='data/images/ClassInfo/S_Skill_Cost.png'>\
 </div>";
 classJobSectionDiv.innerHTML = innerHTML_str;
 
@@ -79,7 +79,7 @@ function showClassPopupInfo(classIdx)
         <div><span class='specName DPTEXT_07'>기동성</span><span class='specStars DPTEXT_08'>"+spec_str3+"</span></div>\
         <span class='explanation DPTEXT_04'>"+classInfo.explanation+"</span>\
     </div>\
-    <img src='data/images/"+classInfo.image+"'>\
+    <img src='data/images/ClassInfo/"+classInfo.image+"'>\
     ";
     if(classInfo.unitSpec != null){
         innerHTML_str += getUnitSpecInnerHTML(classIdx);
@@ -100,13 +100,13 @@ function showSkillPopupInfo(skillCommand, isBuilding)
         case 'o':
         case 's':
         case 'v':
-            skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/small_"+skillCommand+"_skill_Cost.png";
+            skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/ClassInfo/small_"+skillCommand+"_skill_Cost.png";
             break;
         default:
             if(isBuilding)
-                skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/"+skillCommand+"_building_Cost.png";
+                skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/ClassInfo/"+skillCommand+"_building_Cost.png";
             else
-                skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/"+skillCommand+"_Skill_Cost.png";
+                skillPopupInfo.getElementsByTagName("img")[0].src = "data/images/ClassInfo/"+skillCommand+"_Skill_Cost.png";
             break;
     }
 }
@@ -118,7 +118,6 @@ function hideSkillPopupInfo()
 
 function onClickClass(isURL, classIdx)
 {
-    console.log("onClickClass("+isURL+","+classIdx + ")");
     var classInfo = classData.classes[classIdx];
     var classView = document.getElementById("classView");
     var jobView = document.getElementById("jobView");
@@ -133,7 +132,7 @@ function onClickClass(isURL, classIdx)
     var innerHTML_str = "\
     <div class='classProfileSummary'>\
         <div>\
-            <img class='classProfileImage' src=data/images/"+classData.classes[classIdx].image+"><br>\
+            <img class='classProfileImage' src=data/images/ClassInfo/"+classData.classes[classIdx].image+"><br>\
             <span class='specName DPTEXT_07'>파괴력</span><span class='specStars DPTEXT_08'>"+spec_str1+"</span><br>\
             <span class='specName DPTEXT_07'>내구력</span><span class='specStars DPTEXT_08'>"+spec_str2+"</span><br>\
             <span class='specName DPTEXT_07'>기동성</span><span class='specStars DPTEXT_08'>"+spec_str3+"</span><br>\
@@ -205,8 +204,8 @@ function onClickClass(isURL, classIdx)
                     </div>\
                 </div>\
                 <div class ='jobSelection'>\
-                <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/jobSelect1.png'>\
-                <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/jobSelect2.png'>\
+                <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/ClassInfo/jobSelect1.png'>\
+                <img style='align-self:center;justify-self: center; width:144px; height:144px;' src='data/images/ClassInfo/jobSelect2.png'>\
                 <button class='job1SelectButton' onclick='onSelectJob(false,"+classIdx+", 0)'>선택1</button>\
                 <button class='job2SelectButton' onclick='onSelectJob(false,"+classIdx+", 1)'>선택2</button>\
                 </div>\
@@ -222,7 +221,6 @@ function onClickClass(isURL, classIdx)
 }
 function onSelectJob(isURL, classIdx, jobIdx)
 {
-    console.log("onSelectJob("+isURL+","+classIdx + ", " + jobIdx + ")");
     var jobView = document.getElementById("jobView");
     var innerHTML_str = "<div style='background-color:black;'>";
     innerHTML_str += "<div id='missionObjBtn' class='missionObjBtn' onclick='onClickMissionObjBtn(this)'>임무 목표(<span>J</span>)<img src=''></img></div>";
@@ -283,7 +281,6 @@ function getJobAbstractString(jobInfo)
     return job_abstract_str;
 }
 function getMissionObjInnerHTML(classIdx, jobIdx){
-    console.log("getMissionObjInnerHTML("+classIdx+", "+jobIdx+");");
     var innerHTML_str = "";
     switch(classIdx){
         case 14:
@@ -360,14 +357,14 @@ function getSkillInnerHTML(skills){
                         <img class='skillIcon'\
                         onmousemove='showSkillPopupInfo(\""+skillInfo.command[cmdIdx]+"\")' \
                         onmouseout='hideSkillPopupInfo()' \
-                        src='data/images/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
+                        src='data/images/ClassInfo/"+skillInfo.command[cmdIdx]+"_Skill.png'>";
                         break;
                     case "o":
                         innerHTML_str += "\
                         <img class='skillIcon'\
                         onmousemove='showSkillPopupInfo(\""+skillInfo.command[cmdIdx]+"\")' \
                         onmouseout='hideSkillPopupInfo()' \
-                        src='data/images/small_o_Skill.png'>";
+                        src='data/images/ClassInfo/small_o_Skill.png'>";
                         break;
                     default:
                         innerHTML_str += "<span style='color:white'>"+skillInfo.command[cmdIdx]+"</span>";
@@ -433,7 +430,7 @@ function getAvailableBuildingViewer(buildings){
                         <img class='skillIcon'\
                         onmousemove='showSkillPopupInfo(\""+buildingName+"\",true)' \
                         onmouseout='hideSkillPopupInfo()' \
-                        src='data/images/"+buildingName+"_building.png'>";
+                        src='data/images/ClassInfo/"+buildingName+"_building.png'>";
                         bRemoveFirstLetter.push(cmdIdx);
                         cmdIdx+=2;
                         break;
@@ -442,14 +439,14 @@ function getAvailableBuildingViewer(buildings){
                         <img class='skillIcon'\
                         onmousemove='showSkillPopupInfo(\""+buildingInfo.command[cmdIdx]+"\",true)' \
                         onmouseout='hideSkillPopupInfo()' \
-                        src='data/images/small_v_Skill.png'>";
+                        src='data/images/ClassInfo/small_v_Skill.png'>";
                         break;
                     case "s":
                         innerHTML_str += "\
                         <img class='skillIcon'\
                         onmousemove='showSkillPopupInfo(\""+buildingInfo.command[cmdIdx]+"\",true)' \
                         onmouseout='hideSkillPopupInfo()' \
-                        src='data/images/small_s_Skill.png'>";
+                        src='data/images/ClassInfo/small_s_Skill.png'>";
                         break;
                     default:
                         innerHTML_str += "<span style='color:white'>"+buildingInfo.command[cmdIdx]+"</span>";
@@ -458,7 +455,6 @@ function getAvailableBuildingViewer(buildings){
             }
             var outterCommand = "";
             var prevIdx = 0;
-            console.log(bRemoveFirstLetter);
             for(var j = 0; j < bRemoveFirstLetter.length; ++j){
                 if(bRemoveFirstLetter[j] > 0){
                     let t1 = buildingInfo.command.substring(prevIdx,bRemoveFirstLetter[j]);

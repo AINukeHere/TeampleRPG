@@ -932,16 +932,16 @@ classDataJson=[
                 "skills":[
                     {
                         "command":"S",
-                        "name":"연구비 지원",
-                        "explanation":"정부에서 기계공에게 지원금을 줍니다 Money+3",
-                        "type":"유틸기"
+                        "name":"보디가드",
+                        "explanation":"정부에서 보디가드가 나와서 지켜준다. (최대 1명)",
+                        "type":"소환형"
                     }
                 ],
                 "buildings":[
                     {
                         "command":"TBS",
                         "name":"전동차 제작",
-                        "usage":"전동차를 하나 소환합니다.",
+                        "usage":"전동차를 하나 제작합니다.",
                         "type":"소환형"
                     }
                 ],
@@ -960,20 +960,26 @@ classDataJson=[
                         "skills":[
                             {
                                 "command":"S",
-                                "name":"연구비 지원",
-                                "explanation":"정부에서 기계공에게 지원금을 줍니다 Money+3",
-                                "type":"유틸기"
-                            },
-                            {
-                                "command":"C",
                                 "name":"보디가드",
                                 "explanation":"정부에서 보디가드가 나와서 지켜준다. (최대 1명)",
                                 "type":"소환형"
                             },
                             {
+                                "command":"C",
+                                "name":"비표준 장비 업그레이드",
+                                "explanation":"전동차의 속도업그레이드를 완료하고 지뢰를 매설할 수 있습니다.(최대20개)",
+                                "type":"유틸기"
+                            },
+                            {
+                                "command":"C+C",
+                                "name":"위험 요소 제거",
+                                "explanation":"매설한 지뢰를 모두 파괴합니다.",
+                                "type":"유틸기"
+                            },
+                            {
                                 "command":"A",
                                 "name":"메카니즘 연구",
-                                "explanation":"메카닉 유닛들을 제작할 수 있게 연구한다",
+                                "explanation":"더 강력한 메카닉 유닛을 제작할 수 있게 연구한다.",
                                 "type":"유틸기"
                             },
                             {
@@ -1003,15 +1009,21 @@ classDataJson=[
                         ],
                         "buildings":[
                             {
+                                "command":"비표준 장비 업그레이드+TBC",
+                                "name":"중급 제작",
+                                "usage":"전동차를 둘 제작합니다.",
+                                "type":"소환형"
+                            },
+                            {
                                 "command":"메카니즘 연구+TBS",
                                 "name":"하급 제작",
-                                "usage":"무인경비로봇을 하나 소환합니다.",
+                                "usage":"무인경비로봇을 하나 제작합니다.",
                                 "type":"소환형"
                             },
                             {
                                 "command":"메카니즘 연구+TBC",
                                 "name":"중급 제작",
-                                "usage":"무인경비로봇을 둘 소환합니다.",
+                                "usage":"무인경비로봇을 둘 제작합니다.",
                                 "type":"소환형"
                             },
                             {
