@@ -135,7 +135,7 @@ classDataJson=[
                             {
                                 "command":"정신통일+O+AAA",
                                 "name":"동귀어진",
-                                "explanation":"버서커 최후의 공격. 상대뿐만아니라 자기또한 파멸하는 극공기술이다.",
+                                "explanation":"버서커 최후의 공격. 상대뿐만아니라 자기또한 파멸하는 극공기술이다. (쉴드 100% 유지)",
                                 "type":"공격형"
                             }
                         ]
@@ -547,7 +547,7 @@ classDataJson=[
                             },
                             {
                                 "command":"O+O+O+O",
-                                "name":"영원한 선봉장",
+                                "name":"구원",
                                 "explanation":"죽음에 이르는 피해를 받고 사망하면 10초후 그 자리에서 부활합니다.",
                                 "type":"공격형"
                             }
@@ -1957,13 +1957,13 @@ classDataJson=[
                     {
                         "command":"P",
                         "name":"무감각",
-                        "explanation":"쉴드 40 유지",
+                        "explanation":"각 스테이지*10만큼의 쉴드가 유지됩니다.<br>스킬을 사용하는 동안 유지되는 쉴드량이 100% 증가합니다.",
                         "type":"회복형"
                     },
                     {
                         "command":"P",
                         "name":"순수한 광기",
-                        "explanation":"아군사망시 회복",
+                        "explanation":"아군이 사망할때마다 체력과 마나가 회복됩니다.",
                         "type":"회복형"
                     }
                 ]
