@@ -37,8 +37,6 @@
     padding-left: 14px;
     padding-top: 17px;
 }
-/* #upgradeButtonSelection > div:nth-child(2) > div:nth-child(-n+3){
-} */
 #upgradeCalculator{
     display: grid;
     grid-template-columns: 100%;

@@ -1939,7 +1939,7 @@ classDataJson=[
                     {
                         "command":"S",
                         "name":"사혈참",
-                        "explanation":"적을 혹독하게 찢어 죽입니다.",
+                        "explanation":"주위 적을 끌어당겨 혹독하게 찢어 죽입니다.",
                         "type":"공격형"
                     },
                     {
