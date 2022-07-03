@@ -1,7 +1,8 @@
 .upgradeInfomationGrid{
     display: grid;
     grid-template-columns: 640px auto;
-    grid-template-rows: auto 265px;
+    grid-template-rows: auto auto;
+    height: 640px;
 }
 .upgradeBuildings{
     background-color: black;
@@ -13,14 +14,14 @@
 }
 #upgradeButtonSelection{
     display: grid;
-    grid-template-columns: auto 285px;
-    background-color: black;
-    height: min-content;
+    grid-template-columns: auto auto;
 }
 #upgradeButtonSelection > div:nth-child(1){
     padding-left: 5px;
     background-color: white;
+    width:auto;
     border: 1px solid black;
+    margin-right: 5px;
 }
 #upgradeButtonSelection > div:nth-child(2){
     display: grid;
@@ -30,11 +31,14 @@
     grid-template-rows: min-content min-content min-content;
     min-width: 271px;
     min-height: 248px;
-    padding-left: 14px;
-    padding-top: 17px;
     column-gap: 19px;
     row-gap: 9px;
+    border: 1px solid black;
+    padding-left: 14px;
+    padding-top: 17px;
 }
+/* #upgradeButtonSelection > div:nth-child(2) > div:nth-child(-n+3){
+} */
 #upgradeCalculator{
     display: grid;
     grid-template-columns: 100%;

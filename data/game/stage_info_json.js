@@ -3,7 +3,7 @@ var stageData=
     {
         "name":"고블린의 숲",
         "difficulty":1,
-        "units":[65],
+        "units":[65, 95],
         "skillUnits":[80],
         "reward":1500
     },
