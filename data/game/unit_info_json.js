@@ -20,7 +20,7 @@ var unitData={
     },
     "1": {
         "isDefault": 0,
-        "hitPoints": 197120,
+        "hitPoints": 217600,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 750,
@@ -39,12 +39,12 @@ var unitData={
     },
     "2": {
         "isDefault": 0,
-        "hitPoints": 250880,
+        "hitPoints": 276480,
         "shieldPoints": 100,
         "armorPoints": 1,
-        "buildTime": 900,
-        "oreCost": 150,
-        "gasCost": 0,
+        "buildTime": 300,
+        "oreCost": 0,
+        "gasCost": 75,
         "unitName": "\u0006R\u0003ider",
         "groundWeapon": {
             "damage": 40,
@@ -57,9 +57,9 @@ var unitData={
         "hitPoints": 627200,
         "shieldPoints": 100,
         "armorPoints": 0,
-        "buildTime": 2000,
-        "oreCost": 100,
-        "gasCost": 50,
+        "buildTime": 100,
+        "oreCost": 0,
+        "gasCost": 20,
         "unitName": "\u0005\ubb34\uc778\uacbd\ube44\ub85c\ubd07",
         "unitOriginName": "Terran Goliath",
         "groundWeapon": {
@@ -79,7 +79,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Goliath Turret",
+        "unitName": "@\ubcf4\uc2a4\uc785\uc7a5\ud0c0\uc774\uba38",
         "groundWeapon": {
             "damage": 34,
             "damageFactor": 4
@@ -122,7 +122,7 @@ var unitData={
     },
     "7": {
         "isDefault": 0,
-        "hitPoints": 158720,
+        "hitPoints": 176640,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 300,
@@ -199,14 +199,14 @@ var unitData={
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0006\uc624\u0002\ubca8\ub9ac\uc2a4\ud06c \u001c\uac70\uc2e0\ubcd1",
+        "unitName": "\u000e\ub300\u0002\ud568\uc120",
         "groundWeapon": {
-            "damage": 250,
-            "damageFactor": 0
+            "damage": 50,
+            "damageFactor": 4
         },
         "airWeapon": {
-            "damage": 250,
-            "damageFactor": 0
+            "damage": 50,
+            "damageFactor": 4
         },
         "unitOriginName": "Terran Battlecruiser"
     },
@@ -220,8 +220,8 @@ var unitData={
         "gasCost": 0,
         "unitName": "\u000eTrap",
         "groundWeapon": {
-            "damage": 130,
-            "damageFactor": 0
+            "damage": 100,
+            "damageFactor": 30
         },
         "unitOriginName": "Spider Mine"
     },
@@ -258,11 +258,11 @@ var unitData={
         "unitName": "\u0003P\u0004riest \u0003Angel\u0004Mode",
         "groundWeapon": {
             "damage": 100,
-            "damageFactor": 3
+            "damageFactor": 7
         },
         "airWeapon": {
             "damage": 100,
-            "damageFactor": 3
+            "damageFactor": 7
         },
         "unitOriginName": "Sarah Kerrigan (Ghost)"
     },
@@ -321,7 +321,7 @@ var unitData={
     },
     "20": {
         "isDefault": 0,
-        "hitPoints": 248320,
+        "hitPoints": 273920,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 1,
@@ -438,12 +438,12 @@ var unitData={
         "gasCost": 600,
         "unitName": "\u0004\uc2e0\ubb34\uae30 \bRNN",
         "groundWeapon": {
-            "damage": 50,
-            "damageFactor": 4
+            "damage": 100,
+            "damageFactor": 50
         },
         "airWeapon": {
-            "damage": 50,
-            "damageFactor": 4
+            "damage": 100,
+            "damageFactor": 50
         },
         "unitOriginName": "Arcturus Mengsk (Battlecruiser)"
     },
@@ -474,14 +474,14 @@ var unitData={
         "buildTime": 4800,
         "oreCost": 800,
         "gasCost": 600,
-        "unitName": "\u000e\ub300\u0002\ud568\uc120",
+        "unitName": "\u0006\uc624\u0002\ubca8\ub9ac\uc2a4\ud06c \u001c\uac70\uc2e0\ubcd1",
         "groundWeapon": {
-            "damage": 50,
-            "damageFactor": 4
+            "damage": 100,
+            "damageFactor": 50
         },
         "airWeapon": {
-            "damage": 50,
-            "damageFactor": 4
+            "damage": 100,
+            "damageFactor": 50
         },
         "unitOriginName": "Norad II (Battlecruiser)"
     },
@@ -543,7 +543,7 @@ var unitData={
     },
     "34": {
         "isDefault": 0,
-        "hitPoints": 140800,
+        "hitPoints": 156160,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 450,
@@ -610,7 +610,7 @@ var unitData={
     },
     "39": {
         "isDefault": 0,
-        "hitPoints": 327680,
+        "hitPoints": 360960,
         "shieldPoints": 100,
         "armorPoints": 4,
         "buildTime": 900,
@@ -737,9 +737,9 @@ var unitData={
     },
     "48": {
         "isDefault": 0,
-        "hitPoints": 3072000,
+        "hitPoints": 4096000,
         "shieldPoints": 100,
-        "armorPoints": 20,
+        "armorPoints": 15,
         "buildTime": 1800,
         "oreCost": 400,
         "gasCost": 400,
@@ -793,7 +793,7 @@ var unitData={
     },
     "52": {
         "isDefault": 0,
-        "hitPoints": 217600,
+        "hitPoints": 240640,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 1500,
@@ -804,7 +804,7 @@ var unitData={
     },
     "53": {
         "isDefault": 0,
-        "hitPoints": 1024000,
+        "hitPoints": 1305600,
         "shieldPoints": 100,
         "armorPoints": 2,
         "buildTime": 780,
@@ -823,13 +823,13 @@ var unitData={
     },
     "54": {
         "isDefault": 0,
-        "hitPoints": 230400,
+        "hitPoints": 253440,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 840,
         "oreCost": 100,
         "gasCost": 0,
-        "unitName": "\u0006T\u0003heif",
+        "unitName": "\u0006T\u0003hief",
         "groundWeapon": {
             "damage": 34,
             "damageFactor": 2
@@ -891,8 +891,8 @@ var unitData={
         "gasCost": 125,
         "unitName": "\u0007Sniper!",
         "airWeapon": {
-            "damage": 1,
-            "damageFactor": 1
+            "damage": 25,
+            "damageFactor": 10
         },
         "unitOriginName": "Terran Valkyrie"
     },
@@ -924,7 +924,7 @@ var unitData={
     },
     "61": {
         "isDefault": 0,
-        "hitPoints": 253440,
+        "hitPoints": 279040,
         "shieldPoints": 0,
         "armorPoints": 2,
         "buildTime": 1,
@@ -954,7 +954,7 @@ var unitData={
     },
     "63": {
         "isDefault": 0,
-        "hitPoints": 153600,
+        "hitPoints": 168960,
         "shieldPoints": 1,
         "armorPoints": 1,
         "buildTime": 300,
@@ -965,8 +965,8 @@ var unitData={
     },
     "64": {
         "isDefault": 0,
-        "hitPoints": 128000,
-        "shieldPoints": 300,
+        "hitPoints": 140800,
+        "shieldPoints": 330,
         "armorPoints": 1,
         "buildTime": 300,
         "oreCost": 50,
@@ -1014,7 +1014,7 @@ var unitData={
     },
     "67": {
         "isDefault": 0,
-        "hitPoints": 217600,
+        "hitPoints": 240640,
         "shieldPoints": 30,
         "armorPoints": 1,
         "buildTime": 1,
@@ -1025,7 +1025,7 @@ var unitData={
     },
     "68": {
         "isDefault": 0,
-        "hitPoints": 332800,
+        "hitPoints": 366080,
         "shieldPoints": 120,
         "armorPoints": 4,
         "buildTime": 300,
@@ -1153,27 +1153,27 @@ var unitData={
     },
     "76": {
         "isDefault": 0,
-        "hitPoints": 271360,
-        "shieldPoints": 0,
-        "armorPoints": 7,
+        "hitPoints": 460800,
+        "shieldPoints": 100,
+        "armorPoints": 2,
         "buildTime": 600,
         "oreCost": 0,
         "gasCost": 0,
         "unitName": "\u000e\ub9e4\uc9c1 \uace8\ub818(\ub9c8\uc778)",
         "groundWeapon": {
-            "damage": 54,
-            "damageFactor": 4
+            "damage": 50,
+            "damageFactor": 5
         },
         "airWeapon": {
-            "damage": 54,
-            "damageFactor": 4
+            "damage": 50,
+            "damageFactor": 5
         },
         "unitOriginName": "Tassadar/Zeratul (Archon)"
     },
     "77": {
         "isDefault": 0,
-        "hitPoints": 345600,
-        "shieldPoints": 100,
+        "hitPoints": 381440,
+        "shieldPoints": 200,
         "armorPoints": 4,
         "buildTime": 1200,
         "oreCost": 200,
@@ -1187,20 +1187,20 @@ var unitData={
     },
     "78": {
         "isDefault": 0,
-        "hitPoints": 12800000,
-        "shieldPoints": 48000,
-        "armorPoints": 30,
+        "hitPoints": 3200000,
+        "shieldPoints": 65535,
+        "armorPoints": 40,
         "buildTime": 1500,
         "oreCost": 300,
         "gasCost": 100,
         "unitName": "\u0007\uc815\ub839\uc655 \u0004\uc544\ud0c0\ub77d\uc2dc\uc544",
         "groundWeapon": {
             "damage": 100,
-            "damageFactor": 10
+            "damageFactor": 8
         },
         "airWeapon": {
             "damage": 100,
-            "damageFactor": 10
+            "damageFactor": 8
         },
         "unitOriginName": "Fenix (Dragoon)"
     },
@@ -1293,14 +1293,14 @@ var unitData={
         "unitName": "Protoss Scarab",
         "groundWeapon": {
             "damage": 0,
-            "damageFactor": 18
+            "damageFactor": 36
         },
         "unitOriginName": "Protoss Scarab"
     },
     "86": {
         "isDefault": 0,
         "hitPoints": 320000,
-        "shieldPoints": 50,
+        "shieldPoints": 100,
         "armorPoints": 3,
         "buildTime": 4800,
         "oreCost": 50,
@@ -1380,7 +1380,7 @@ var unitData={
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\uc21c\uc704\ud45c\ub370\uc2a4",
+        "unitName": "@Tip",
         "unitOriginName": "Cargo Ship (Unused)"
     },
     "92": {
@@ -1503,14 +1503,14 @@ var unitData={
         "unitOriginName": "Alexei Stukov (Ghost)"
     },
     "101": {
-        "isDefault": 0,
+        "isDefault": 1,
         "hitPoints": 256,
         "shieldPoints": 1,
         "armorPoints": 0,
         "buildTime": 1,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "@\uba54\uce74\ub2c9\uc8fc\ubb38\uc81c\uc791",
+        "unitName": "Map Revealer",
         "unitOriginName": "Map Revealer"
     },
     "102": {
@@ -1523,12 +1523,12 @@ var unitData={
         "gasCost": 600,
         "unitName": "\u0004\ud3ed\uaca9\uae30",
         "groundWeapon": {
-            "damage": 50,
-            "damageFactor": 4
+            "damage": 100,
+            "damageFactor": 50
         },
         "airWeapon": {
-            "damage": 50,
-            "damageFactor": 4
+            "damage": 100,
+            "damageFactor": 50
         },
         "unitOriginName": "Gerard DuGalle (BattleCruiser)"
     },
@@ -1583,8 +1583,8 @@ var unitData={
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 200,
-        "oreCost": 9,
-        "gasCost": 0,
+        "oreCost": 0,
+        "gasCost": 60,
         "unitName": "\u0007\uc911\uae09\uc81c\uc791\uc911 ...",
         "unitOriginName": "Terran Command Center"
     },
@@ -1616,8 +1616,8 @@ var unitData={
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 300,
-        "oreCost": 3,
-        "gasCost": 0,
+        "oreCost": 0,
+        "gasCost": 20,
         "unitName": "\u0007\ud558\uae09\uc81c\uc791\uc911 ...",
         "unitOriginName": "Terran Supply Depot"
     },
@@ -1688,14 +1688,14 @@ var unitData={
         "unitOriginName": "Terran Control Tower"
     },
     "116": {
-        "isDefault": 1,
+        "isDefault": 0,
         "hitPoints": 217600,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 900,
         "oreCost": 100,
         "gasCost": 150,
-        "unitName": "Terran Science Facility",
+        "unitName": "\u0004\uac8c\uc784 \ud301 \ubcf4\uae30\b(\uc548\ubcf4\ub824\uba74 \ub744\uc6b0\uae30)",
         "unitOriginName": "Terran Science Facility"
     },
     "117": {
@@ -1778,10 +1778,10 @@ var unitData={
     "124": {
         "isDefault": 0,
         "hitPoints": 256000,
-        "shieldPoints": 10000,
+        "shieldPoints": 0,
         "armorPoints": 0,
         "buildTime": 72,
-        "oreCost": 1,
+        "oreCost": 0,
         "gasCost": 0,
         "unitName": "\u0003\ubc29\u0005\uc5b4\ud0d1/\u0004\uc2e0\ud638\ud0c4",
         "airWeapon": {
@@ -1796,8 +1796,8 @@ var unitData={
         "shieldPoints": 100,
         "armorPoints": 40,
         "buildTime": 72,
-        "oreCost": 12,
-        "gasCost": 0,
+        "oreCost": 0,
+        "gasCost": 125,
         "unitName": "\u0003\ubc29\uc5b4\uc694\uc0c8",
         "unitOriginName": "Terran Bunker"
     },
@@ -1901,25 +1901,25 @@ var unitData={
         "unitOriginName": "Zerg Nydus Canal"
     },
     "135": {
-        "isDefault": 0,
+        "isDefault": 1,
         "hitPoints": 217600,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 600,
         "oreCost": 100,
         "gasCost": 50,
-        "unitName": "\ubc84\uc11c\ucee4\uad81\ub370\uc2a4",
+        "unitName": "Zerg Hydralisk Den",
         "unitOriginName": "Zerg Hydralisk Den"
     },
     "136": {
-        "isDefault": 0,
+        "isDefault": 1,
         "hitPoints": 217600,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 900,
         "oreCost": 100,
         "gasCost": 100,
-        "unitName": "\ubaa8\ube4c\uad81\uadf9\uce90\ub17c\ud655\uc778",
+        "unitName": "Zerg Defiler Mound",
         "unitOriginName": "Zerg Defiler Mound"
     },
     "137": {
@@ -2052,14 +2052,14 @@ var unitData={
         "unitOriginName": "Zerg Overmind (With Shell)"
     },
     "148": {
-        "isDefault": 0,
+        "isDefault": 1,
         "hitPoints": 640000,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\uc5b4\uc314\uc2e0\uc8fd\uc74c\uc778\uc2dd",
+        "unitName": "Zerg Overmind",
         "unitOriginName": "Zerg Overmind"
     },
     "149": {
@@ -2096,14 +2096,14 @@ var unitData={
         "unitOriginName": "Zerg Cerebrate"
     },
     "152": {
-        "isDefault": 1,
+        "isDefault": 0,
         "hitPoints": 384000,
         "shieldPoints": 100,
         "armorPoints": 1,
         "buildTime": 0,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "Zerg Cerebrate Daggoth",
+        "unitName": "\u0005\ud504\ub85c\uadf8\ub7a8 \uc2dc\uccb4",
         "unitOriginName": "Zerg Cerebrate Daggoth"
     },
     "153": {
@@ -2162,14 +2162,14 @@ var unitData={
         "unitOriginName": "Protoss Assimilator"
     },
     "158": {
-        "isDefault": 0,
+        "isDefault": 1,
         "hitPoints": 76800,
         "shieldPoints": 300,
         "armorPoints": 1,
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "@\ubc84\uc11c\ucee4\ubaa8\ub4dc",
+        "unitName": "Unused Protoss Building1",
         "unitOriginName": "Unused Protoss Building1"
     },
     "159": {
@@ -2368,36 +2368,36 @@ var unitData={
         "unitOriginName": "Xel'Naga Temple"
     },
     "176": {
-        "isDefault": 1,
+        "isDefault": 0,
         "hitPoints": 25600000,
         "shieldPoints": 100,
         "armorPoints": 0,
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Mineral Field (Type 1)",
+        "unitName": "\u0004\ub09c\uc774\ub3c4: \u0007\uc26c\uc6c0 , \u0004\uc785\ubb38\ucd94\ucc9c\ub3c4:\u0007\ubbf8\ub124\ub784\uc591",
         "unitOriginName": "Mineral Field (Type 1)"
     },
     "177": {
-        "isDefault": 1,
+        "isDefault": 0,
         "hitPoints": 25600000,
         "shieldPoints": 100,
         "armorPoints": 0,
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Mineral Field (Type 2)",
+        "unitName": "\u0004\ub09c\uc774\ub3c4: \u0003\ubcf4\ud1b5, \u0004\uc785\ubb38\ucd94\ucc9c\ub3c4:\u0007\ubbf8\ub124\ub784\uc591",
         "unitOriginName": "Mineral Field (Type 2)"
     },
     "178": {
-        "isDefault": 1,
+        "isDefault": 0,
         "hitPoints": 25600000,
         "shieldPoints": 100,
         "armorPoints": 0,
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "Mineral Field (Type 3)",
+        "unitName": "\u0004\ub09c\uc774\ub3c4: \b\uc5b4\ub824\uc6c0, \u0004\uc785\ubb38\ucd94\ucc9c\ub3c4:\u0007\ubbf8\ub124\ub784\uc591",
         "unitOriginName": "Mineral Field (Type 3)"
     },
     "179": {
@@ -2592,7 +2592,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "\u0011 \uc544\uc774\ud15c \ub3c4\uc6c0\ub9d0",
+        "unitName": "\u0004\ubcf4\uc2a4\uc785\uad6c",
         "unitOriginName": "Terran Beacon"
     },
     "196": {
@@ -2618,14 +2618,14 @@ var unitData={
         "unitOriginName": "Zerg Flag Beacon"
     },
     "198": {
-        "isDefault": 1,
+        "isDefault": 0,
         "hitPoints": 25600000,
         "shieldPoints": 100,
         "armorPoints": 0,
         "buildTime": 1,
         "oreCost": 50,
         "gasCost": 50,
-        "unitName": "Terran Flag Beacon",
+        "unitName": "\u0011 \uc544\uc774\ud15c \ub3c4\uc6c0\ub9d0",
         "unitOriginName": "Terran Flag Beacon"
     },
     "199": {
@@ -2674,7 +2674,7 @@ var unitData={
     },
     "203": {
         "isDefault": 0,
-        "hitPoints": 1280000,
+        "hitPoints": 2048000,
         "shieldPoints": 100,
         "armorPoints": 20,
         "buildTime": 1,
@@ -2682,7 +2682,7 @@ var unitData={
         "gasCost": 1,
         "unitName": "\b\ud50c\ub85c\uc5b4 \ubbf8\uc0ac\uc77c \ud2b8\ub7a9",
         "groundWeapon": {
-            "damage": 65,
+            "damage": 75,
             "damageFactor": 1
         },
         "unitOriginName": "Floor Missile Trap"
@@ -2706,7 +2706,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\ub2cc\uc790\uad81\uc2dc\uc791",
+        "unitName": "@\uc18c\ube0c\ud5ec\ub4dc\ub86d",
         "unitOriginName": "Left Upper Level Door"
     },
     "206": {
@@ -2744,7 +2744,7 @@ var unitData={
     },
     "209": {
         "isDefault": 0,
-        "hitPoints": 1843200,
+        "hitPoints": 2304000,
         "shieldPoints": 100,
         "armorPoints": 0,
         "buildTime": 1,
@@ -2759,7 +2759,7 @@ var unitData={
     },
     "210": {
         "isDefault": 0,
-        "hitPoints": 1536000,
+        "hitPoints": 1792000,
         "shieldPoints": 100,
         "armorPoints": 15,
         "buildTime": 1,
@@ -2767,7 +2767,7 @@ var unitData={
         "gasCost": 1,
         "unitName": "\b\ubbf8\uc0ac\uc77c trap 2",
         "groundWeapon": {
-            "damage": 62,
+            "damage": 80,
             "damageFactor": 1
         },
         "unitOriginName": "Left Wall Missile Trap"
@@ -2789,7 +2789,7 @@ var unitData={
     },
     "212": {
         "isDefault": 0,
-        "hitPoints": 1863936,
+        "hitPoints": 1792000,
         "shieldPoints": 100,
         "armorPoints": 0,
         "buildTime": 1,
@@ -2797,7 +2797,7 @@ var unitData={
         "gasCost": 1,
         "unitName": "\b\ubbf8\uc0ac\uc77c trap",
         "groundWeapon": {
-            "damage": 62,
+            "damage": 80,
             "damageFactor": 1
         },
         "unitOriginName": "Right Wall Missile Trap"
