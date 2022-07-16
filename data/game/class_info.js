@@ -1432,6 +1432,24 @@ classDataJson=[
                                 "name":"완벽주의자",
                                 "explanation":"시야가 꺼지고 4초후 마나가 225로 고정됩니다. 6초동안 지속됩니다.<br>시야가 꺼진 동안 적이 직접적인 공격을 하지 못합니다.",
                                 "type":"유틸기"
+                            },
+                            {
+                                "command":"궁극캐논+S",
+                                "name":"기반 다지기",
+                                "explanation":"빌더를 다섯 소환합니다.",
+                                "type":"소환형"
+                            },
+                            {
+                                "command":"궁극캐논+C",
+                                "name":"철거 전략",
+                                "explanation":"모든 빌더를 트랩으로 교체합니다.",
+                                "type":"공격형"
+                            },
+                            {
+                                "command":"궁극캐논+A",
+                                "name":"전설적인 복원기술",
+                                "explanation":"모든 빌더 건물을 회복시킵니다.",
+                                "type":"회복형"
                             }
                         ],
                         "buildings":[
