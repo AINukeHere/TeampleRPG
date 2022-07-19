@@ -7,7 +7,7 @@ for(i = 1; i <= 10; ++i)
     innerHTML_str += getStageViewerHTML(i);
 }
 stageInfoDiv.innerHTML = innerHTML_str;
-function toggleStageView(stageNum){
+function toggleStageImageView(stageNum){
     var stageViewDiv = document.getElementById("StageView"+stageNum);
     var stageImage = stageViewDiv.getElementsByClassName("stageImage")[0];
 
@@ -15,15 +15,15 @@ function toggleStageView(stageNum){
     if (stageImage.src != stageImageSource)
         stageImage.src = stageImageSource;
 
-    if(stageViewDiv.style.display == "none")
-        stageViewDiv.style.display = "block";
+    if(stageImage.style.display == "none")
+        stageImage.style.display = "block";
     else
-        stageViewDiv.style.display = "none";
+        stageImage.style.display = "none";
 }
 function getStageViewerHTML(stageNum){
     var innerHTML_str = "\
-    <div class='StageViewButton' onclick=\"toggleStageView("+stageNum+")\">스테이지"+stageNum+" 접기/펼치기</div>\
-    <div class='StageView' id='StageView"+stageNum+"' style='display:none'>\
+    <h3>스테이지"+stageNum+"</h3>\
+    <div class='StageView' id='StageView"+stageNum+"'>\
         <div>\
             <span class='DPTEXT_08'>S </span>\
             <span class='DPTEXT_11'>T </span>\
@@ -46,7 +46,8 @@ function getStageViewerHTML(stageNum){
         innerHTML_str+="\
         </div>\
         <div>\
-            <img class='stageImage' src=''>\
+            <span class='StageViewButton DPTEXT_04' onclick='toggleStageImageView("+stageNum+")'>이미지 보기/숨기기</span>\
+            <img class='stageImage' style='display:none' src=''>\
         </div>\
     </div>";
 

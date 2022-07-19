@@ -1,7 +1,12 @@
 var upgradeInfoDiv = document.getElementById("UpgradeInfomation").getElementsByTagName('div')[0];
 
 var innerHTML_str = "\
-<h3>업그레이드 선택</h3>\
+<h3>사용방법</h3>\
+<p>\
+1. 좌측 건물을 클릭하고 업그레이트 버튼을 클릭하여 원하는 업그레이드 정보를 불러오세요.<br>\
+2. 우측에 세가지 방식의 계산이 준비되어있습니다. 원하는 값들을 입력하고 계산버튼을 눌러 계산결과를 확인하세요.<br>\
+3. 다른 업그레이드 정보가 필요하다면 버튼 왼쪽의 칸에 직접 입력할 수도 있습니다.\
+</p>\
 <div class='upgradeInfomationGrid'>\
   <div class='upgradeBuildings'>";
     for (var i = 0; i < upgradeData.length; ++i){
