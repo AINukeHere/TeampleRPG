@@ -1,0 +1,7 @@
+#GameTipInfomation div{
+    background-color: black;
+    padding:5px;
+    text-align: right;
+}
+#GameTipInfomation div > span{
+}

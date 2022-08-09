@@ -17,6 +17,7 @@
 	        @import url("item_info_section.css");
             @import url("stage_info_section.css");
             @import url("mutator_info_section.css");
+            @import url("game_tip_info_section.css");
             @import url("upgrade_info_section.css");
         </style>
     </head>
@@ -29,6 +30,7 @@
         <script ttype="text/javascript" src="data/game/stage_info_json.js"></script>
         <script ttype="text/javascript" src="data/game/SCTreeData.js"></script>
         <script ttype="text/javascript" src="data/game/mutator_info_json.js"></script>
+        <script ttype="text/javascript" src="data/game/game_tip_info.js"></script>
         <script ttype="text/javascript" src="data/game/upgrade_info_json.js"></script>
         <header id="title">
             <a href=".">
@@ -45,6 +47,7 @@
                 <a href="#ItemInfomation">아이템 정보</a>
                 <a href="#StageInfomation">스테이지 정보</a>
                 <a href="#MutatorInfomation">돌연변이원 정보</a>
+                <a href="#GameTipInfomation">게임 중 표시되는 팁</a>
                 <a href="#UpgradeInfomation">업그레이드 계산기</a>
                 <a href="#NuclearCalculator">핵 데미지 계산기</a>
             </div>
@@ -56,6 +59,7 @@
             <li><a href="#ItemInfomation">아이템 정보</a></li>
             <li><a href="#StageInfomation">스테이지 정보</a></li>
             <li><a href="#MutatorInfomation">돌연변이원 정보</a></li>
+            <li><a href="#GameTipInfomation">게임 중 표시되는 팁</a></li>
             <li><a href="#UpgradeInfomation">업그레이드 계산기</a></li>
             <li><a href="#NuclearCalculator">핵 데미지 계산기</a></li>
         </ul>
@@ -98,6 +102,14 @@
             <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>돌연변이원 정보</span>
             <div></div>
             <script src="mutator_info_section.js"></script>
+        </section>
+
+        <!-- 게임 중 표시되는 팁 정보 -->
+        <hr>
+        <section id="GameTipInfomation">
+            <span class="sectionTitle" onclick="toogleSection(this)"><span style="font-size: inherit;">▶ </span>게임 중 표시되는 팁</span>
+            <div></div>
+            <script src="game_tip_info_section.js"></script>
         </section>
 
         <!-- 업그레이드 계산기 -->
