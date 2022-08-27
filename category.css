@@ -1,13 +1,16 @@
 #index
 {
 	display:block;
-	text-align: center;
+	/* text-align: center; */
 	margin-left: 25px;
+}
+#index > li{
+    display: inline;
 }
 #index a
 {
 	display:inline-block;
-	background:red;
+	background:rgb(255,64,64);
 	margin:5px;
 	margin-bottom: 5px;
 	width:150px;

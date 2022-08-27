@@ -13,9 +13,6 @@
 #title a:visited{
     color: black;
 }
-#index > li{
-    display: inline;
-}
 section{
     margin-left: 100px;
     max-width: 1133px;
