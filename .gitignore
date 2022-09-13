@@ -1,4 +1,7 @@
 data/game/*.lua
 data/images/StageImages/FullMap.png
-temp.py
+*.py
 ExportUnitData
+dist
+build
+*.spec
