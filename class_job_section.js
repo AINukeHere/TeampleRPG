@@ -131,6 +131,9 @@ function onClickClass(isURL, classIdx)
     curClassUnitData = unitData[classData.classes[classIdx].unitIdx];
     var innerHTML_str = "\
     <div class='classProfileSummary'>\
+        <div style='grid-column:1/3; text-align:center; margin-bottom:10px;'>\
+            <span style='color:Yellow; font-size:50px;'>"+classData.classes[classIdx].name+"</span>\
+        </div>\
         <div>\
             <img class='classProfileImage' src=data/images/ClassInfo/"+classData.classes[classIdx].image+"><br>\
             <span class='specName DPTEXT_07'>파괴력</span><span class='specStars DPTEXT_08'>"+spec_str1+"</span><br>\
