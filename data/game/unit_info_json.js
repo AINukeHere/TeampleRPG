@@ -1,4 +1,4 @@
-//this file created 2022-07-16 11:47:38.568533
+//this file created 2025-05-26 08:30:58.633191
 var unitData={
     "0": {
         "isDefault": 0,
@@ -169,7 +169,7 @@ var unitData={
     "10": {
         "isDefault": 0,
         "hitPoints": 150994176,
-        "shieldPoints": 100,
+        "shieldPoints": 0,
         "armorPoints": 20,
         "buildTime": 720,
         "oreCost": 100,
@@ -250,7 +250,7 @@ var unitData={
     },
     "16": {
         "isDefault": 0,
-        "hitPoints": 588800,
+        "hitPoints": 647680,
         "shieldPoints": 100,
         "armorPoints": 15,
         "buildTime": 1500,
@@ -270,7 +270,7 @@ var unitData={
     "17": {
         "isDefault": 0,
         "hitPoints": 25170432,
-        "shieldPoints": 100,
+        "shieldPoints": 0,
         "armorPoints": 10,
         "buildTime": 1200,
         "oreCost": 200,
@@ -713,7 +713,7 @@ var unitData={
     "46": {
         "isDefault": 0,
         "hitPoints": 2559744,
-        "shieldPoints": 100,
+        "shieldPoints": 0,
         "armorPoints": 20,
         "buildTime": 750,
         "oreCost": 50,
@@ -738,8 +738,8 @@ var unitData={
     },
     "48": {
         "isDefault": 0,
-        "hitPoints": 4096000,
-        "shieldPoints": 100,
+        "hitPoints": 3072000,
+        "shieldPoints": 0,
         "armorPoints": 15,
         "buildTime": 1800,
         "oreCost": 400,
@@ -780,7 +780,7 @@ var unitData={
     "51": {
         "isDefault": 0,
         "hitPoints": 26880000,
-        "shieldPoints": 100,
+        "shieldPoints": 0,
         "armorPoints": 20,
         "buildTime": 1500,
         "oreCost": 200,
@@ -1398,7 +1398,7 @@ var unitData={
     "93": {
         "isDefault": 0,
         "hitPoints": 72223488,
-        "shieldPoints": 100,
+        "shieldPoints": 0,
         "armorPoints": 10,
         "buildTime": 1,
         "oreCost": 1,
@@ -1420,7 +1420,7 @@ var unitData={
     "95": {
         "isDefault": 0,
         "hitPoints": 1024000,
-        "shieldPoints": 100,
+        "shieldPoints": 0,
         "armorPoints": 0,
         "buildTime": 1,
         "oreCost": 1,
@@ -1551,7 +1551,7 @@ var unitData={
     "104": {
         "isDefault": 0,
         "hitPoints": 50342400,
-        "shieldPoints": 100,
+        "shieldPoints": 0,
         "armorPoints": 30,
         "buildTime": 1500,
         "oreCost": 200,
@@ -1892,9 +1892,9 @@ var unitData={
     },
     "134": {
         "isDefault": 0,
-        "hitPoints": 1280000,
+        "hitPoints": 2560000,
         "shieldPoints": 100,
-        "armorPoints": 1,
+        "armorPoints": 100,
         "buildTime": 600,
         "oreCost": 150,
         "gasCost": 0,
@@ -2104,7 +2104,7 @@ var unitData={
         "buildTime": 0,
         "oreCost": 0,
         "gasCost": 0,
-        "unitName": "\u0005\ud504\ub85c\uadf8\ub7a8 \uc2dc\uccb4",
+        "unitName": "\u0003\ub514\ud14d\ud130",
         "unitOriginName": "Zerg Cerebrate Daggoth"
     },
     "153": {
@@ -2329,7 +2329,7 @@ var unitData={
         "hitPoints": 258,
         "shieldPoints": 20,
         "armorPoints": 250,
-        "buildTime": 200,
+        "buildTime": 100,
         "oreCost": 0,
         "gasCost": 50,
         "unitName": "\u0007\ubc29\uc5b4\ubcf4\ucda9\uc18c",
@@ -2859,7 +2859,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\ub9c8\ub098\uc99d\ud3ed\uae30 \u0003($200)\u0004(+\ucd5c\ub300)",
+        "unitName": "\u000f\ub9c8\ub098\ud3ec\uc158 \u0003($100)",
         "unitOriginName": "Psi Emitter"
     },
     "218": {
@@ -2881,7 +2881,7 @@ var unitData={
         "buildTime": 1,
         "oreCost": 1,
         "gasCost": 1,
-        "unitName": "\u000f\ub9c8\ub098\ud3ec\uc158 \u0003($100)",
+        "unitName": "\u000f\ub9c8\ub098\uc99d\ud3ed\uae30 \u0003($200)\u0004(+\ucd5c\ub300)",
         "unitOriginName": "Khaydarin Crystal"
     },
     "220": {

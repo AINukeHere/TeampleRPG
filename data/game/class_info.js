@@ -336,7 +336,7 @@ classDataJson=[
                             {
                                 "command":"O",
                                 "name":"의도된 죽음(Binding Life)",
-                                "explanation":"5초이내에 사망하면 마나를 돌려받고 계속 마나를 얻으며 트랩을 사용할 수 있습니다.",
+                                "explanation":"10초이내에 사망하면 마나를 돌려받고 6분동안 마나를 얻으며 트랩을 사용할 수 있습니다.",
                                 "type":"유틸기"
                             },
                             {
@@ -397,7 +397,7 @@ classDataJson=[
                             },
                             {
                                 "command":"CCOSOA",
-                                "name":"Ground  Zero",
+                                "name":"Ground Zero <span class='DPTEXT_08'>(1회용)</span>",
                                 "explanation":"지정된 위치주변에 있는 모든것을 파괴시킨다.",
                                 "type":"공격형"
                             }
@@ -467,7 +467,7 @@ classDataJson=[
                             },
                             {
                                 "command":"SOSAAA",
-                                "name":"Priest Angel Mode",
+                                "name":"Priest Angel Mode <span class='DPTEXT_08'>(1회용)</span>",
                                 "explanation":"프리스트가 아름다움과 마음을 상징하는 천사로 탈바꿈합니다.",
                                 "type":"유틸기"
                             },
@@ -1146,7 +1146,7 @@ classDataJson=[
                             {
                                 "command":"검은 그림자+A",
                                 "name":"그림자 영혼강탈",
-                                "explanation":"그림자의 공격으로 적의 영혼을 혼란상태에 빠집니다.",
+                                "explanation":"그림자가 적의 영혼을 혼란상태에 빠뜨리며 체력을 회복합니다.",
                                 "type":"공격형"
                             },
                             {
@@ -1842,7 +1842,7 @@ classDataJson=[
                                 "type":"공격형"
                             },
                             {
-                                "command":"지뢰+S",
+                                "command":"Trap+S",
                                 "name":"손은 눈보다 빠르지",
                                 "explanation":"자신과 지뢰의 위치를 바꾸며 체력을 모두 회복합니다.",
                                 "type":"유틸기"
@@ -2017,7 +2017,7 @@ classDataJson=[
                     {
                         "command":"O",
                         "name":"사살백두(射殺百頭)",
-                        "explanation":"\"쏘아 죽이는 100개의 머리\"라는 뜻으로 100번을 순식간으로 적을 베어버린다.",
+                        "explanation":"\"쏘아 죽이는 100개의 머리\"라는 뜻으로 순식간에 범위 내의 모든 적을 베어버린다.",
                         "type":"공격형"
                     },
                     {
