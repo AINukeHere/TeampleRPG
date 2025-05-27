@@ -1593,8 +1593,8 @@ classDataJson=[
                 "skills":[
                     {
                         "command":"S",
-                        "name":"회피",
-                        "explanation":"적의 공격을 순간 회피합니다.",
+                        "name":"은신",
+                        "explanation":"순간 은신하여 적의 공격을 회피합니다.",
                         "type":"유틸기"
                     }
                 ],
@@ -1614,8 +1614,8 @@ classDataJson=[
                         "skills":[
                             {
                                 "command":"S",
-                                "name":"회피",
-                                "explanation":"적의 공격을 순간 회피합니다.",
+                                "name":"은신",
+                                "explanation":"순간 은신하여 적의 공격을 회피합니다.",
                                 "type":"유틸기"
                             },
                             {
@@ -1665,8 +1665,8 @@ classDataJson=[
                         "skills":[
                             {
                                 "command":"S",
-                                "name":"회피",
-                                "explanation":"적의 공격을 순간 회피합니다.",
+                                "name":"은신",
+                                "explanation":"순간 은신하여 적의 공격을 회피합니다.",
                                 "type":"유틸기"
                             },
                             {
