@@ -82,7 +82,7 @@ mutatorData=[
     },
     {
         "status":"enabled",
-        "hidden":true,
+        "hidden":false,
         "name":"방어막",
         "explanation":"모든 적 유닛이 피해를 받으면 250의 방어막을 얻습니다. 스테이지를 클리어할수록 보호횟수가 증가합니다.",
         "hidden_name_hint":"ㅂㅇㅁ"
@@ -105,7 +105,7 @@ mutatorData=[
         "status":"enabled",
         "name":"업그레이드가 쵝오!",
         "explanation":"시간이 지남에 따라 적이 업그레이드를 진행합니다.",
-        "hidden":true,
+        "hidden":false,
         "hidden_name_hint":"ㅇㄱㄹㅇㄷㄱㅊㅇ!"
     },
     {
